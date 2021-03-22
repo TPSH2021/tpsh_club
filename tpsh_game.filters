@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="headers">
+      <UniqueIdentifier>{f8870952-6d21-4640-a8c5-4403096aab81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources">
+      <UniqueIdentifier>{eabe53b6-569e-4853-aa10-4d8c72a42864}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\imgui">
+      <UniqueIdentifier>{afcf0cba-9746-485f-b811-7a66508b275d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sources\dialogModule">
+      <UniqueIdentifier>{cbc48415-244d-4d96-89ef-89b7eb9a09ee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="src\main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="imgui\imgui.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="imgui\imgui_demo.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="imgui\imgui_draw.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="imgui\imgui_tables.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="imgui\imgui_widgets.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'" Include="imgui-sfml\imgui-SFML.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui-sfml\imgui-SFML.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>sources\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dialogModule\dialogSystem.cpp">
+      <Filter>sources\dialogModule</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\dialogModule\dialogSystem.h">
+      <Filter>sources\dialogModule</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

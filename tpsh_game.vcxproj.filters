@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="dialogModule">
+      <UniqueIdentifier>{ebd464f5-c30f-4c7e-99ec-8fafc4ce1364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{a40c9de6-066d-43b9-abed-a26485c01257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mainModule">
+      <UniqueIdentifier>{c72d6dba-6f41-4731-ac2b-f0b16af4d08e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dialogModule\dialogSystem.cpp">
+      <Filter>dialogModule</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>mainModule</Filter>
+    </ClCompile>
+    <ClCompile Include="submodules\imgui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="submodules\imgui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="submodules\imgui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="submodules\imgui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="submodules\imgui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="submodules\imgui-sfml\imgui-SFML.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\dialogModule\dialogSystem.h">
+      <Filter>dialogModule</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
