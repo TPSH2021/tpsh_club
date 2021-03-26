@@ -1,56 +1,44 @@
 {
-  "startPoint" : "dialog2.1",
+  "startPoint" : "dialog2.0",
   "textPoints": [
     {
-      "id": "dialog2.2",
+      "id": "dialog2.0",
       "background": "room_background",
       "character": "player",
       "left1": {
-        "character": "non",
-        "emotion": "non"
+        "character": "none",
+        "emotion": "none"
       },
       "left2": {
-        "character": "non",
-        "emotion": "non"
+        "character": "none",
+        "emotion": "none"
       },
       "right1": {
-        "character": "non",
-        "emotion": "non"
+        "character": "none",
+        "emotion": "none"
       },
       "right2": {
-        "character": "non",
-        "emotion": "non"
+        "character": "none",
+        "emotion": "none"
       },
       "jumps": [
         {
-          "nextPoint": "dialog2.3",
-          "description": ""
+          "nextPoint": "dialog2.5.",
+          "description": "dialog2.2"
         },
         {
-          "id": "dialog2.0",
-          "background": "room_background",
-          "character": "player",
-          "jumps": [
-            {
-              "nextPoint": "dialog2.1",
-              "description": "Саша"
-            },
-            {
-              "nextPoint": "dialog1.5",
-              "description": "Вадим"
-            },
-            {
-              "nextPoint": "dialog1.5",
-              "description": "Катя"
-            },
-            {
-              "nextPoint": "dialog1.5",
-              "description": "Маша"
-            }
-          ]
+          "nextPoint": "dialog2.",
+          "description": "dialog2.3"
+        },
+        {
+          "nextPoint": "dialog2.",
+          "description": "dialog2.4"
         }
 
       ]
     }
-  ] 
+
+  ]
+
 }
+   
