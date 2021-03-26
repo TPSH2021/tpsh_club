@@ -24,12 +24,14 @@ namespace game {
         };
 
 
-
         class dialogSystem {
         public:
-            dialog& getDialog(const std::string& id);
-            ~dialogSystem();
+            dialog& getDialog();
+            bool next();
+
             dialogSystem();
+            ~dialogSystem();
+            
         private:
             std::map<std::string, dialog> dialogs;
             std::string cur_dialog;
