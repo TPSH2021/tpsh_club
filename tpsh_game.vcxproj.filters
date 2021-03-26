@@ -14,6 +14,12 @@
     <Filter Include="mainModule">
       <UniqueIdentifier>{c72d6dba-6f41-4731-ac2b-f0b16af4d08e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assetsSystem">
+      <UniqueIdentifier>{8a6b902d-23b2-44f2-81f0-35e67f50eed1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gameModule">
+      <UniqueIdentifier>{0a983330-d76d-4119-a6f4-1f2b91ec3a9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dialogModule\dialogSystem.cpp">
@@ -40,10 +46,22 @@
     <ClCompile Include="submodules\imgui-sfml\imgui-SFML.cpp">
       <Filter>ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\assetsModule\assetsSystem.cpp">
+      <Filter>assetsSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameModule\gameModule.cpp">
+      <Filter>gameModule</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dialogModule\dialogSystem.h">
       <Filter>dialogModule</Filter>
+    </ClInclude>
+    <ClInclude Include="src\assetsModule\assetsSystem.h">
+      <Filter>assetsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameModule\gameModule.h">
+      <Filter>gameModule</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

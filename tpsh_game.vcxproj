@@ -19,7 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\assetsModule\assetsSystem.cpp" />
     <ClCompile Include="src\dialogModule\dialogSystem.cpp" />
+    <ClCompile Include="src\gameModule\gameModule.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="submodules\imgui-sfml\imgui-SFML.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -41,7 +43,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\assetsModule\assetsSystem.h" />
     <ClInclude Include="src\dialogModule\dialogSystem.h" />
+    <ClInclude Include="src\gameModule\gameModule.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
