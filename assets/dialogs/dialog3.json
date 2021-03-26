@@ -1,8 +1,8 @@
 {
-  "startPoint" : "dialog1.0",
+  "startPoint": "dialog3.0",
   "textPoints": [
     {
-      "id": "dialog1.0",
+      "id": "dialog3.0",
       "background": "street_background",
       "character": "Игорь Че",
       "left1": {
@@ -14,7 +14,7 @@
         "emotion": "smiling_1"
       },
       "right1": {
-        "character": "none",
+        "character": "Рудник Павел",
         "emotion": "neutral_1"
       },
       "right2": {
@@ -23,215 +23,250 @@
       },
       "jumps": [
         {
-          "nextPoint": "dialog1.5",
-          "description": "dialog1.1"
+          "nextPoint": "dialog3.1",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.1",
+      "background": "street_background",
+      "character": "Рудник Павел",
+      "left1": {
+        "character": "Влад",
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "Вольных Лиза",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "Рудник Павел",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "Игорь Че",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.5",
+          "description": "dialog3.2"
         },
         {
-          "nextPoint": "dialog1.5",
-          "description": "dialog1.2"
+          "nextPoint": "dialog3.6",
+          "description": "dialog3.3"
         },
         {
-          "nextPoint": "dialog1.5",
-          "description": "dialog1.3"
+          "nextPoint": "dialog3.7",
+          "description": "dialog3.4"
+        }
+      ]
+    },
+    {
+      "id": "dialog3.5",
+      "background": "street_background",
+      "character": "Рудник Павел",
+      "left1": {
+        "character": "Влад",
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "Вольных Лиза",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "Рудник Павел",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "Игорь Че",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.8",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.6",
+      "background": "street_background",
+      "character": "Рудник Павел",
+      "left1": {
+        "character": "Влад",
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "Вольных Лиза",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "Рудник Павел",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "Игорь Че",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.8",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.7",
+      "background": "street_background",
+      "character": "Рудник Павел",
+      "left1": {
+        "character": "Влад",
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "Вольных Лиза",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "Рудник Павел",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "Игорь Че",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.8",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.8",
+      "background": "street_background",
+      "character": "Красников Максим",
+      "left1": {
+        "character": "Влад",
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "Вольных Лиза",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "Рудник Павел",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "Красников Максим",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.12",
+          "description": "dialog3.9"
         },
         {
-          "nextPoint": "dialog1.5",
-          "description": "dialog1.4"
-        }
-      ]
-    },
-    {
-      "id": "dialog1.5",
-      "background": "street_background",
-      "character": "Игорь Че",
-      "left1": {
-        "character": "Влад",
-        "emotion": "angry_1"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "smiling_1"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "neutral_1"
-      },
-      "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog1.6",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog1.6",
-      "background": "street_background",
-      "character": "Игорь Че",
-      "left1": {
-        "character": "Влад",
-        "emotion": "angry_1"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "smiling_1"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "neutral_1"
-      },
-      "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog1.7",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog1.7",
-      "background": "street_background",
-      "character": "Влад",
-      "left1": {
-        "character": "Влад",
-        "emotion": "angry_1"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "smiling_1"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "neutral_1"
-      },
-      "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog1.8",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog1.8",
-      "background": "street_background",
-      "character": "Игорь Че",
-      "left1": {
-        "character": "Влад",
-        "emotion": "angry_1"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "smiling_1"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "neutral_1"
-      },
-      "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog1.11",
-          "description": "dialog1.9"
+          "nextPoint": "dialog3.13",
+          "description": "dialog3.10"
         },
         {
-          "nextPoint": "dialog1.11",
-          "description": "dialog1.10"
+          "nextPoint": "dialog3.12",
+          "description": "dialog3.11"
         }
       ]
     },
     {
-      "id": "dialog1.11",
+      "id": "dialog3.12",
       "background": "street_background",
-      "character": "Игорь Че",
+      "character": "Красников Максим",
       "left1": {
         "character": "Влад",
-        "emotion": "angry_1"
+        "emotion": "calm_1"
       },
       "left2": {
-        "character": "none",
+        "character": "Вольных Лиза",
         "emotion": "smiling_1"
       },
       "right1": {
-        "character": "none",
+        "character": "Рудник Павел",
         "emotion": "neutral_1"
       },
       "right2": {
-        "character": "Игорь Че",
+        "character": "Красников Максим",
         "emotion": "calm_1"
       },
       "jumps": [
         {
-          "nextPoint": "dialog1.13",
-          "description": "dialog1.12"
-        }
-      ]
-    },
-    {
-      "id": "dialog1.13",
-      "background": "street_background",
-      "character": "Игорь Че",
-      "left1": {
-        "character": "Влад",
-        "emotion": "angry_1"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "smiling_1"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "neutral_1"
-      },
-      "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog1.14",
+          "nextPoint": "dialog3.14",
           "description": ""
         }
       ]
     },
     {
-      "id": "dialog1.14",
+      "id": "dialog3.13",
       "background": "street_background",
-      "character": "Игорь Че",
+      "character": "Красников Максим",
       "left1": {
         "character": "Влад",
-        "emotion": "angry_1"
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "Вольных Лиза",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "Рудник Павел",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "Красников Максим",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.14",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.14",
+      "background": "street_background",
+      "character": "Вольных Лиза",
+      "left1": {
+        "character": "Влад",
+        "emotion": "calm_1"
       },
       "left2": {
         "character": "none",
         "emotion": "smiling_1"
       },
       "right1": {
-        "character": "none",
+        "character": "rudnik",
         "emotion": "neutral_1"
       },
       "right2": {
-        "character": "Игорь Че",
+        "character": "Вольных Лиза",
         "emotion": "calm_1"
       },
       "jumps": [
         {
-          "nextPoint": "",
-          "description": ""
+          "nextPoint": "dialog3.18",
+          "description": "dialog3.15"
+        },
+        {
+          "nextPoint": "dialog3.19",
+          "description": "dialog3.16"
+        },
+        {
+          "nextPoint": "dialog3.20",
+          "description": "dialog3.17"
         }
       ]
     }
-  ] 
+  ]
 }
