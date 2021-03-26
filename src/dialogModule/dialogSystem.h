@@ -1,18 +1,38 @@
 #pragma once
 
 #include <memory>
+#include "assetsSystem.h"
+#include <map>
+#include <string>
+
 
 namespace game {
-	namespace dialogModule {
-		class dialogDataInterface {
-			//...
-			// implement getters and setters for dialogData fields
-			
-		};
-		class dialogSystemInterface {
-			virtual ~dialogSystemInterface() = delete;
-			virtual bool addDialog(std::unique_ptr<dialogDataInterface>) = 0;
-			virtual std::weak_ptr<dialogDataInterface> getDialog() = 0;
-		};
-	}
+    namespace dialogModule {
+
+        class replica {
+        public:
+            std::string getBackgroundId();
+            std::pair<std::string, std::string> getLeft2Character();
+        };
+
+
+        class dialog {
+        public:
+        private:
+            std::map<std::string, replica> replicas;
+            std::string cur_replica;
+        };
+
+
+
+        class dialogSystem {
+        public:
+            dialog& getDialog(const std::string& id);
+            ~dialogSystem();
+            dialogSystem();
+        private:
+            std::map<std::string, dialog> dialogs;
+            std::string cur_dialog;
+        };
+    }
 }
