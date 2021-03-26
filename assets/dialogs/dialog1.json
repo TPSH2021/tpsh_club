@@ -1,0 +1,237 @@
+{
+  "startPoint" : "dialog1.0",
+  "textPoints": [
+    {
+      "id": "dialog1.0",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "calm_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.5",
+          "description": "dialog1.1"
+        },
+        {
+          "nextPoint": "dialog1.5",
+          "description": "dialog1.2"
+        },
+        {
+          "nextPoint": "dialog1.5",
+          "description": "dialog1.3"
+        },
+        {
+          "nextPoint": "dialog1.5",
+          "description": "dialog1.4"
+        }
+      ]
+    },
+    {
+      "id": "dialog1.5",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.6",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog1.6",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.7",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog1.7",
+      "background": "street_background",
+      "character": "¬лад",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.8",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog1.8",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.11",
+          "description": "dialog1.9"
+        },
+        {
+          "nextPoint": "dialog1.11",
+          "description": "dialog1.10"
+        }
+      ]
+    },
+    {
+      "id": "dialog1.11",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.13",
+          "description": "dialog1.12"
+        }
+      ]
+    },
+    {
+      "id": "dialog1.13",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog1.14",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog1.14",
+      "background": "street_background",
+      "character": "»горь „е",
+      "left1": {
+        "character": "¬лад",
+        "emotion": "angry_1"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling_1"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral_1"
+      },
+      "right2": {
+        "character": "»горь „е",
+        "emotion": "calm_1"
+      },
+      "jumps": [
+        {
+          "nextPoint": "",
+          "description": ""
+        }
+      ]
+    }
+  ] 
+}
