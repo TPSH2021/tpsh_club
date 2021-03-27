@@ -32,7 +32,7 @@
     {
       "id": "dialog2.1",
       "background": "room_background",
-      "character": "player",
+      "character": "none",
       "left1": {
         "character": "none",
         "emotion": "none"
@@ -67,10 +67,558 @@
     },
     {
       "id": "dialog2.5",
-      "background": "room_background",
-      "character": "player"
+      "background": "door_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.7",
+        "description": ""
+      }
+      ]
     },
-    {}
+    {
+      "id": "dialog2.7",
+      "background": "dark_room_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.8",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.8",
+      "background": "dark_room_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "gelya",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.9",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.9",
+      "background": "dark_room_background",
+      "character": "gelya",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "gelya",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.10",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.10",
+      "background": "dark_room_background",
+      "character": "player",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "gelya",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.11",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.11",
+      "background": "dark_room_background",
+      "character": "gelya",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "gelya",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.27",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.12",
+      "background": "door_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.13",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.13",
+      "background": "baderiks_room_background",
+      "character": "pasha.b",
+      "left1": {
+        "character": "pasha.b",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "misha.b",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.14",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.14",
+      "background": "baderiks_room_background",
+      "character": "player",
+      "left1": {
+        "character": "pasha.r",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "misha.r",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.25",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.15",
+      "background": "door_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.16",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.16",
+      "background": "rita_room_background",
+      "character": "player",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.17",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.17",
+      "background": "rita_room_background",
+      "character": "rita",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.18",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.18",
+      "background": "rita_room_background",
+      "character": "player",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.19",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.19",
+      "background": "rita_room_background",
+      "character": "rita",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.20",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.20",
+      "background": "rita_room_background",
+      "character": "player",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.21",
+        "description": ""
+      }
+      ]
+    },
+
+    {
+      "id": "dialog2.21",
+      "background": "rita_room_background",
+      "character": "rita",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "player",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.22",
+        "description": ""
+      }
+      ]
+    },
+
+    {
+      "id": "dialog2.22",
+      "background": "rita_room_background",
+      "character": "player",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.23",
+        "description": ""
+      }
+      ]
+    },
+
+    {
+      "id": "dialog2.23",
+      "background": "rita_room_background",
+      "character": "rita",
+      "left1": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.24",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.24",
+      "background": "rita_room_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "rita",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.25",
+        "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.25",
+      "background": "hole_background",
+      "character": "player",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog3.0",
+        "description": "dialog2.26"
+      },
+      {
+        "nextPoint": "dialog3.0",
+        "description": "dialog2.27"
+      },
+      {
+        "nextPoint": "dialog3.0",
+        "description": "dialog2.28"
+      }
+      ]
+    }
+
+
+
 
   ]
 
