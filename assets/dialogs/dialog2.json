@@ -69,7 +69,8 @@
       "id": "dialog2.5",
       "background": "room_background",
       "character": "player"
-    }
+    },
+    {}
 
   ]
 
