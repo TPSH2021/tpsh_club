@@ -21,7 +21,7 @@
   <ItemGroup>
     <ClCompile Include="src\assetsModule\assetsSystem.cpp" />
     <ClCompile Include="src\dialogModule\dialogSystem.cpp" />
-    <ClCompile Include="src\gameModule\gameModule.cpp" />
+    <ClCompile Include="src\gameModule\gameSystem.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="submodules\imgui-sfml\imgui-SFML.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -45,7 +45,7 @@
   <ItemGroup>
     <ClInclude Include="src\assetsModule\assetsSystem.h" />
     <ClInclude Include="src\dialogModule\dialogSystem.h" />
-    <ClInclude Include="src\gameModule\gameModule.h" />
+    <ClInclude Include="src\gameModule\gameSystem.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -117,7 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\submodules\imgui;$(ProjectDir)\submodules\json\single_include\nlohmann;$(ProjectDir)\submodules\imgui-sfml;C:\programs\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src\gameModule;$(ProjectDir)\src\assetsSystem;$(ProjectDir)\src;$(ProjectDir)\submodules\imgui;$(ProjectDir)\submodules\json\single_include\nlohmann;$(ProjectDir)\submodules\imgui-sfml;C:\programs\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

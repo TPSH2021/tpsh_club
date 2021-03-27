@@ -1,6 +1,7 @@
-#include "gameModule.h"
+#include "gameSystem.h"
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
+
 namespace game {
 	namespace gameModule {
 		Window::Window() {
