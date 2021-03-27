@@ -8,17 +8,6 @@
 
 namespace game {
 	namespace assetsModule {
-
-
-		class asset {
-		public:
-			const std::weak_ptr<sf::Image> getImage();
-			asset(const std::string&);
-		private:
-			sf::Image img;
-		};
-
-
 		class background {
 		public:
 			sf::Sprite getSprite();
