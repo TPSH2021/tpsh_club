@@ -55,11 +55,11 @@
           "description": "dialog2.2"
         },
         {
-          "nextPoint": "dialog2.",
+          "nextPoint": "dialog2.12",
           "description": "dialog2.3"
         },
         {
-          "nextPoint": "dialog2.",
+          "nextPoint": "dialog2.15",
           "description": "dialog2.4"
         }
 
@@ -133,7 +133,7 @@
       },
       "right1": {
         "character": "gelya",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "right2": {
         "character": "none",
@@ -160,7 +160,7 @@
       },
       "right1": {
         "character": "gelya",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "right2": {
         "character": "none",
@@ -187,7 +187,7 @@
       },
       "right1": {
         "character": "gelya",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "right2": {
         "character": "none",
@@ -214,7 +214,7 @@
       },
       "right1": {
         "character": "gelya",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "right2": {
         "character": "none",
@@ -222,7 +222,7 @@
       },
       "jumps": [
       {
-        "nextPoint": "dialog2.27",
+        "nextPoint": "dialog2.25",
         "description": ""
       }
       ]
@@ -260,11 +260,11 @@
       "character": "pasha.b",
       "left1": {
         "character": "pasha.b",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "left2": {
         "character": "misha.b",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "right1": {
         "character": "none",
@@ -287,11 +287,11 @@
       "character": "player",
       "left1": {
         "character": "pasha.r",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "left2": {
         "character": "misha.r",
-        "emotion": "none"
+        "emotion": "smiling"
       },
       "right1": {
         "character": "none",
@@ -341,7 +341,7 @@
       "character": "player",
       "left1": {
         "character": "rita",
-        "emotion": "none"
+        "emotion": "angry"
       },
       "left2": {
         "character": "none",
@@ -368,37 +368,10 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "none"
+        "emotion": "angry"
       },
       "left2": {
         "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "jumps": [
-      {
-        "nextPoint": "dialog2.18",
-        "description": ""
-      }
-      ]
-    },
-    {
-      "id": "dialog2.18",
-      "background": "rita_room_background",
-      "character": "player",
-      "left1": {
-        "character": "rita",
-        "emotion": "none"
-      },
-      "left2": {
-        "character": "",
         "emotion": "none"
       },
       "right1": {
@@ -412,7 +385,11 @@
       "jumps": [
       {
         "nextPoint": "dialog2.19",
-        "description": ""
+        "description": "dialog2.18"
+      },
+      {
+        "nextPoint": "dialog2.30",
+        "description": "dialog2.29"
       }
       ]
     },
@@ -422,34 +399,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "none"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "jumps": [
-      {
-        "nextPoint": "dialog2.20",
-        "description": ""
-      }
-      ]
-    },
-    {
-      "id": "dialog2.20",
-      "background": "rita_room_background",
-      "character": "player",
-      "left1": {
-        "character": "rita",
-        "emotion": "none"
+        "emotion": "angry"
       },
       "left2": {
         "character": "none",
@@ -466,7 +416,11 @@
       "jumps": [
       {
         "nextPoint": "dialog2.21",
-        "description": ""
+        "description": "dialog2.20"
+      },
+      {
+        "nextPoint": "dialog2.30",
+        "description": "dialog2.29"
       }
       ]
     },
@@ -477,7 +431,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "none"
+        "emotion": "angry"
       },
       "left2": {
         "character": "player",
@@ -493,36 +447,12 @@
       },
       "jumps": [
       {
-        "nextPoint": "dialog2.22",
-        "description": ""
-      }
-      ]
-    },
-
-    {
-      "id": "dialog2.22",
-      "background": "rita_room_background",
-      "character": "player",
-      "left1": {
-        "character": "rita",
-        "emotion": "none"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "jumps": [
-      {
         "nextPoint": "dialog2.23",
-        "description": ""
+        "description": "dialog2.22"
+      },
+      {
+        "nextPoint": "dialog2.30",
+        "description": "dialog2.29"
       }
       ]
     },
@@ -533,7 +463,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "none"
+        "emotion": "happy"
       },
       "left2": {
         "character": "none",

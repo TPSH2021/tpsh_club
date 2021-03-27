@@ -1,0 +1,119 @@
+{
+    "startPoint" : "dialog4.0",
+    "textPoints": [
+      {
+        "id": "dialog4.0",
+        "background": "auditorium_background",
+        "character": "klenin",
+        "left1": {
+          "character": "klenin",
+          "emotion": "happy"
+        },
+        "left2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right1": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "jumps": [
+          {
+            "nextPoint": "dialog4.1",
+            "description": ""
+          }
+  
+        ]
+      },
+      {
+        "id": "dialog4.1",
+        "background": "room_background",
+        "character": "klenin",
+        "left1": {
+          "character": "klenin",
+          "emotion": "happy"
+        },
+        "left2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right1": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "jumps": [
+          {
+            "nextPoint": "dialog4.2",
+            "description": ""
+          }
+  
+        ]
+      },
+      {
+        "id": "dialog4.2",
+        "background": "room_background",
+        "character": "player",
+        "left1": {
+          "character": "klenin",
+          "emotion": "happy"
+        },
+        "left2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right1": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "jumps": [
+          {
+            "nextPoint": "dialog4.3",
+            "description": ""
+          }
+  
+        ]
+      },
+      {
+        "id": "dialog4.3",
+        "background": "room_background",
+        "character": "klenin",
+        "left1": {
+          "character": "klenin",
+          "emotion": "happy"
+        },
+        "left2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right1": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "right2": {
+          "character": "none",
+          "emotion": "none"
+        },
+        "jumps": [
+          {
+            "nextPoint": "dialog5.0",
+            "description": ""
+          }
+  
+        ]
+      }
+
+
+    ]
+}
