@@ -4,33 +4,33 @@
 #include <map>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
+#include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
 namespace game {
 namespace assetsModule {
 class background {
  public:
-  background();
-  const sf::Sprite& getSprite();
+  background(const std::string& id, const std::string& filepath);
+  const sf::Texture& getTexture();
  private:
   std::string id;
-  sf::Sprite img;
+  sf::Texture img;
 };
 
 class character {
  public:
-  character();
-  const sf::Sprite& getEmotionById(std::string emotion);
+  character(const std::string& id, const std::map<std::string, sf::Texture>& emotions);
+  const sf::Texture& getEmotionById(std::string emotion);
   const std::vector<std::string>& getAllEmotions();
  private:
-  std::string name;
   std::string id;
-  std::map<std::string, sf::Sprite> emotions;
+  std::map<std::string, sf::Texture> emotions;
 };
 
 class assetsSystem {
  public:
-  assetsSystem();
+  assetsSystem(const std::string& filepath);
   const background& getBackground(std::string&);
   const character& getCharacter(std::string&);
 
