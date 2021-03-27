@@ -30,7 +30,7 @@ class replica {
 
   const std::string& getText();
   const std::string& getSpeaker();
-  const std::vector<std::string, std::string>& getJumps();
+  const std::vector<std::pair<std::string, std::string>>& getJumps();
 
  private:
   std::string id;
@@ -48,7 +48,7 @@ class dialog {
  public:
   dialog();
   replica& getReplica();
-  bool next();
+  bool next(const std::string&);
 
  private:
   std::map<std::string, replica> replicas;
@@ -60,7 +60,7 @@ class dialogSystem {
  public:
   dialogSystem();
   dialog& getDialog();
-  bool next();
+  bool next(const std::string&);
 
  private:
   std::map<std::string, dialog> dialogs;
