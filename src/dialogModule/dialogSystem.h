@@ -4,6 +4,7 @@
 #include "assetsSystem.h"
 #include <map>
 #include <string>
+#include <vector>
 
 
 namespace game {
