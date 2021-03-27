@@ -11,25 +11,26 @@ namespace game {
 
         class replica {
         public:
-            std::string getBackgroundId();
-            std::string getBackgroundId();
-
-            std::pair<std::string, std::string> getLeft1Character();
-            std::pair<std::string, std::string> getLeft2Character();
-            std::pair<std::string, std::string> getRight1Character();
-            std::pair<std::string, std::string> getRight2Character();
-
             void setBackgroundId(std::string id);
+            std::string getBackgroundId();
 
-            void setLeft1Character(std::pair<std::string, std::string> id);
-            void setLeft2Character(std::pair<std::string, std::string> id);
-            void setRight1Character(std::pair<std::string, std::string> id);
-            void setRight2Character(std::pair<std::string, std::string> id);
+			void setLeft1Character(std::pair<std::string, std::string> id);
+			std::pair<std::string, std::string> getLeft1Character();
+			void setLeft2Character(std::pair<std::string, std::string> id);
+			std::pair<std::string, std::string> getLeft2Character();
+			void setRight1Character(std::pair<std::string, std::string> id);
+			std::pair<std::string, std::string> getRight1Character();
+			void setRight2Character(std::pair<std::string, std::string> id);
+			std::pair<std::string, std::string> getRight2Character();
+
+            std::string getText();
+            std::string getSpeaker();
+            std::vector<std::string, std::string> getJumps();
         private:
             std::string id;
             std::string background_id;
-            std::pair<std::string, std::string> character_left2;
             std::pair<std::string, std::string> character_left1;
+            std::pair<std::string, std::string> character_left2;
             std::pair<std::string, std::string> character_right1;
             std::pair<std::string, std::string> character_right2;
             std::string speaker;
@@ -62,4 +63,3 @@ namespace game {
         };
     }
 }
-x
