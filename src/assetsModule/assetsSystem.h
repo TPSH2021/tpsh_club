@@ -31,8 +31,10 @@ namespace game {
 
 		class character {
 		public:
-			const std::weak_ptr<asset> getCharacterEmotion(std::string);
+			sf::Sprite getEmotionById(std::string emotion);
+			std::vector<std::string> getAllEmotions();
 		private:
+			std::string name;
 			std::string id;
 			std::map<std::string, asset> emotions;
 		};
