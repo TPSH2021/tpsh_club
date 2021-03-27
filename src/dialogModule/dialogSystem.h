@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include "assetsSystem.h"
+#include "assetsModule/assetsSystem.h"
 #include <map>
 #include <string>
 #include <vector>
