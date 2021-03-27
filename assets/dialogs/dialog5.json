@@ -1,0 +1,545 @@
+{
+  "startPoint": "dialog5.0",
+  "textPoints": [
+    {
+      "id": "dialog5.0",
+      "background": "workspace",
+      "character": "diana",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.1",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.1",
+      "background": "workspace",
+      "character": "ilya",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "ilya",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.2",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.2",
+      "background": "workspace",
+      "character": "diana",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "ilya",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.3",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.3",
+      "background": "workspace",
+      "character": "dasha",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "dasha",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.4",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.4",
+      "background": "workspace",
+      "character": "milena",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "milena",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.5",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.5",
+      "background": "workspace",
+      "character": "danil",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "danil",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.6",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.6",
+      "background": "workspace",
+      "character": "gelya",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "gelya",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.7",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.7",
+      "background": "workspace",
+      "character": "vlad",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.8",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.8",
+      "background": "workspace",
+      "character": "diana",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.9",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.9",
+      "background": "workspace",
+      "character": "vlad",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.10",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.10",
+      "background": "workspace",
+      "character": "none",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.11",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.11",
+      "background": "workspace",
+      "character": "none",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.12",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.12",
+      "background": "workspace",
+      "character": "none",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.13",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.13",
+      "background": "workspace",
+      "character": "ilya",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.14",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.14",
+      "background": "workspace",
+      "character": "vova",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.15",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.15",
+      "background": "workspace",
+      "character": "vova",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.16",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.16",
+      "background": "workspace",
+      "character": "vova",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.17",
+          "description": "dialog5.14"
+        }
+      ]
+    },
+    {
+      "id": "dialog5.17",
+      "background": "workspace",
+      "character": "diana",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.18",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog5.18",
+      "background": "workspace",
+      "character": "diana",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog5.20",
+          "description": "dialog5.19"
+        }
+      ]
+    },
+    {
+      "id": "dialog5.20",
+      "background": "workspace",
+      "character": "diana",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "ilya",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "vova",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "diana",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

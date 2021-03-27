@@ -4,22 +4,22 @@
     {
       "id": "dialog3.0",
       "background": "street_background",
-      "character": "Игорь Че",
+      "character": "igor",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
-        "emotion": "smiling_1"
+        "emotion": "none"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
+        "character": "igor",
+        "emotion": "neutral"
       },
       "jumps": [
         {
@@ -31,22 +31,22 @@
     {
       "id": "dialog3.1",
       "background": "street_background",
-      "character": "Рудник Павел",
+      "character": "rudnik",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "neutral"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
+        "character": "igor",
+        "emotion": "neutral"
       },
       "jumps": [
         {
@@ -66,22 +66,22 @@
     {
       "id": "dialog3.5",
       "background": "street_background",
-      "character": "Рудник Павел",
+      "character": "rudnik",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "smiling"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
+        "character": "igor",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -93,22 +93,22 @@
     {
       "id": "dialog3.6",
       "background": "street_background",
-      "character": "Рудник Павел",
+      "character": "rudnik",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "smiling"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
+        "character": "igor",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -120,22 +120,22 @@
     {
       "id": "dialog3.7",
       "background": "street_background",
-      "character": "Рудник Павел",
+      "character": "rudnik",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "smiling"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Игорь Че",
-        "emotion": "calm_1"
+        "character": "igor",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -147,22 +147,22 @@
     {
       "id": "dialog3.8",
       "background": "street_background",
-      "character": "Красников Максим",
+      "character": "maxim",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "smiling"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Красников Максим",
-        "emotion": "calm_1"
+        "character": "maxim",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -182,22 +182,22 @@
     {
       "id": "dialog3.12",
       "background": "street_background",
-      "character": "Красников Максим",
+      "character": "maxim",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "smiling"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Красников Максим",
-        "emotion": "calm_1"
+        "character": "maxim",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -209,22 +209,22 @@
     {
       "id": "dialog3.13",
       "background": "street_background",
-      "character": "Красников Максим",
+      "character": "maxim",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "Вольных Лиза",
-        "emotion": "smiling_1"
+        "character": "lisa",
+        "emotion": "smiling"
       },
       "right1": {
-        "character": "Рудник Павел",
-        "emotion": "neutral_1"
+        "character": "rudnik",
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Красников Максим",
-        "emotion": "calm_1"
+        "character": "maxim",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -236,22 +236,22 @@
     {
       "id": "dialog3.14",
       "background": "street_background",
-      "character": "Вольных Лиза",
+      "character": "lisa",
       "left1": {
-        "character": "Влад",
-        "emotion": "calm_1"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
-        "emotion": "smiling_1"
+        "emotion": "none"
       },
       "right1": {
         "character": "rudnik",
-        "emotion": "neutral_1"
+        "emotion": "neutral"
       },
       "right2": {
-        "character": "Вольных Лиза",
-        "emotion": "calm_1"
+        "character": "lisa",
+        "emotion": "calm"
       },
       "jumps": [
         {
@@ -265,6 +265,238 @@
         {
           "nextPoint": "dialog3.20",
           "description": "dialog3.17"
+        }
+      ]
+    },
+    {
+      "id": "dialog3.18",
+      "background": "street_background",
+      "character": "lisa",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "rudnik",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.21",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.19",
+      "background": "street_background",
+      "character": "lisa",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "rudnik",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.21",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.20",
+      "background": "street_background",
+      "character": "lisa",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "rudnik",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.21",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.21",
+      "background": "street_background",
+      "character": "igor",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "igor",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.22",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.22",
+      "background": "street_background",
+      "character": "igor",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "igor",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.26",
+          "description": "dialog3.23"
+        },
+        {
+          "nextPoint": "dialog3.26",
+          "description": "dialog3.24"
+        },
+        {
+          "nextPoint": "dialog3.26",
+          "description": "dialog3.25"
+        }
+      ]
+    },
+    {
+      "id": "dialog3.26",
+      "background": "street_background",
+      "character": "igor",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "igor",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.30",
+          "description": "dialog3.27"
+        },
+        {
+          "nextPoint": "dialog3.30",
+          "description": "dialog3.28"
+        },
+        {
+          "nextPoint": "dialog3.30",
+          "description": "dialog3.29"
+        }
+      ]
+    },
+    {
+      "id": "dialog3.30",
+      "background": "street_background",
+      "character": "igor",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "igor",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.32",
+          "description": "dialog3.31"
+        }
+      ]
+    },
+    {
+      "id": "dialog3.30",
+      "background": "street_background",
+      "character": "igor",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "igor",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "lisa",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "",
+          "description": ""
         }
       ]
     }
