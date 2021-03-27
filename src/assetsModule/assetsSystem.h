@@ -4,6 +4,8 @@
 #include <map>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
+#include <SFML/Graphics/Sprite.hpp>
+
 namespace game {
 	namespace assetsModule {
 
@@ -16,12 +18,14 @@ namespace game {
 			sf::Image img;
 		};
 
+
 		class background {
 		public:
-			const std::weak_ptr<asset> getBackground();
+			sf::Sprite getSprite();
+			
 		private:
 			std::string id;
-            asset background;
+			sf::Sprite img;
 		};
 
 
@@ -32,10 +36,6 @@ namespace game {
 			std::string id;
 			std::map<std::string, asset> emotions;
 		};
-	
-
-
-		
 
 
 		class assetsSystem {
