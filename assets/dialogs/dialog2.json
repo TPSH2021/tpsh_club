@@ -1,0 +1,77 @@
+{
+  "startPoint" : "dialog2.0",
+  "textPoints": [
+    {
+      "id": "dialog2.0",
+      "background": "room_background",
+      "character": "player",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog2.1",
+          "description": ""
+        }
+
+      ]
+    },
+    {
+      "id": "dialog2.1",
+      "background": "room_background",
+      "character": "player",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog2.5.",
+          "description": "dialog2.2"
+        },
+        {
+          "nextPoint": "dialog2.",
+          "description": "dialog2.3"
+        },
+        {
+          "nextPoint": "dialog2.",
+          "description": "dialog2.4"
+        }
+
+      ]
+    },
+    {
+      "id": "dialog2.5",
+      "background": "room_background",
+      "character": "player"
+    }
+
+  ]
+
+}
+   
