@@ -1,4 +1,5 @@
 #pragma once
+
 #include <memory>
 #include <string>
 #include <map>
@@ -8,35 +9,35 @@
 #include <SFML/Graphics/Sprite.hpp>
 
 namespace game {
-namespace assetsModule {
-class background {
- public:
-  background(const std::string& id, const std::string& filepath);
-  const sf::Texture& getTexture();
- private:
-  std::string id;
-  sf::Texture img;
-};
+	namespace assetsModule {
+		class background {
+		public:
+			background(const std::string& id, const std::string& filepath);
+			const sf::Texture& getTexture();
+		private:
+			std::string id;
+			sf::Texture img;
+		};
 
-class character {
- public:
-  character(const std::string& id, const std::map<std::string, sf::Texture>& emotions);
-  const sf::Texture& getEmotionById(std::string emotion);
-  const std::vector<std::string>& getAllEmotions();
- private:
-  std::string id;
-  std::map<std::string, sf::Texture> emotions;
-};
+		class character {
+		public:
+			character(const std::string& id, const std::map<std::string, sf::Texture>& emotions);
+			const sf::Texture& getEmotionById(std::string emotion);
+			const std::vector<std::string>& getAllEmotions();
+		private:
+			std::string id;
+			std::map<std::string, sf::Texture> emotions;
+		};
 
-class assetsSystem {
- public:
-  assetsSystem(const std::string& filepath);
-  const background& getBackground(std::string&);
-  const character& getCharacter(std::string&);
+		class assetsSystem {
+		public:
+			assetsSystem(const std::string& filepath);
+			const background& getBackground(std::string&);
+			const character& getCharacter(std::string&);
 
- private:
-  std::map<std::string, background> backgrounds;
-  std::map<std::string, character> characters;
-};
-}  // namespace assetsModule
+		private:
+			std::map<std::string, background> backgrounds;
+			std::map<std::string, character> characters;
+		};
+	}  // namespace assetsModule
 }  // namespace game
