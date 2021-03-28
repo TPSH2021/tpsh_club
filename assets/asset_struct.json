@@ -1,0 +1,157 @@
+{
+  "character_data": [
+    {
+      "id": "vlad",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "misha.b",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "pasha.b",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "rita",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "rudnik",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "igor",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "milena",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "gelya",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "ilya",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "danil",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "dasha",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "klenin",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "lisa",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "diana",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "vova",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    },
+    {
+      "id": "maxim",
+      "happy_emotion": "file",
+      "sad_emotion": "file",
+      "angry_emotion": "file",
+      "calm_emotion": "file",
+      "smiling_emotion": "file",
+      "neutral_emotion": "file"
+    }
+  ],
+  "bg_data": [
+    {
+      "id_bg": "file of background",
+      "filename": "file",
+      "name": "bg name"
+    }
+  ]
+}
+
+
