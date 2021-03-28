@@ -20,6 +20,12 @@
     <Filter Include="assetsSystem">
       <UniqueIdentifier>{8cc7b183-27f4-41d8-b59d-3cce652cea55}</UniqueIdentifier>
     </Filter>
+    <Filter Include="guiModule">
+      <UniqueIdentifier>{e77bb3a6-0514-4586-80f2-35bb507ec87b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="menuModule">
+      <UniqueIdentifier>{41375577-0b62-44fd-bf8b-15e66b22bd23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\dialogModule\dialogSystem.cpp">
@@ -52,6 +58,12 @@
     <ClCompile Include="src\assetsModule\assetsSystem.cpp">
       <Filter>assetsSystem</Filter>
     </ClCompile>
+    <ClCompile Include="src\guiModule\gui.cpp">
+      <Filter>guiModule</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menuModule\menu.cpp">
+      <Filter>menuModule</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dialogModule\dialogSystem.h">
@@ -62,6 +74,12 @@
     </ClInclude>
     <ClInclude Include="src\assetsModule\assetsSystem.h">
       <Filter>assetsSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\guiModule\gui.h">
+      <Filter>guiModule</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menuModule\menu.h">
+      <Filter>menuModule</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
