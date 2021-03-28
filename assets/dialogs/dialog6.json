@@ -1,0 +1,87 @@
+{
+  "startPoint": "dialog6.0",
+  "textPoints": [
+    {
+      "id": "dialog6.0",
+      "background": "bedroom_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog6.1",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog6.1",
+      "background": "bedroom_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog6.2",
+          "description": ""
+        }
+      ]
+    },
+
+    {
+      "id": "dialog6.2",
+      "background": "bedroom_background",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "neutral"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@ namespace game {
 	namespace assetsModule {
 		class background {
 		public:
-			background(const std::string& id, const std::string& filepath);
+			background(const int& ids, const std::string& filepath);
 			const sf::Texture& getTexture();
 		private:
 			std::string id;
@@ -21,7 +21,7 @@ namespace game {
 
 		class character {
 		public:
-			character(const std::string& id, const std::map<std::string, sf::Texture>& emotions);
+			character(const int& ids, const std::string& emotions);
 			const sf::Texture& getEmotionById(std::string emotion);
 			const std::vector<std::string>& getAllEmotions();
 		private:
@@ -34,10 +34,12 @@ namespace game {
 			assetsSystem(const std::string& filepath);
 			const background& getBackground(std::string&);
 			const character& getCharacter(std::string&);
+			const std::wstring& getText(std::string&);
 
 		private:
 			std::map<std::string, background> backgrounds;
 			std::map<std::string, character> characters;
+			std::map<std::string, std::wstring> texts;
 		};
 	}  // namespace assetsModule
 }  // namespace game

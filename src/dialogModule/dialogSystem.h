@@ -12,7 +12,7 @@ namespace game {
 
 		class replica {
 		public:
-			replica();
+			replica(const int& id, const std::string& filepath);
 			void setBackgroundId(const std::string& id);
 			const std::string& getBackgroundId() const;
 
@@ -46,7 +46,7 @@ namespace game {
 
 		class dialog {
 		public:
-			dialog();
+			dialog(const std::string& id, const std::string& filepath);
 			replica& getReplica();
 			bool next(const std::string&);
 
@@ -58,7 +58,7 @@ namespace game {
 
 		class dialogSystem {
 		public:
-			dialogSystem();
+			dialogSystem(const std::string& filepath);
 			dialog& getDialog();
 			bool next(const std::string&);
 
