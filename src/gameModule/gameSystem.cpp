@@ -23,6 +23,3 @@ gameLogic::~gameLogic() {}
 void gameLogic::handleInput() {}
 
 
-void gameLogic::update() {
-	m_window->update();  // Update window events.
-}

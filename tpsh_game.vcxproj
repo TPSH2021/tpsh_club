@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\assetsModule\assetsSystem.h" />
+    <ClInclude Include="src\consts.h" />
     <ClInclude Include="src\dialogModule\dialogSystem.h" />
     <ClInclude Include="src\gameModule\gameSystem.h" />
     <ClInclude Include="src\guiModule\gui.h" />

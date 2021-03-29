@@ -81,5 +81,8 @@
     <ClInclude Include="src\menuModule\menu.h">
       <Filter>menuModule</Filter>
     </ClInclude>
+    <ClInclude Include="src\consts.h">
+      <Filter>mainModule</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
