@@ -8,18 +8,12 @@ using namespace game::gameModule;
 
 
 
-void gameLogic::render() {
-	m_window->beginDraw();  // Clear.
-	//m_window.Draw(m_mushroom);
-	m_window->endDraw();  // Display.
-}
-
-gameLogic::gameLogic() {
+gameLogic::gameLogic() :
+d_system("assets/dialogs/dialog_struct.json"),
+a_system("assets/asset_struct.json")
+{
 	// Setting up class members.
 }
 
-gameLogic::~gameLogic() {}
-
-void gameLogic::handleInput() {}
 
 

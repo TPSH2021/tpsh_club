@@ -5,21 +5,20 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
 #include "guiModule/gui.h"
+#include "dialogModule/dialogSystem.h"
+#include "assetsModule/assetsSystem.h"
 
 namespace game {
+	using namespace dialogModule;
+	using namespace assetsModule;
 	namespace gameModule {
-		
-
 		class gameLogic {
 		public:
 			gameLogic();
-			~gameLogic();
-			void handleInput();
-			void update();
-			void render();
-
+			void run(GUI::window* window);
 		private:
-			std::shared_ptr<GUI::window> m_window;
+			dialogSystem d_system;
+			assetsSystem a_system;
 		};
 	}  // namespace gameModule
 }  // namespace game
