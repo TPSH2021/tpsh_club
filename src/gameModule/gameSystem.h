@@ -19,6 +19,10 @@ namespace game {
 			gameLogic(const sf::Font& font);
 			states run(GUI::window* window);
 		private:
+			bool flag;
+			bool loadScene;
+			void handleKeyboard(const sf::Event& event);
+			void createNewScene();
 			void drawUI(GUI::window* window);
 			float d_scale;
 			sf::Vector2f d_pos;
@@ -26,6 +30,12 @@ namespace game {
 			GUI::button red_button;
 			GUI::button menu_button;
 			GUI::button exit;
+			sf::Texture char_left_2;
+			sf::Texture char_left_1;
+			sf::Texture char_right_1;
+			sf::Texture char_right_2;
+			GUI::label speaker;
+			GUI::label d_text;
 			//dialogSystem d_system;
 			//assetsSystem a_system;
 		};
