@@ -4,24 +4,29 @@
 #include <iostream>
 #include <SFML/System/String.hpp>
 #include <SFML/System/String.hpp>
-
+#include <SFML/Graphics/Font.hpp>
 using namespace GUI;
 
 
 //---------------------------------------------------------------label
-const sf::Text& label::getDrawable() const {
-	return mText;
+
+label::label(const sf::Font& font, const sf::Vector2f& pos, int size) {
+	mText = sf::Text(L"", font, size);
+	mText.setPosition(pos);
+	mText.setFillColor(sf::Color::Black);
 }
 
-void label::setText(const std::string& text) {
-	mText.setString(sf::String::fromUtf8(text.begin(), text.end()));
-	
+void label::setText(const std::wstring& text) {
+	mText.setString(text);
+}
+
+void label::draw(window& window) {
+	window.getRenderWindow().draw(mText);
 }
 
 //---------------------------------------------------------------button
-button::button(const std::string &text, const sf::Vector2u& size, const sf::Vector2u& pos) {
-
-}
+//button::button(const std::string &text, const sf::Vector2u& size, const sf::Vector2u& pos) {
+//}
 
 void button::select() {
 	mIsSelected = true;
@@ -87,17 +92,9 @@ void window::toggleFullscreen() {
 	create();
 }
 
-void window::draw(const label& obj) {
-	m_window.draw(obj.getDrawable());
-}
-
-void window::draw(const button& obj) {
-	m_window.draw(obj.getDrawable().first);
-	m_window.draw(obj.getDrawable().second);
-}
 
 void window::beginDraw() {
-	m_window.clear(sf::Color::Black);
+	m_window.clear(sf::Color::White);
 }
 
 void window::endDraw() {
@@ -114,4 +111,8 @@ bool window::isFullscreen() {
 
 sf::Vector2u window::getWindowSize() {
 	return m_windowSize;
+}
+
+sf::RenderWindow& window::getRenderWindow() {
+	return m_window;
 }
