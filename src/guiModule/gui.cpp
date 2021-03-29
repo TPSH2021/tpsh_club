@@ -29,7 +29,9 @@ void label::draw(window* window) {
 }
 
 //---------------------------------------------------------------button
-button::button(const std::string &sprite_path,
+button::button(const std::string & common_tx,
+	const std::string& triggered_tx,
+	const std::string& clicked_tx,
 	float scale_u,
 	const sf::Vector2f& pos_u,
 	uint8_t id_u) {
@@ -39,8 +41,10 @@ button::button(const std::string &sprite_path,
 	isActive = false;
 	isSelected = false;
 	pos = pos_u;
-	texture = sf::Texture();
-	texture.loadFromFile(sprite_path);
+	//common = sf::Texture();
+	common.loadFromFile(common_tx);
+	triggered.loadFromFile(triggered_tx);
+	clicked.loadFromFile(clicked_tx);
 	id = id_u;
 }
 
@@ -57,22 +61,53 @@ void button::draw(window& window) {
 	auto sprite = sf::Sprite();
 	sprite.setPosition(pos);
 	sprite.setScale({ scale, scale });
-	sprite.setTexture(texture);
+	switch (state)
+	{
+	case GUI::button::Type::Normal:
+		sprite.setTexture(common);
+		break;
+	case GUI::button::Type::Selected:
+		sprite.setTexture(triggered);
+		break;
+	case GUI::button::Type::Triggered:
+		sprite.setTexture(clicked);
+		break;
+	case GUI::button::Type::Pressed:
+		sprite.setTexture(clicked);
+		break;
+	}
 	window.getRenderWindow().draw(sprite);
 }
 void button::draw(window* window) {
 	auto sprite = sf::Sprite();
 	sprite.setPosition(pos);
 	sprite.setScale({ scale, scale });
-	sprite.setTexture(texture);
+	switch (state)
+	{
+	case GUI::button::Type::Normal:
+		sprite.setTexture(common);
+		break;
+	case GUI::button::Type::Selected:
+		sprite.setTexture(triggered);
+		break;
+	case GUI::button::Type::Triggered:
+		sprite.setTexture(clicked);
+		break;
+	case GUI::button::Type::Pressed:
+		sprite.setTexture(clicked);
+		break;
+	}
 	window->getRenderWindow().draw(sprite);
 }
 
 void button::update(const sf::Event& event) {
 	if (event.type == sf::Event::EventType::MouseMoved) {
 		auto m_pos = event.mouseMove;
-		bool x_collide = ((pos.x * g_scale.x) <= m_pos.x && m_pos.x <= (pos.x + texture.getSize().x * scale) * g_scale.x);
-		bool y_collide = ((pos.y * g_scale.y) <= m_pos.y && m_pos.y <= (pos.y + texture.getSize().y * scale) * g_scale.y);
+		bool x_collide;
+		bool y_collide;
+
+		x_collide = ((pos.x * g_scale.x) <= m_pos.x && m_pos.x <= (pos.x + common.getSize().x * scale) * g_scale.x);
+		y_collide = ((pos.y * g_scale.y) <= m_pos.y && m_pos.y <= (pos.y + common.getSize().y * scale) * g_scale.y);
 		if (x_collide && y_collide)
 			select();
 		else

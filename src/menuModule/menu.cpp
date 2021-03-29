@@ -7,8 +7,14 @@ using namespace game;
 using namespace menuModule;
 
 menu::menu(const sf::Font& font) :
-play("assets/images/UI/play.png", 1, { 100, 100 }, 1),
-exit("assets/images/UI/exit.png", 1, { 100, 300 }, 2),
+play("assets/images/UI/play_c.png",
+	"assets/images/UI/play_t.png",
+	"assets/images/UI/play_a.png",
+	0.2, { 100, 100 }, 1),
+exit("assets/images/UI/exit_c.png",
+	"assets/images/UI/exit_t.png", 
+	"assets/images/UI/exit_a.png", 
+	0.2, { 100, 300 }, 2),
 bg("assets/images/UI/bg.png"),
 title(font, { 0, 0 }, 32)
 {}

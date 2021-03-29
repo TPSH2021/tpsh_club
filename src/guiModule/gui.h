@@ -56,7 +56,9 @@ namespace GUI {
 			Pressed
 		};
 
-		button(const std::string& sprite_path,
+		button(const std::string&,
+			const std::string&,
+			const std::string&,
 			float scale,
 			const sf::Vector2f& pos,
 			uint8_t id_u);
@@ -65,10 +67,7 @@ namespace GUI {
 		void update(const sf::Event& event);
 		void draw(window& window);
 		void draw(window* window);
-		void setId(uint8_t);
-		uint8_t getId() const;
 	private:
-		void changeTexture();
 		void select();
 		void deselect();
 		void activate();
@@ -79,7 +78,9 @@ namespace GUI {
 		float scale;
 		sf::Vector2f g_scale;
 		sf::Vector2f pos;
-		sf::Texture texture;
+		sf::Texture common;
+		sf::Texture triggered;
+		sf::Texture clicked;
 
 		bool isSelected;
 		bool isActive;
