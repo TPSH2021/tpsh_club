@@ -40,3 +40,30 @@ assetsSystem::assetsSystem(const std::string& filepath) {
 	for (auto& el : locale.items())
 		texts.insert(std::make_pair(el.key(), std::wstring(L"" + el.value())));
 }
+
+
+
+const sf::Texture& character::getEmotionById(std::string id) {
+	return emotions.at(id);
+}
+const std::vector<std::string>& character::getAllEmotions() {
+	std::vector<std::string> res;
+	for (const auto& c : emotions)
+		res.push_back(c.first);
+	return res;
+}
+
+
+const background& assetsSystem::getBackground(std::string& id) {
+	return backgrounds.at(id);
+}
+const character& assetsSystem::getCharacter(std::string& id) {
+	return characters.at(id);
+}
+const std::wstring& assetsSystem::getText(std::string& id) {
+	return texts.at(id);
+}
+
+const sf::Texture& background::getTexture() {
+	return img;
+}

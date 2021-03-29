@@ -22,7 +22,7 @@ namespace game {
 		class character {
 		public:
 			character(const int& ids, const std::string& emotions);
-			const sf::Texture& getEmotionById(std::string emotion);
+			const sf::Texture& getEmotionById(std::string id);
 			const std::vector<std::string>& getAllEmotions();
 		private:
 			std::string id;
