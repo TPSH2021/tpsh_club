@@ -8,6 +8,8 @@ namespace game {
 	const enum class states {
 		menu,
 		game,
+		exit,
 		redactor
 	};
+	
 }

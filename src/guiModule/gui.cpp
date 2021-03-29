@@ -24,6 +24,9 @@ void label::setText(const std::wstring& text) {
 void label::draw(window& window) {
 	window.getRenderWindow().draw(mText);
 }
+void label::draw(window* window) {
+	window->getRenderWindow().draw(mText);
+}
 
 //---------------------------------------------------------------button
 button::button(const std::string &sprite_path,
@@ -32,6 +35,9 @@ button::button(const std::string &sprite_path,
 	uint8_t id_u) {
 	g_scale = { 1, 1 };
 	scale = scale_u;
+	state = Type::Normal;
+	isActive = false;
+	isSelected = false;
 	pos = pos_u;
 	texture = sf::Texture();
 	texture.loadFromFile(sprite_path);
@@ -41,7 +47,7 @@ button::button(const std::string &sprite_path,
 bool GUI::button::isClicked()
 {
 	if (state == Type::Pressed) {
-		state = Type::Normal;
+		deactivate();
 		return true;
 	} 
 	return false;
@@ -53,6 +59,13 @@ void button::draw(window& window) {
 	sprite.setScale({ scale, scale });
 	sprite.setTexture(texture);
 	window.getRenderWindow().draw(sprite);
+}
+void button::draw(window* window) {
+	auto sprite = sf::Sprite();
+	sprite.setPosition(pos);
+	sprite.setScale({ scale, scale });
+	sprite.setTexture(texture);
+	window->getRenderWindow().draw(sprite);
 }
 
 void button::update(const sf::Event& event) {
@@ -71,22 +84,24 @@ void button::update(const sf::Event& event) {
 	}
 	else if (event.type == sf::Event::MouseButtonPressed && isSelected && !flag) {
 		flag = true;
-		state = Type::Pressed;
+		state = Type::Triggered;
 	}
 	else if (event.type == sf::Event::MouseButtonReleased && isSelected) {
 		flag = false;
-		state = Type::Selected;
+		activate();
 	}
 }
 
 void button::select() {
 	isSelected = true;
-	state = Type::Selected;
+	if (state != Type::Pressed)
+		state = Type::Selected;
 }
 
 void button::deselect() {
 	isSelected = false;
-	state = Type::Normal;
+	if (state != Type::Pressed)
+		state = Type::Normal;
 }
 
 void button::activate() {
@@ -175,3 +190,35 @@ sf::RenderWindow& window::getRenderWindow() {
 }
 
 
+mBackground::mBackground(const std::string& path) {
+	texture = sf::Texture();
+	pos = { 0, 0 };
+	texture.loadFromFile(path);
+	scale = winC::size.x / texture.getSize().x;
+	std::cout << scale << std::endl;
+	g_scale = { 1, 1 };
+}
+
+void mBackground::update(const sf::Event& event) {
+	if (event.type == sf::Event::Resized) {
+		g_scale.x = event.size.width / winC::size.x;
+		g_scale.y = event.size.height / winC::size.y;
+	}
+}
+
+
+void mBackground::draw(window& window) {
+	auto sprite = sf::Sprite();
+	sprite.setPosition(pos);
+	sprite.setScale({ scale, scale });
+	sprite.setTexture(texture);
+	window.getRenderWindow().draw(sprite);
+}
+
+void mBackground::draw(window* window) {
+	auto sprite = sf::Sprite();
+	sprite.setPosition(pos);
+	sprite.setScale({ scale, scale });
+	sprite.setTexture(texture);
+	window->getRenderWindow().draw(sprite);
+}

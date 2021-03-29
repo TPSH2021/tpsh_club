@@ -1,39 +1,46 @@
 #include "gameModule/gameSystem.h"
 #include "guiModule/gui.h"
 #include <iostream>
+#include <memory>
 #include <SFML/Window/Event.hpp>
 #include "consts.h"
+#include "menuModule/menu.h"
 using namespace game;
 using namespace gameModule;
 using namespace GUI;
+using namespace menuModule;
 
 
+sf::Font stdFont;
 
 
 int main() {
 	// Program entry point.   
 	window window("game", sf::Vector2u(1280, 720));
-	sf::Font stdFont;
 	stdFont.loadFromFile("assets/ConsolasBold.ttf");
+	states state = states::menu;
 	label label(stdFont, {100, 100}, 32);
+	mBackground bg("assets/images/UI/bg.png");
 	button button("assets/images/UI/play.png",
 		0.8,
 		{100, 400},
 		1);
 	auto img = sf::Image();
 	label.setText(L"лемч");
-	while (!window.isDone()) {
-		// State loop. 
-		window.beginDraw();
-		sf::Event event;
-		//std::cout << window.getRenderWindow().getSize().x << std::endl;
-		while (window.getRenderWindow().pollEvent(event)) {
-			window.update(event);
-			button.update(event);
+	while (state != states::exit) {
+		switch (state)
+		{
+		case game::states::menu:
+		{
+			menu menu_g(stdFont);
+			state = menu_g.run(&window);
 		}
-		label.draw(window);
-		button.draw(window);
-		window.endDraw();
+			break;
+		case game::states::game:
+			break;
+		case game::states::redactor:
+			break;
+		}
 	}
 
 

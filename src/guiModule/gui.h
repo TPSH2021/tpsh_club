@@ -24,9 +24,9 @@ namespace GUI {
 		bool isFullscreen();
 		void update(const sf::Event& event);
 		void toggleFullscreen();
+		void destroy();
 	private:
 		void setup(const std::string& l_title, const sf::Vector2u& l_size);
-		void destroy();
 		void create();
 		sf::RenderWindow m_window;
 		sf::Vector2u m_windowSize;
@@ -41,6 +41,7 @@ namespace GUI {
 		void setText(const std::wstring& text);
 		void update(const sf::Event& event);
 		void draw(window& window);
+		void draw(window* window);
 	private:
 		sf::Text mText;
 	};
@@ -51,6 +52,7 @@ namespace GUI {
 		{
 			Normal,
 			Selected,
+			Triggered,
 			Pressed
 		};
 
@@ -62,6 +64,7 @@ namespace GUI {
 		bool isClicked();
 		void update(const sf::Event& event);
 		void draw(window& window);
+		void draw(window* window);
 		void setId(uint8_t);
 		uint8_t getId() const;
 	private:
@@ -90,7 +93,7 @@ namespace GUI {
 		mBackground(const std::string& path);
 		void update(const sf::Event& event);
 		void draw(window& window);
-
+		void draw(window* window);
 	private:
 		sf::Vector2f g_scale;
 		sf::Vector2f pos;
