@@ -249,8 +249,39 @@
       },
       "jumps": [
       {
-        "nextPoint": "dialog2.13",
+        "nextPoint": "dialog2.12.1",
         "description": ""
+      }
+      ]
+    },
+    {
+      "id": "dialog2.12.1",
+      "background": "baderiks_room_background",
+      "character": "pasha.b",
+      "left1": {
+        "character": "pasha.b",
+        "emotion": "smiling"
+      },
+      "left2": {
+        "character": "misha.b",
+        "emotion": "smiling"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "dialog2.13",
+        "description": "dialog2.18"
+      },
+      {
+        "nextPoint": "dialog2.13",
+        "description": "dialog2.29"
       }
       ]
     },
