@@ -6,7 +6,7 @@
 
 using namespace game::assetsModule;
 
-background::background(const int& ids, const std::string& filepath) : id(id) {
+background::background(const int& ids, const std::string& filepath) {
 	std::ifstream jsonstream(filepath);
 	nlohmann::json structfile;
 	jsonstream >> structfile;
@@ -29,11 +29,14 @@ character::character(const int& ids, const std::string& filepath) {
 }
 
 assetsSystem::assetsSystem(const std::string& filepath) {
-	std::fstream jsonstream(filepath);
-	nlohmann::json structfile;
+	std::fstream jsonstream(filepath), localestream("assets\\texts\\Locale.json");
+	nlohmann::json structfile, locale;
 	jsonstream >> structfile;
+	localestream >> locale;
 	for (int i = 0; i < structfile["bg_data"].size(); i++)
 		backgrounds.insert(std::make_pair(structfile["bg_data"][i]["id"], background(i, filepath)));
 	for (int i = 0; i < structfile["characters_data"].size(); i++)
 		characters.insert(std::make_pair(structfile["characters_data"][i]["id"], character(structfile["characters_data"][i]["id"], filepath)));
+	for (auto& el : locale.items())
+		texts.insert(std::make_pair(el.key(), std::wstring(L"" + el.value())));
 }
