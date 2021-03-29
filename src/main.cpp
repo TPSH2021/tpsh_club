@@ -29,7 +29,10 @@ int main() {
 		}
 			break;
 		case game::states::game:
-			break;
+		{
+			gameLogic game_g(stdFont);
+			state = game_g.run(&window);
+		}
 		case game::states::redactor:
 			break;
 		}

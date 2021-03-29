@@ -7,6 +7,8 @@
 #include "guiModule/gui.h"
 #include "dialogModule/dialogSystem.h"
 #include "assetsModule/assetsSystem.h"
+#include "guiModule/gui.h"
+#include "consts.h"
 
 namespace game {
 	using namespace dialogModule;
@@ -14,11 +16,18 @@ namespace game {
 	namespace gameModule {
 		class gameLogic {
 		public:
-			gameLogic();
-			void run(GUI::window* window);
+			gameLogic(const sf::Font& font);
+			states run(GUI::window* window);
 		private:
-			dialogSystem d_system;
-			assetsSystem a_system;
+			void drawUI(GUI::window* window);
+			float d_scale;
+			sf::Vector2f d_pos;
+			sf::Texture dialogUI;
+			GUI::button red_button;
+			GUI::button menu_button;
+			GUI::button exit;
+			//dialogSystem d_system;
+			//assetsSystem a_system;
 		};
 	}  // namespace gameModule
 }  // namespace game

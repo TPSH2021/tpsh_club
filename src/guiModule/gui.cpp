@@ -146,7 +146,7 @@ void button::activate() {
 
 void button::deactivate() {
 	isActive = false;
-	state = Type::Normal;
+	state = Type::Selected;
 }
 //---------------------------------------------------------------window
 window::window() {
