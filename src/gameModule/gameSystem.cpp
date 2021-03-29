@@ -68,16 +68,42 @@ game::states gameLogic::run(GUI::window* window) {
 
 void gameLogic::drawUI(GUI::window* window) {
 	window->beginDraw();
+
+	auto char_l_2_sprite = sf::Sprite();
+	auto char_l_1_sprite = sf::Sprite();
+	auto char_r_1_sprite = sf::Sprite();
+	auto char_r_2_sprite = sf::Sprite();
+	char_l_2_sprite.setTexture(char_left_2);
+	char_l_1_sprite.setTexture(char_left_1);
+	char_r_1_sprite.setTexture(char_right_1);
+	char_r_2_sprite.setTexture(char_right_2);
+	float sc = 0.7;
+	char_l_2_sprite.setScale({ sc, sc });
+	char_l_1_sprite.setScale({ sc, sc });
+	char_r_1_sprite.setScale({ sc, sc });
+	char_r_2_sprite.setScale({ sc, sc });
+	float k = winC::size.x / 4;
+	char_l_2_sprite.move({20, winC::size.y - char_left_2.getSize().y * sc});
+	char_l_1_sprite.move({20 + k, winC::size.y - char_left_1.getSize().y * sc });
+	char_r_1_sprite.move({ winC::size.x - 20 - k - char_right_2.getSize().x * sc, winC::size.y - char_right_1.getSize().y * sc});
+	char_r_2_sprite.move({ winC::size.x - 20 - char_right_2.getSize().x * sc, winC::size.y - char_right_2.getSize().y * sc});
+	window->getRenderWindow().draw(char_l_2_sprite);
+	window->getRenderWindow().draw(char_l_1_sprite);
+	window->getRenderWindow().draw(char_r_1_sprite);
+	window->getRenderWindow().draw(char_r_2_sprite);
+
 	red_button.draw(window);
 	menu_button.draw(window);
 	exit.draw(window);
-	auto sprite = sf::Sprite();
-	sprite.setPosition(d_pos);
-	sprite.setScale({ d_scale, d_scale });
-	sprite.setTexture(dialogUI);
-	window->getRenderWindow().draw(sprite);
+	auto d_sprite = sf::Sprite();
+	d_sprite.setPosition(d_pos);
+	d_sprite.setScale({ d_scale, d_scale });
+	d_sprite.setTexture(dialogUI);
+	window->getRenderWindow().draw(d_sprite);
+
 	speaker.draw(window);
 	d_text.draw(window);
+
 	window->endDraw();
 }
 
