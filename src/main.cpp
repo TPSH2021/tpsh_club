@@ -19,14 +19,6 @@ int main() {
 	window window("game", sf::Vector2u(1280, 720));
 	stdFont.loadFromFile("assets/ConsolasBold.ttf");
 	states state = states::menu;
-	label label(stdFont, {100, 100}, 32);
-	mBackground bg("assets/images/UI/bg.png");
-	button button("assets/images/UI/play.png",
-		0.8,
-		{100, 400},
-		1);
-	auto img = sf::Image();
-	label.setText(L"лемч");
 	while (state != states::exit) {
 		switch (state)
 		{
@@ -42,6 +34,6 @@ int main() {
 			break;
 		}
 	}
-
-
+	window.doDone(true);
+	window.destroy();
 }

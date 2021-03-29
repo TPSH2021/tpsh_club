@@ -31,10 +31,8 @@ states menu::run(GUI::window* window) {
 		exit.draw(window);
 		if (play.isClicked())
 			return states::game;
-		else if (exit.isClicked())
+		else if (exit.isClicked() || window->isDone())
 			return states::exit;
 		window->endDraw();
 	}
-	window->doDone(true);
-	window->destroy();
 }
