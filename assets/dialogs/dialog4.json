@@ -63,7 +63,7 @@
         "character": "player",
         "left1": {
           "character": "klenin",
-          "emotion": "happy"
+          "emotion": "smiling"
         },
         "left2": {
           "character": "none",
@@ -91,7 +91,7 @@
         "character": "klenin",
         "left1": {
           "character": "klenin",
-          "emotion": "happy"
+          "emotion": "smiling"
         },
         "left2": {
           "character": "none",
