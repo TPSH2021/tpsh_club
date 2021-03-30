@@ -104,7 +104,7 @@
       "happy_emotion": "file",
       "sad_emotion": "file",
       "angry_emotion": "file",
-      "calm_emotion": "file",
+      "calm_emotion": "assets\images\characters\klenin\calm.png",
       "smiling_emotion": "file",
       "neutral_emotion": "file"
     },
