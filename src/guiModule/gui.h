@@ -99,7 +99,7 @@ namespace GUI {
 		sf::Vector2f g_scale;
 		sf::Vector2f pos;
 		sf::Texture texture;
-		float scale;
+		sf::Vector2f scale;
 	};
 
 }

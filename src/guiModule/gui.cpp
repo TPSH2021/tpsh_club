@@ -229,8 +229,8 @@ mBackground::mBackground(const std::string& path) {
 	texture = sf::Texture();
 	pos = { 0, 0 };
 	texture.loadFromFile(path);
-	scale = winC::size.x / texture.getSize().x;
-	std::cout << scale << std::endl;
+	scale.x = winC::size.x / texture.getSize().x;
+	scale.y = winC::size.y / texture.getSize().y;
 	g_scale = { 1, 1 };
 }
 
@@ -245,7 +245,7 @@ void mBackground::update(const sf::Event& event) {
 void mBackground::draw(window& window) {
 	auto sprite = sf::Sprite();
 	sprite.setPosition(pos);
-	sprite.setScale({ scale, scale });
+	sprite.setScale(scale);
 	sprite.setTexture(texture);
 	window.getRenderWindow().draw(sprite);
 }
@@ -253,7 +253,7 @@ void mBackground::draw(window& window) {
 void mBackground::draw(window* window) {
 	auto sprite = sf::Sprite();
 	sprite.setPosition(pos);
-	sprite.setScale({ scale, scale });
+	sprite.setScale(scale);
 	sprite.setTexture(texture);
 	window->getRenderWindow().draw(sprite);
 }
