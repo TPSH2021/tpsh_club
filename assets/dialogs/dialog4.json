@@ -31,7 +31,7 @@
       },
       {
         "id": "dialog4.1",
-        "background": "room_background",
+        "background": "auditorium_background",
         "character": "klenin",
         "left1": {
           "character": "klenin",
@@ -59,7 +59,7 @@
       },
       {
         "id": "dialog4.2",
-        "background": "room_background",
+        "background": "auditorium_background",
         "character": "player",
         "left1": {
           "character": "klenin",
@@ -87,7 +87,7 @@
       },
       {
         "id": "dialog4.3",
-        "background": "room_background",
+        "background": "auditorium_background",
         "character": "klenin",
         "left1": {
           "character": "klenin",

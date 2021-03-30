@@ -104,7 +104,7 @@
       "happy_emotion": "file",
       "sad_emotion": "file",
       "angry_emotion": "file",
-      "calm_emotion": "assets/images/characters/klenin/calm.png",
+      "calm_emotion": "assets\images\characters\klenin\calm.png",
       "smiling_emotion": "file",
       "neutral_emotion": "file"
     },
@@ -147,9 +147,28 @@
   ],
   "bg_data": [
     {
-      "id_bg": "file of background",
-      "filename": "file",
-      "name": "bg name"
+      "id_bg": "assets/images/backgrounds/hall.png",
+      "filename": "hall"
+    },
+    {
+      "id_bg": "assets/images/backgrounds/hotel_hall_background.png",
+      "filename": "hotel_hall_background"
+      
+    },
+    {
+      "id_bg": "assets/images/backgrounds/workspace_background.png",
+      "filename": "workspace_background"
+      
+    },
+    {
+      "id_bg": "assets/images/backgrounds/screenshot1.png",
+      "filename": "screenshot1"
+      
+    },
+    {
+      "id_bg": "assets/images/backgrounds/screenshot2.png",
+      "filename": "screenshot2"
+      
     }
   ]
 }
