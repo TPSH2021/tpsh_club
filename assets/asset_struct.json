@@ -2,7 +2,7 @@
   "character_data": [
     {
       "id": "vlad",
-      "happy": "fassets/images/characters/none_char.png",
+      "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
       "calm": "assets/images/characters/none_char.png",
@@ -11,21 +11,21 @@
     },
     {
       "id": "misha.b",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "pasha.b",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "rita",
@@ -38,12 +38,12 @@
     },
     {
       "id": "rudnik",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "igor",
@@ -56,48 +56,48 @@
     },
     {
       "id": "milena",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "gelya",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "ilya",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "danil",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "dasha",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "klenin",
@@ -110,30 +110,30 @@
     },
     {
       "id": "lisa",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "diana",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "vova",
-      "happy": "file",
-      "sad": "file",
-      "angry": "file",
-      "calm": "file",
-      "smiling": "file",
-      "neutral": "file"
+      "happy": "assets/images/characters/none_char.png",
+      "sad": "assets/images/characters/none_char.png",
+      "angry": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/none_char.png",
+      "neutral": "assets/images/characters/none_char.png"
     },
     {
       "id": "maxim",
