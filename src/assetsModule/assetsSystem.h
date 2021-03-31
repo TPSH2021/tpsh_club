@@ -23,7 +23,7 @@ namespace game {
 		class character {
 		public:
 			character(const int& ids, const nlohmann::json& structfile);
-			const sf::Texture& getEmotionById(std::string id);
+			const sf::Texture& getEmotionById(std::string id) const;
 			const std::vector<std::string>& getAllEmotions();
 		private:
 			std::string id;

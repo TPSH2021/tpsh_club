@@ -11,5 +11,6 @@ namespace game {
 		exit,
 		redactor
 	};
+	const sf::Vector2f char_size = { 370, 830 };
 	
 }

@@ -30,14 +30,10 @@ namespace game {
 			GUI::button red_button;
 			GUI::button menu_button;
 			GUI::button exit;
-			sf::Texture char_left_2;
-			sf::Texture char_left_1;
-			sf::Texture char_right_1;
-			sf::Texture char_right_2;
 			GUI::label speaker;
 			GUI::label d_text;
-			//dialogSystem d_system;
-			//assetsSystem a_system;
+			dialogSystem d_system;
+			assetsSystem a_system;
 		};
 	}  // namespace gameModule
 }  // namespace game
