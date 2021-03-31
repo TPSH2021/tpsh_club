@@ -182,22 +182,23 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door"
+      "id": "door1"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "baderiks_room"
+      "id": "door2"
       
     },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "door3"
+      
+    },
+    
     {
       "file": "assets/images/backgrounds/none_bg.png",
       "id": "rita_room"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "hole"
       
     },
     {
