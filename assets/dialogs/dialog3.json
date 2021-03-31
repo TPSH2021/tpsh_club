@@ -3,7 +3,7 @@
   "textPoints": [
     {
       "id": "dialog3.0",
-      "background": "street",
+      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
@@ -30,7 +30,7 @@
     },
     {
       "id": "dialog3.1",
-      "background": "street",
+      "background": "comrade",
       "character": "rudnik",
       "left1": {
         "character": "vlad",
@@ -65,7 +65,7 @@
     },
     {
       "id": "dialog3.5",
-      "background": "street",
+      "background": "comrade",
       "character": "rudnik",
       "left1": {
         "character": "vlad",
@@ -92,7 +92,7 @@
     },
     {
       "id": "dialog3.6",
-      "background": "street",
+      "background": "comrade",
       "character": "rudnik",
       "left1": {
         "character": "vlad",
@@ -119,7 +119,7 @@
     },
     {
       "id": "dialog3.7",
-      "background": "street",
+      "background": "comrade",
       "character": "rudnik",
       "left1": {
         "character": "vlad",
@@ -146,7 +146,7 @@
     },
     {
       "id": "dialog3.8",
-      "background": "street",
+      "background": "comrade",
       "character": "maxim",
       "left1": {
         "character": "vlad",
@@ -181,7 +181,7 @@
     },
     {
       "id": "dialog3.12",
-      "background": "street",
+      "background": "comrade",
       "character": "maxim",
       "left1": {
         "character": "vlad",
@@ -208,7 +208,7 @@
     },
     {
       "id": "dialog3.13",
-      "background": "street",
+      "background": "comrade",
       "character": "maxim",
       "left1": {
         "character": "vlad",
@@ -235,7 +235,7 @@
     },
     {
       "id": "dialog3.14",
-      "background": "street",
+      "background": "comrade",
       "character": "lisa",
       "left1": {
         "character": "vlad",
@@ -270,7 +270,7 @@
     },
     {
       "id": "dialog3.18",
-      "background": "street",
+      "background": "comrade",
       "character": "lisa",
       "left1": {
         "character": "vlad",
@@ -297,7 +297,7 @@
     },
     {
       "id": "dialog3.19",
-      "background": "street",
+      "background": "comrade",
       "character": "lisa",
       "left1": {
         "character": "vlad",
@@ -324,7 +324,7 @@
     },
     {
       "id": "dialog3.20",
-      "background": "street",
+      "background": "comrade",
       "character": "lisa",
       "left1": {
         "character": "vlad",
@@ -351,7 +351,7 @@
     },
     {
       "id": "dialog3.21",
-      "background": "street",
+      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
@@ -378,7 +378,7 @@
     },
     {
       "id": "dialog3.22",
-      "background": "street",
+      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
@@ -413,7 +413,7 @@
     },
     {
       "id": "dialog3.26",
-      "background": "street",
+      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
@@ -448,7 +448,7 @@
     },
     {
       "id": "dialog3.30",
-      "background": "street",
+      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
@@ -475,7 +475,7 @@
     },
     {
       "id": "dialog3.30",
-      "background": "street",
+      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
