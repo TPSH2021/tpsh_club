@@ -147,27 +147,72 @@
   ],
   "bg_data": [
     {
-      "id_bg": "assets/images/backgrounds/hall.png",
-      "filename": "hall"
+      "file": "assets/images/backgrounds/hall.png",
+      "id": "hall"
     },
     {
-      "id_bg": "assets/images/backgrounds/hotel_hall_background.png",
-      "filename": "hotel_hall_background"
+      "file": "assets/images/backgrounds/hotel_hall_background.png",
+      "id": "hotel_hall_background"
       
     },
     {
-      "id_bg": "assets/images/backgrounds/workspace_background.png",
-      "filename": "workspace_background"
+      "file": "assets/images/backgrounds/workspace.png",
+      "id": "workspace"
       
     },
     {
-      "id_bg": "assets/images/backgrounds/screenshot1.png",
-      "filename": "screenshot1"
+      "file": "assets/images/backgrounds/screenshot1.png",
+      "id": "screenshot1"
       
     },
     {
-      "id_bg": "assets/images/backgrounds/screenshot2.png",
-      "filename": "screenshot2"
+      "file": "assets/images/backgrounds/screenshot2.png",
+      "id": "screenshot2"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "dark_room"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/room.png",
+      "id": "room"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "door"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "baderiks_room"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "rita_room"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "hole"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "street"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "auditorium"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "bedroom"
       
     }
   ]
