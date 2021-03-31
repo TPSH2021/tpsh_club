@@ -5,21 +5,39 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
 #include "guiModule/gui.h"
+#include "dialogModule/dialogSystem.h"
+#include "assetsModule/assetsSystem.h"
+#include "guiModule/gui.h"
+#include "consts.h"
 
 namespace game {
+	using namespace dialogModule;
+	using namespace assetsModule;
 	namespace gameModule {
-		
-
 		class gameLogic {
 		public:
-			gameLogic();
-			~gameLogic();
-			void handleInput();
-			void update();
-			void render();
-
+			gameLogic(const sf::Font& font);
+			states run(GUI::window* window);
 		private:
-			std::shared_ptr<GUI::window> m_window;
+			bool flag;
+			bool loadScene;
+			void handleKeyboard(const sf::Event& event);
+			void createNewScene();
+			void drawUI(GUI::window* window);
+			float d_scale;
+			sf::Vector2f d_pos;
+			sf::Texture dialogUI;
+			GUI::button red_button;
+			GUI::button menu_button;
+			GUI::button exit;
+			sf::Texture char_left_2;
+			sf::Texture char_left_1;
+			sf::Texture char_right_1;
+			sf::Texture char_right_2;
+			GUI::label speaker;
+			GUI::label d_text;
+			//dialogSystem d_system;
+			//assetsSystem a_system;
 		};
 	}  // namespace gameModule
 }  // namespace game

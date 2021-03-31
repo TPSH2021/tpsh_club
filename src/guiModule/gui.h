@@ -20,12 +20,13 @@ namespace GUI {
 		sf::Vector2u getWindowSize();
 		sf::RenderWindow& getRenderWindow();
 		bool isDone();
+		void doDone(bool);
 		bool isFullscreen();
-		void update();
+		void update(const sf::Event& event);
 		void toggleFullscreen();
+		void destroy();
 	private:
 		void setup(const std::string& l_title, const sf::Vector2u& l_size);
-		void destroy();
 		void create();
 		sf::RenderWindow m_window;
 		sf::Vector2u m_windowSize;
@@ -40,44 +41,65 @@ namespace GUI {
 		void setText(const std::wstring& text);
 		void update(const sf::Event& event);
 		void draw(window& window);
+		void draw(window* window);
 	private:
 		sf::Text mText;
 	};
 
 	class button {
 	public:
-		enum Type
+		enum class Type
 		{
 			Normal,
 			Selected,
+			Triggered,
 			Pressed
 		};
 
-		//button(const std::string& text,
-		//	const sf::Vector2u& size,
-		//	const sf::Vector2u& pos);
+		button(const std::string&,
+			const std::string&,
+			const std::string&,
+			float scale,
+			const sf::Vector2f& pos,
+			uint8_t id_u);
 
-		~button();
-		bool isClicked() const;
+		bool isClicked();
 		void update(const sf::Event& event);
-		void draw(window window);
-		void setId(uint8_t);
-		uint8_t getId() const;
+		void draw(window& window);
+		void draw(window* window);
 	private:
-		void changeTexture(Type buttonType);
 		void select();
 		void deselect();
 		void activate();
 		void deactivate();
 	private:
 		uint8_t id;
-		sf::Sprite mSprite;
-		label mLabel;
-		bool mIsSelected;
-		bool mIsActive;
+
+		float scale;
+		sf::Vector2f g_scale;
+		sf::Vector2f pos;
+		sf::Texture common;
+		sf::Texture triggered;
+		sf::Texture clicked;
+
+		bool isSelected;
+		bool isActive;
+		bool flag;
+		Type state;
 	};
 
 	 
-
+	class mBackground {
+	public:
+		mBackground(const std::string& path);
+		void update(const sf::Event& event);
+		void draw(window& window);
+		void draw(window* window);
+	private:
+		sf::Vector2f g_scale;
+		sf::Vector2f pos;
+		sf::Texture texture;
+		sf::Vector2f scale;
+	};
 
 }
