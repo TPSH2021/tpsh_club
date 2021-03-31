@@ -3,7 +3,7 @@
   "textPoints": [
     {
       "id": "dialog5.0",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "diana",
       "left1": {
         "character": "vlad",
@@ -30,7 +30,7 @@
     },
     {
       "id": "dialog5.1",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "ilya",
       "left1": {
         "character": "vlad",
@@ -57,7 +57,7 @@
     },
     {
       "id": "dialog5.2",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "diana",
       "left1": {
         "character": "vlad",
@@ -84,7 +84,7 @@
     },
     {
       "id": "dialog5.3",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "dasha",
       "left1": {
         "character": "vlad",
@@ -111,7 +111,7 @@
     },
     {
       "id": "dialog5.4",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "milena",
       "left1": {
         "character": "vlad",
@@ -138,7 +138,7 @@
     },
     {
       "id": "dialog5.5",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "danil",
       "left1": {
         "character": "vlad",
@@ -165,7 +165,7 @@
     },
     {
       "id": "dialog5.6",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "gelya",
       "left1": {
         "character": "vlad",
@@ -192,7 +192,7 @@
     },
     {
       "id": "dialog5.7",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "vlad",
       "left1": {
         "character": "vlad",
@@ -219,7 +219,7 @@
     },
     {
       "id": "dialog5.8",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "diana",
       "left1": {
         "character": "vlad",
@@ -246,7 +246,7 @@
     },
     {
       "id": "dialog5.9",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "vlad",
       "left1": {
         "character": "vlad",
@@ -273,7 +273,7 @@
     },
     {
       "id": "dialog5.10",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "none",
       "left1": {
         "character": "vlad",
@@ -300,7 +300,7 @@
     },
     {
       "id": "dialog5.11",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "none",
       "left1": {
         "character": "vlad",
@@ -327,7 +327,7 @@
     },
     {
       "id": "dialog5.12",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "none",
       "left1": {
         "character": "vlad",
@@ -354,7 +354,7 @@
     },
     {
       "id": "dialog5.13",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "ilya",
       "left1": {
         "character": "vlad",
@@ -381,7 +381,7 @@
     },
     {
       "id": "dialog5.14",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "vova",
       "left1": {
         "character": "vlad",
@@ -408,7 +408,7 @@
     },
     {
       "id": "dialog5.15",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "vova",
       "left1": {
         "character": "vlad",
@@ -435,7 +435,7 @@
     },
     {
       "id": "dialog5.16",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "vova",
       "left1": {
         "character": "vlad",
@@ -462,7 +462,7 @@
     },
     {
       "id": "dialog5.17",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "diana",
       "left1": {
         "character": "vlad",
@@ -489,7 +489,7 @@
     },
     {
       "id": "dialog5.18",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "diana",
       "left1": {
         "character": "vlad",
@@ -516,7 +516,7 @@
     },
     {
       "id": "dialog5.20",
-      "background": "workspace",
+      "background": "workspace_background",
       "character": "diana",
       "left1": {
         "character": "vlad",

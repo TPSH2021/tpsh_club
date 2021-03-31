@@ -29,12 +29,12 @@
     },
     {
       "id": "rita",
-      "happy_emotion": "file",
-      "sad_emotion": "file",
-      "angry_emotion": "file",
-      "calm_emotion": "file",
-      "smiling_emotion": "file",
-      "neutral_emotion": "file"
+      "happy_emotion": "assets/images/characters/none_char.png",
+      "sad_emotion": "assets/images/characters/rita/sad.png",
+      "angry_emotion": "assets/images/characters/none_char.png",
+      "calm_emotion": "assets/images/characters/none_char.png",
+      "smiling_emotion": "assets/images/characters/rita/smiling.png",
+      "neutral_emotion": "assets/images/characters/rita/neutral.png"
     },
     {
       "id": "rudnik",
@@ -47,12 +47,12 @@
     },
     {
       "id": "igor",
-      "happy_emotion": "file",
-      "sad_emotion": "file",
-      "angry_emotion": "file",
-      "calm_emotion": "file",
-      "smiling_emotion": "file",
-      "neutral_emotion": "file"
+      "happy_emotion": "assets/images/characters/none_char.png",
+      "sad_emotion": "assets/images/characters/none_char.png",
+      "angry_emotion": "assets/images/characters/none_char.png",
+      "calm_emotion": "assets/images/characters/none_char.png",
+      "smiling_emotion": "assets/images/characters/igor/smiling.png",
+      "neutral_emotion": "assets/images/characters/igor/neutral.png"
     },
     {
       "id": "milena",
@@ -101,12 +101,12 @@
     },
     {
       "id": "klenin",
-      "happy_emotion": "file",
-      "sad_emotion": "file",
-      "angry_emotion": "file",
-      "calm_emotion": "assets\images\characters\klenin\calm.png",
-      "smiling_emotion": "file",
-      "neutral_emotion": "file"
+      "happy_emotion": "assets/images/characters/none_char.png",
+      "sad_emotion": "assets/images/characters/none_char.png",
+      "angry_emotion": "assets/images/characters/none_char.png",
+      "calm_emotion": "assets/images/characters/klenin/calm.png",
+      "smiling_emotion": "assets/images/characters/none_char.png",
+      "neutral_emotion": "assets/images/characters/none_char.png"
     },
     {
       "id": "lisa",

@@ -7,19 +7,19 @@
       "character": "none",
       "left1": {
         "character": "none",
-        "emotion": "calm"
+        "emotion": "none"
       },
       "left2": {
         "character": "none",
-        "emotion": "smiling"
+        "emotion": "none"
       },
       "right1": {
         "character": "none",
-        "emotion": "neutral"
+        "emotion": "none"
       },
       "right2": {
         "character": "none",
-        "emotion": "calm"
+        "emotion": "none"
       },
       "jumps": [
         {
@@ -34,19 +34,19 @@
       "character": "none",
       "left1": {
         "character": "none",
-        "emotion": "calm"
+        "emotion": "none"
       },
       "left2": {
         "character": "none",
-        "emotion": "smiling"
+        "emotion": "none"
       },
       "right1": {
         "character": "none",
-        "emotion": "neutral"
+        "emotion": "none"
       },
       "right2": {
         "character": "none",
-        "emotion": "calm"
+        "emotion": "none"
       },
       "jumps": [
         {
@@ -62,19 +62,19 @@
       "character": "none",
       "left1": {
         "character": "none",
-        "emotion": "calm"
+        "emotion": "none"
       },
       "left2": {
         "character": "none",
-        "emotion": "smiling"
+        "emotion": "none"
       },
       "right1": {
         "character": "none",
-        "emotion": "neutral"
+        "emotion": "none"
       },
       "right2": {
         "character": "none",
-        "emotion": "calm"
+        "emotion": "none"
       },
       "jumps": [
         {
