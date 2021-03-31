@@ -3,6 +3,7 @@
 #include <memory>
 #include <string>
 #include <map>
+#include <json.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
 #include <SFML/Graphics/Texture.hpp>
@@ -12,7 +13,7 @@ namespace game {
 	namespace assetsModule {
 		class background {
 		public:
-			background(const int& ids, const std::string& filepath);
+			background(const int& ids, const nlohmann::json& structfile);
 			const sf::Texture& getTexture();
 		private:
 			std::string id;
@@ -21,7 +22,7 @@ namespace game {
 
 		class character {
 		public:
-			character(const int& ids, const std::string& emotions);
+			character(const int& ids, const nlohmann::json& structfile);
 			const sf::Texture& getEmotionById(std::string id);
 			const std::vector<std::string>& getAllEmotions();
 		private:
@@ -31,7 +32,7 @@ namespace game {
 
 		class assetsSystem {
 		public:
-			assetsSystem(const std::string& filepath);
+			assetsSystem();
 			const background& getBackground(std::string&);
 			const character& getCharacter(std::string&);
 			const std::wstring& getText(std::string&);
