@@ -37,9 +37,10 @@ assetsSystem::assetsSystem() {
 
 
 
-const sf::Texture& character::getEmotionById(std::string id) {
+const sf::Texture& character::getEmotionById(std::string id) const {
 	return emotions.at(id);
 }
+
 const std::vector<std::string>& character::getAllEmotions() {
 	std::vector<std::string> res;
 	for (const auto& c : emotions)
