@@ -372,7 +372,7 @@
       "character": "player",
       "left1": {
         "character": "rita",
-        "emotion": "angry"
+        "emotion": "netural"
       },
       "left2": {
         "character": "none",
@@ -399,7 +399,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "angry"
+        "emotion": "netural"
       },
       "left2": {
         "character": "none",
@@ -430,7 +430,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "angry"
+        "emotion": "netural"
       },
       "left2": {
         "character": "none",
@@ -462,7 +462,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "angry"
+        "emotion": "netural"
       },
       "left2": {
         "character": "player",
@@ -494,7 +494,7 @@
       "character": "rita",
       "left1": {
         "character": "rita",
-        "emotion": "happy"
+        "emotion": "smiling"
       },
       "left2": {
         "character": "none",
@@ -525,7 +525,7 @@
       },
       "left2": {
         "character": "rita",
-        "emotion": "none"
+        "emotion": "netural"
       },
       "right1": {
         "character": "none",
