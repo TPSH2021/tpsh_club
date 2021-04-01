@@ -7,18 +7,18 @@
 
 using namespace game::assetsModule;
 
-background::background(const int& ids, const nlohmann::json& structfile) {
-	id = structfile["bg_data"][ids]["id"];
-	img.loadFromFile(structfile["bg_data"][ids]["file"]);
+background::background(const nlohmann::json& structfile) {
+	id = structfile["id"];
+	img.loadFromFile(structfile["file"]);
 }
 
-character::character(const int& ids, const nlohmann::json& structfile) {
-	id = structfile["character_data"][ids]["id"];
+character::character(const nlohmann::json& structfile) {
+	id = structfile["id"];
 	std::vector<std::string> emotion = { "happy", "sad", "angry", "calm",  "smiling", "neutral" };
 	for (int i = 0; i < emotion.size(); i++)
 	{
 		sf::Texture texture;
-		texture.loadFromFile(structfile["character_data"][ids][emotion[i]]);
+		texture.loadFromFile(structfile[emotion[i]]);
 		emotions.insert(std::make_pair(emotion[i], texture));
 	}
 }
@@ -29,11 +29,11 @@ assetsSystem::assetsSystem() {
 	jsonstream >> structfile;
 	localestream >> locale;
 	for (int i = 0; i < structfile["bg_data"].size(); i++)
-		backgrounds.insert(std::make_pair(structfile["bg_data"][i]["id"], background(i, structfile)));
+		backgrounds.insert(std::make_pair(structfile["bg_data"][i]["id"], background(structfile["bg_data"][i])));
 	for (int i = 0; i < structfile["character_data"].size(); i++)
 	{
 		std::cout << structfile["character_data"][i]["id"] << std::endl;
-		characters[structfile["character_data"][i]["id"]] = character(i, structfile);
+		characters[structfile["character_data"][i]["id"]] = character(structfile["character_data"][i]);
 	}
 	for (int i = 0; i < locale.size(); i++)
 		texts[locale[i]["id"]] = locale[i]["data"];

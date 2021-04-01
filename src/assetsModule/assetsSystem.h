@@ -13,7 +13,7 @@ namespace game {
 	namespace assetsModule {
 		class background {
 		public:
-			background(const int& ids, const nlohmann::json& structfile);
+			background(const nlohmann::json& structfile);
 			const sf::Texture& getTexture();
 		private:
 			std::string id;
@@ -22,7 +22,7 @@ namespace game {
 
 		class character {
 		public:
-			character(const int& ids, const nlohmann::json& structfile);
+			character(const nlohmann::json& structfile);
 			character() = default;
 			const sf::Texture& getEmotionById(std::string id) const;
 			const std::vector<std::string>& getAllEmotions();
