@@ -67,7 +67,7 @@
     },
     {
       "id": "dialog2.5",
-      "background": "door1",
+      "background": "door",
       "character": "none",
       "left1": {
         "character": "none",
@@ -132,7 +132,7 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "gelya",
+        "character": "rudnik",
         "emotion": "smiling"
       },
       "right2": {
@@ -149,7 +149,7 @@
     {
       "id": "dialog2.9",
       "background": "dark_room",
-      "character": "gelya",
+      "character": "rudnik",
       "left1": {
         "character": "none",
         "emotion": "none"
@@ -159,7 +159,7 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "gelya",
+        "character": "rudnik",
         "emotion": "smiling"
       },
       "right2": {
@@ -186,7 +186,7 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "gelya",
+        "character": "rudnik",
         "emotion": "smiling"
       },
       "right2": {
@@ -203,7 +203,7 @@
     {
       "id": "dialog2.11",
       "background": "dark_room",
-      "character": "gelya",
+      "character": "rudnik",
       "left1": {
         "character": "none",
         "emotion": "none"
@@ -213,7 +213,7 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "gelya",
+        "character": "rudnik",
         "emotion": "smiling"
       },
       "right2": {
@@ -229,7 +229,7 @@
     },
     {
       "id": "dialog2.12",
-      "background": "door2",
+      "background": "door",
       "character": "none",
       "left1": {
         "character": "none",
@@ -341,7 +341,7 @@
     },
     {
       "id": "dialog2.15",
-      "background": "door3",
+      "background": "door",
       "character": "none",
       "left1": {
         "character": "none",
