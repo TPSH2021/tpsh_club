@@ -50,6 +50,7 @@
     <ClInclude Include="src\dialogModule\dialogSystem.h" />
     <ClInclude Include="src\gameModule\gameSystem.h" />
     <ClInclude Include="src\guiModule\gui.h" />
+    <ClInclude Include="src\helper_func.hpp" />
     <ClInclude Include="src\menuModule\menu.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -123,6 +124,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\submodules\imgui;$(ProjectDir)\submodules\json\single_include\nlohmann;$(ProjectDir)\submodules\imgui-sfml;C:\programs\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
