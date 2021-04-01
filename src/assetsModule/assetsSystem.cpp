@@ -52,8 +52,7 @@ const std::vector<std::string>& character::getAllEmotions() {
 	return res;
 }
 
-
-const background& assetsSystem::getBackground(std::string& id) {
+background& assetsSystem::getBackground(const std::string& id) {
 	return backgrounds.at(id);
 }
 const character& assetsSystem::getCharacter(std::string& id) {

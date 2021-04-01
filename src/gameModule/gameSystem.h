@@ -23,7 +23,7 @@ namespace game {
 			bool loadScene;
 			void handleKeyboard(const sf::Event& event);
 			void handleChsButtons(const sf::Event& event);
-			void createNewScene();
+			void createNewScene(bool);
 			void drawUI(GUI::window* window);
 			float d_scale;
 			bool endGame;
@@ -36,7 +36,8 @@ namespace game {
 			GUI::label d_text;
 			dialogSystem d_system;
 			assetsSystem a_system;
-			std::vector<GUI::button> choise_btns;
+			sf::Font ffont;
+			std::vector<GUI::textButton> choice_btns;
 			int chs_jump;
 		};
 	}  // namespace gameModule

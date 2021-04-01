@@ -84,5 +84,8 @@
     <ClInclude Include="src\consts.h">
       <Filter>mainModule</Filter>
     </ClInclude>
+    <ClInclude Include="src\helper_func.hpp">
+      <Filter>mainModule</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

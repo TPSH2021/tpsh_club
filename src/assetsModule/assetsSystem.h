@@ -34,7 +34,7 @@ namespace game {
 		class assetsSystem {
 		public:
 			assetsSystem();
-			const background& getBackground(std::string&);
+			background& getBackground(const std::string&);
 			const character& getCharacter(std::string&);
 			const std::string& getText(const std::string&);
 
