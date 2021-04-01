@@ -259,20 +259,20 @@
       "background": "rita_room",
       "character": "pasha.b",
       "left1": {
-        "character": "pasha.b",
-        "emotion": "smiling"
-      },
-      "left2": {
-        "character": "misha.b",
-        "emotion": "smiling"
-      },
-      "right1": {
         "character": "vlad",
         "emotion": "calm"
       },
-      "right2": {
+      "left2": {
         "character": "none",
         "emotion": "none"
+      },
+      "right1": {
+        "character": "misha.b",
+        "emotion": "smiling"
+      },
+      "right2": {
+        "character": "pasha.b",
+        "emotion": "smiling"
       },
       "jumps": [
       {
@@ -290,20 +290,20 @@
       "background": "rita_room",
       "character": "pasha.b",
       "left1": {
-        "character": "pasha.b",
-        "emotion": "smiling"
-      },
-      "left2": {
-        "character": "misha.b",
-        "emotion": "smiling"
-      },
-      "right1": {
         "character": "vlad",
         "emotion": "calm"
       },
-      "right2": {
+      "left2": {
         "character": "none",
         "emotion": "none"
+      },
+      "right1": {
+        "character": "misha.b",
+        "emotion": "smiling"
+      },
+      "right2": {
+        "character": "pasha.b",
+        "emotion": "smiling"
       },
       "jumps": [
       {
@@ -317,20 +317,20 @@
       "background": "rita_room",
       "character": "vlad",
       "left1": {
-        "character": "pasha.b",
-        "emotion": "smiling"
-      },
-      "left2": {
-        "character": "misha.b",
-        "emotion": "smiling"
-      },
-      "right1": {
         "character": "vlad",
         "emotion": "calm"
       },
-      "right2": {
+      "left2": {
         "character": "none",
         "emotion": "none"
+      },
+      "right1": {
+        "character": "misha.b",
+        "emotion": "smiling"
+      },
+      "right2": {
+        "character": "pasha.b",
+        "emotion": "smiling"
       },
       "jumps": [
       {
