@@ -148,6 +148,17 @@ void button::deactivate() {
 	isActive = false;
 	state = Type::Selected;
 }
+
+textButton::textButton(const std::string& common_tx,
+	const std::string& triggered_tx,
+	const std::string& clicked_tx,
+	float scale,
+	const sf::Vector2f& pos,
+	uint8_t id_u,
+	const sf::Font& font,
+	int size) : btn(common_tx, triggered_tx, clicked_tx, scale, pos, id_u),
+	lbl(font, { pos.x + 20, pos.y + 5 }, size)
+{}
 //---------------------------------------------------------------window
 window::window() {
 	setup("Window", sf::Vector2u(640, 480));
