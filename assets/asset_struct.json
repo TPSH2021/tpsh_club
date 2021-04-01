@@ -220,6 +220,11 @@
       "file": "assets/images/backgrounds/none_bg.png",
       "id": "bedroom3"
       
+    },
+    {
+      "file": "assets/images/backgrounds/die.png",
+      "id": "die"
+      
     }
   ]
 }

@@ -576,7 +576,35 @@
         "description": "dialog2.28"
       }
       ]
+    },
+    {
+      "id": "dialog2.30",
+      "background": "die",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+      {
+        "nextPoint": "",
+        "description": ""
+      }
+      ]
     }
+
 
 
 
