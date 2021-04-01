@@ -24,15 +24,13 @@ gameLogic::gameLogic(const sf::Font& font) :
 	d_system("assets/dialogs/dialog_struct.json"),
 	a_system()
 {
+	ffont = font;
 	speaker.setText(L"SomeName");
 	d_text.setText(L"SomeText");
 	dialogUI.loadFromFile("assets/images/UI/dialog.png");
 	d_scale = winC::size.x / dialogUI.getSize().x;
 	d_pos = { 0, winC::size.y - dialogUI.getSize().y * d_scale };
-
-	speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
-	d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
-
+	createNewScene(false);
 }
 
 game::states gameLogic::run(GUI::window* window) {
@@ -50,7 +48,7 @@ game::states gameLogic::run(GUI::window* window) {
 		}
 		if (loadScene) {
 			std::cout << "loaded" << std::endl;
-			createNewScene();
+			createNewScene(true);
 		}
 
 		red_button.isClicked();
@@ -68,10 +66,14 @@ game::states gameLogic::run(GUI::window* window) {
 }
 
 void gameLogic::handleChsButtons(const sf::Event& event) {
-	for (GUI::button& btn : choise_btns) {
-		btn.update(event);
-		if (btn.isClicked())
-			
+	for (int i(0); i < choice_btns.size(); ++i) {
+		choice_btns[i].btn.update(event);
+		//choice_btns[i].lbl.update(event);
+		if (choice_btns[i].btn.isClicked()) {
+			chs_jump = i;
+			loadScene = true;
+			return;
+		}	
 	}
 }
 
@@ -87,7 +89,6 @@ void gameLogic::drawUI(GUI::window* window) {
 	auto char_l_1 = d_system.getDialog().getReplica().getLeft1Character();
 	auto char_r_1 = d_system.getDialog().getReplica().getRight1Character();
 	auto char_r_2 = d_system.getDialog().getReplica().getRight2Character();
-
 
 	float k = winC::size.x / 4;
 
@@ -136,34 +137,46 @@ void gameLogic::drawUI(GUI::window* window) {
 	speaker.draw(window);
 	d_text.draw(window);
 
+	for (auto& b : choice_btns)
+	{
+		b.btn.draw(window);
+		b.lbl.draw(window);
+	}
+
 	window->endDraw();
 }
 
 
-void gameLogic::createNewScene() {
-	if (d_system.getDialog().getReplica().getJumps()[0].first.size() == 0)
-		endGame = d_system.next(d_system.getDialog().getJump());
-	else if (!endGame)
-		d_system.getDialog().next(d_system.getDialog().getReplica().getJumps()[chs_jump].first);
-	if (!endGame) {
-		choise_btns.clear();
-		if (d_system.getDialog().getReplica().getJumps().size() == 1)
-			chs_jump = 0;
-		else {
+void gameLogic::createNewScene(bool need_next) {
+	if (chs_jump != -1) {
+		if (need_next && d_system.getDialog().getReplica().getJumps()[0].first.size() == 0)
+			endGame = d_system.next(d_system.getDialog().getJump());
+		else if (need_next && !endGame)
+			d_system.getDialog().next(d_system.getDialog().getReplica().getJumps()[chs_jump].first);
+		if (!endGame) {
+			choice_btns.clear();
+			if (d_system.getDialog().getReplica().getJumps().size() == 1)
+				chs_jump = 0;
+			else {
 
-			for (int i(0); i < d_system.getDialog().getReplica().getJumps().size(); ++i) {
-				choise_btns.push_back(GUI::button(
-					"assets/img/UI/choose_c.png",
-					"assets/img/UI/choose_t.png",
-					"assets/img/UI/choose_a.png",
-					0.5,
-					{ 100, 100 + i * 75 },
-					1
-				));
+				for (int i(0); i < d_system.getDialog().getReplica().getJumps().size(); ++i) {
+					choice_btns.push_back(GUI::textButton(
+						"assets/images/UI/choose_c.png",
+						"assets/images/UI/choose_t.png",
+						"assets/images/UI/choose_a.png",
+						0.15,
+						{ 200.0f, 100 + i * 70.0f },
+						1,
+						ffont,
+						18));
+					choice_btns[i].lbl.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getJumps()[i].second)));
+				}
+				chs_jump = -1;
+				std::cout << choice_btns.size() << std::endl;
 			}
+			speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
+			d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
 		}
-		speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
-		d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
 	}
 	loadScene = false;
 }

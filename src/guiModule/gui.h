@@ -88,6 +88,20 @@ namespace GUI {
 		Type state;
 	};
 
+	class textButton {
+	public:
+		textButton(const std::string&,
+			const std::string&,
+			const std::string&,
+			float scale,
+			const sf::Vector2f& pos,
+			uint8_t id_u,
+			const sf::Font& font,
+			int size
+		);
+		button btn;
+		label lbl;
+	};
 	 
 	class mBackground {
 	public:
