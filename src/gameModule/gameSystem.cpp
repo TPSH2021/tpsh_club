@@ -10,15 +10,15 @@ gameLogic::gameLogic(const sf::Font& font) :
 	red_button("assets/images/UI/redactor_c.png",
 		"assets/images/UI/redactor_t.png",
 		"assets/images/UI/redactor_a.png",
-		0.08, { 0, 0 }, 1),
+		0.06, { 0, 0 }, 1),
 	menu_button("assets/images/UI/menu_c.png",
 		"assets/images/UI/menu_t.png",
 		"assets/images/UI/menu_a.png",
-		0.08, { 0, 38 }, 2),
+		0.06, { 0, 35 }, 2),
 	exit("assets/images/UI/exit_c.png",
 		"assets/images/UI/exit_t.png",
 		"assets/images/UI/exit_a.png",
-		0.08, { 0, 76 }, 3),
+		0.06, { 0, 70 }, 3),
 	speaker(font, {30, winC::size.y - 232}, 32),
 	d_text(font, {70, winC::size.y - 180}, 30),
 	d_system("assets/dialogs/dialog_struct.json"),
@@ -79,7 +79,13 @@ void gameLogic::handleChsButtons(const sf::Event& event) {
 
 void gameLogic::drawUI(GUI::window* window) {
 	window->beginDraw();
+	auto bg_sprite = sf::Sprite();
+	bg_sprite.setTexture(a_system.getBackground(d_system.getDialog().getReplica().getBackgroundId()).getTexture());
 
+	bg_sprite.setScale(
+		{ winC::size.x / a_system.getBackground(d_system.getDialog().getReplica().getBackgroundId()).getTexture().getSize().x,
+		 winC::size.y / a_system.getBackground(d_system.getDialog().getReplica().getBackgroundId()).getTexture().getSize().y });
+	window->getRenderWindow().draw(bg_sprite);
 	auto char_l_2_sprite = sf::Sprite();
 	auto char_l_1_sprite = sf::Sprite();
 	auto char_r_1_sprite = sf::Sprite();
@@ -92,7 +98,7 @@ void gameLogic::drawUI(GUI::window* window) {
 
 	float k = winC::size.x / 4;
 
-	if (char_l_1.first != "none") {
+	if (char_l_2.first != "none") {
 		char_l_2_sprite.setTexture(a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second));
 		float k_x = char_size.x / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().x;
 		float k_y = char_size.y / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().y;
@@ -166,9 +172,7 @@ void gameLogic::createNewScene(bool need_next) {
 						"assets/images/UI/choose_a.png",
 						0.15,
 						{ 200.0f, 100 + i * 70.0f },
-						1,
-						ffont,
-						18));
+						1, ffont, 18));
 					choice_btns[i].lbl.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getJumps()[i].second)));
 				}
 				chs_jump = -1;

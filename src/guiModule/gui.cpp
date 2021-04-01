@@ -18,7 +18,31 @@ label::label(const sf::Font& font, const sf::Vector2f& pos, int size) {
 }
 
 void label::setText(const std::wstring& text) {
-	mText.setString(text);
+	std::vector<size_t> repl, tmp;
+	std::wstring res(text);
+	size_t d = 0;
+	size_t l = 0;
+	for (size_t i(0); i < text.size(); ++i)
+		if (res[i] == L' ')
+			tmp.push_back(i);
+	for (auto& k : tmp) {
+		if ((k - d >= 60 && k - d <= 65)) {
+			repl.push_back(k);
+			d = k;
+			l = k;
+		}
+		else if (k - d > 65) {
+			repl.push_back(l);
+			d = l;
+			l = k;
+		}
+		else {
+			l = k;
+		}
+	}
+	for (size_t i : repl)
+		res[i] = L'\n';
+	mText.setString(res);
 }
 
 void label::draw(window& window) {
