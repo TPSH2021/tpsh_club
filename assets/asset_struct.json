@@ -182,17 +182,17 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door1"
+      "id": "door"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door2"
+      "id": "door"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door3"
+      "id": "door"
       
     },
     
@@ -203,7 +203,7 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "street"
+      "id": "comrade"
       
     },
     {
