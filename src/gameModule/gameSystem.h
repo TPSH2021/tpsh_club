@@ -22,9 +22,11 @@ namespace game {
 			bool flag;
 			bool loadScene;
 			void handleKeyboard(const sf::Event& event);
+			void handleChsButtons(const sf::Event& event);
 			void createNewScene();
 			void drawUI(GUI::window* window);
 			float d_scale;
+			bool endGame;
 			sf::Vector2f d_pos;
 			sf::Texture dialogUI;
 			GUI::button red_button;
@@ -34,6 +36,8 @@ namespace game {
 			GUI::label d_text;
 			dialogSystem d_system;
 			assetsSystem a_system;
+			std::vector<GUI::button> choise_btns;
+			int chs_jump;
 		};
 	}  // namespace gameModule
 }  // namespace game

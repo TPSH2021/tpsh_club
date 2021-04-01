@@ -23,6 +23,7 @@ namespace game {
 		class character {
 		public:
 			character(const int& ids, const nlohmann::json& structfile);
+			character() = default;
 			const sf::Texture& getEmotionById(std::string id) const;
 			const std::vector<std::string>& getAllEmotions();
 		private:
@@ -35,12 +36,12 @@ namespace game {
 			assetsSystem();
 			const background& getBackground(std::string&);
 			const character& getCharacter(std::string&);
-			const std::wstring& getText(std::string&);
+			const std::string& getText(const std::string&);
 
 		private:
 			std::map<std::string, background> backgrounds;
 			std::map<std::string, character> characters;
-			std::map<std::string, std::wstring> texts;
+			std::map<std::string, std::string> texts;
 		};
 	}  // namespace assetsModule
 }  // namespace game

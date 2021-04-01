@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <filesystem>
+#include <iostream>
 
 using namespace game::dialogModule;
 
@@ -13,14 +15,14 @@ replica::replica(const int& ids, const std::string& filepath) {
 	nlohmann::json structure;
 	jsonstream >> structure;
 	id = structure["textPoints"][ids]["id"];
-	background_id = structure["textPoints"][id]["background"];
-	speaker = structure["textPoints"][id]["character"];
-	character_left1 = { structure["textPoints"][id]["left1"]["character"], structure["textPoints"][id]["left1"]["emotion"] };
-	character_left2 = { structure["textPoints"][id]["left2"]["character"], structure["textPoints"][id]["left2"]["emotion"] };
-	character_right1 = { structure["textPoints"][id]["right1"]["character"], structure["textPoints"][id]["right1"]["emotion"] };
-	character_right2 = { structure["textPoints"][id]["right2"]["character"], structure["textPoints"][id]["right2"]["emotion"] };
-	for (int i = 0; i < structure["textPoints"][id]["jumps"].size(); i++)
-		jumps.push_back({ structure["textPoints"][id]["jumps"][i]["nextPoint"], structure["textPoints"][id]["jumps"][i]["description"] });	
+	background_id = structure["textPoints"][ids]["background"];
+	speaker = structure["textPoints"][ids]["character"];
+	character_left1 = { structure["textPoints"][ids]["left1"]["character"], structure["textPoints"][ids]["left1"]["emotion"] };
+	character_left2 = { structure["textPoints"][ids]["left2"]["character"], structure["textPoints"][ids]["left2"]["emotion"] };
+	character_right1 = { structure["textPoints"][ids]["right1"]["character"], structure["textPoints"][ids]["right1"]["emotion"] };
+	character_right2 = { structure["textPoints"][ids]["right2"]["character"], structure["textPoints"][ids]["right2"]["emotion"] };
+	for (int i = 0; i < structure["textPoints"][ids]["jumps"].size(); i++)
+		jumps.push_back({ structure["textPoints"][ids]["jumps"][i]["nextPoint"], structure["textPoints"][ids]["jumps"][i]["description"] });
 }
 
 void replica::setBackgroundId(const std::string& id) {
@@ -65,8 +67,8 @@ const std::pair<std::string, std::string>& replica::getRight2Character() const {
 	return character_right2;
 }
 
-const std::string& replica::getText() const {
-	return text;
+const std::string& replica::getId() const {
+	return id;
 }
 
 const std::string& replica::getSpeaker() const {
@@ -78,11 +80,12 @@ const std::vector<std::pair<std::string, std::string>>& replica::getJumps() cons
 }
 
 //-------------------------------------------------------------------dialog
-dialog::dialog(const std::string& id, const std::string& filepath) : id(id) {
-	std::ifstream jsonstream("filepath");
+dialog::dialog(const std::string& id, const std::string& filepath, const std::string& jump) : id(id) {
+	std::ifstream jsonstream(filepath);
 	nlohmann::json structfile;
 	jsonstream >> structfile;
 	cur_replica = structfile["startPoint"];
+	jump_to = jump;
 	for (int i = 0; i < structfile["textPoints"].size(); i++)
 		replicas.insert(std::make_pair( structfile["textPoints"][i]["id"], replica(i, filepath)));
 }
@@ -97,15 +100,20 @@ bool dialog::next(const std::string& replicaId) {
 	return true;
 }
 
+const std::string& dialog::getJump() {
+	return jump_to;
+}
 //-------------------------------------------------------------------dialogSystem
-dialogSystem::dialogSystem(const std::string& filepath)
-{
-	std::ifstream jsonstream(filepath);
+dialogSystem::dialogSystem(const std::string& filepath) {
+	auto cwd = std::filesystem::current_path().string();
+	std::cout << cwd << std::endl;
+	std::ifstream jsonstream;
+	jsonstream.open(filepath, std::fstream::in);
 	nlohmann::json structfile;
 	jsonstream >> structfile;
 	cur_dialog = structfile["start_point"];
 	for (int i = 0; i < structfile["data"].size(); i++)
-		dialogs.insert(std::make_pair(structfile["data"][i]["id"], dialog(structfile["data"][i]["id"], structfile["data"][i]["dirname"])));
+		dialogs.insert(std::make_pair(structfile["data"][i]["id"], dialog(structfile["data"][i]["id"], structfile["data"][i]["dirname"], structfile["data"][i]["jump_to"])));
 }
 
 dialog& dialogSystem::getDialog() {
@@ -114,5 +122,5 @@ dialog& dialogSystem::getDialog() {
 
 bool dialogSystem::next(const std::string& dialogId) {
 	cur_dialog = dialogId;
-	return true;
+	return dialogId == "";
 }

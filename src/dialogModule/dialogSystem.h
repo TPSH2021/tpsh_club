@@ -28,7 +28,7 @@ namespace game {
 			void setRight2Character(const std::pair<std::string, std::string>& id);
 			const std::pair<std::string, std::string>& getRight2Character() const;
 
-			const std::string& getText() const;
+			const std::string& getId() const;
 			const std::string& getSpeaker() const;
 			const std::vector<std::pair<std::string, std::string>>& getJumps() const;
 
@@ -46,14 +46,16 @@ namespace game {
 
 		class dialog {
 		public:
-			dialog(const std::string& id, const std::string& filepath);
+			dialog(const std::string& id, const std::string& filepath, const std::string& jump);
 			replica& getReplica();
 			bool next(const std::string&);
+			const std::string& getJump();
 
 		private:
 			std::map<std::string, replica> replicas;
 			std::string cur_replica;
 			std::string id;
+			std::string jump_to;
 		};
 
 		class dialogSystem {

@@ -3,32 +3,32 @@
   "data": [
     {
       "id": "dialog1",
-      "dirname": "dialogs",
+      "dirname": "assets/dialogs/dialog1.json",
       "jump_to": "dialog2"
     },
     {
       "id": "dialog2",
-      "dirname": "dialogs",
+      "dirname": "assets/dialogs/dialog2.json",
       "jump_to": "dialog3"
     },
     {
       "id": "dialog3",
-      "dirname": "dialogs",
+      "dirname": "assets/dialogs/dialog3.json",
       "jump_to": "dialog4"
     },
     {
       "id": "dialog4",
-      "dirname": "dialogs",
+      "dirname": "assets/dialogs/dialog4.json",
       "jump_to": "dialog5"
     },
     {
       "id": "dialog5",
-      "dirname": "dialogs",
+      "dirname": "assets/dialogs/dialog5.json",
       "jump_to": "dialog6"
     },
     {
       "id": "dialog6",
-      "dirname": "dialogs",
+      "dirname": "assets/dialogs/dialog6.json",
       "jump_to": ""
     }
   ]
