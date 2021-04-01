@@ -3,36 +3,40 @@
 #include <string>
 #include <json.hpp>
 #include <fstream>
+#include <iostream>
 
 using namespace game::assetsModule;
 
 background::background(const int& ids, const nlohmann::json& structfile) {
-	id = structfile["bakgrounds_data"][ids]["id"];
-	img.loadFromFile(structfile["backgrounds_data"][ids]["filename"]);
+	id = structfile["bg_data"][ids]["id"];
+	img.loadFromFile(structfile["bg_data"][ids]["file"]);
 }
 
 character::character(const int& ids, const nlohmann::json& structfile) {
-	id = structfile["characters_data"][ids]["id"];
+	id = structfile["character_data"][ids]["id"];
 	std::vector<std::string> emotion = { "happy", "sad", "angry", "calm",  "smiling", "neutral" };
 	for (int i = 0; i < emotion.size(); i++)
 	{
 		sf::Texture texture;
-		texture.loadFromFile(structfile["characters_data"][ids][emotion[i] + "_emotion"]);
+		texture.loadFromFile(structfile["character_data"][ids][emotion[i]]);
 		emotions.insert(std::make_pair(emotion[i], texture));
 	}
 }
 
 assetsSystem::assetsSystem() {
-	std::fstream jsonstream("assets\\assets_struct.json"), localestream("assets\\texts\\Locale.json");
+	std::fstream jsonstream("assets/asset_struct.json"), localestream("assets/texts/locale.json");
 	nlohmann::json structfile, locale;
 	jsonstream >> structfile;
 	localestream >> locale;
 	for (int i = 0; i < structfile["bg_data"].size(); i++)
 		backgrounds.insert(std::make_pair(structfile["bg_data"][i]["id"], background(i, structfile)));
-	for (int i = 0; i < structfile["characters_data"].size(); i++)
-		characters.insert(std::make_pair(structfile["characters_data"][i]["id"], character(structfile["characters_data"][i]["id"], structfile)));
-	for (auto& el : locale.items())
-		texts.insert(std::make_pair(el.key(), std::wstring(L"" + el.value())));
+	for (int i = 0; i < structfile["character_data"].size(); i++)
+	{
+		std::cout << structfile["character_data"][i]["id"] << std::endl;
+		characters[structfile["character_data"][i]["id"]] = character(i, structfile);
+	}
+	for (int i = 0; i < locale.size(); i++)
+		texts[locale[i]["id"]] = locale[i]["data"];
 }
 
 
@@ -55,7 +59,7 @@ const background& assetsSystem::getBackground(std::string& id) {
 const character& assetsSystem::getCharacter(std::string& id) {
 	return characters.at(id);
 }
-const std::wstring& assetsSystem::getText(std::string& id) {
+const std::string& assetsSystem::getText(const std::string& id) {
 	return texts.at(id);
 }
 
