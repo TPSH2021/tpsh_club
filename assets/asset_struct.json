@@ -215,6 +215,11 @@
       "file": "assets/images/backgrounds/none_bg.png",
       "id": "bedroom"
       
+    },
+    {
+      "file": "assets/images/backgrounds/die.png",
+      "id": "die"
+      
     }
   ]
 }
