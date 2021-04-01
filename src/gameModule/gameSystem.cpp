@@ -46,20 +46,32 @@ game::states gameLogic::run(GUI::window* window) {
 			menu_button.update(event);
 			exit.update(event);
 			handleKeyboard(event);
+			handleChsButtons(event);
 		}
 		if (loadScene) {
 			std::cout << "loaded" << std::endl;
 			createNewScene();
 		}
 
-		drawUI(window);
 		red_button.isClicked();
 		if (menu_button.isClicked())
 			return states::menu;
 		else if (exit.isClicked() || window->isDone())
 			return states::exit;
+		else if (endGame)
+			return states::menu;
+
+		drawUI(window);
 
 
+	}
+}
+
+void gameLogic::handleChsButtons(const sf::Event& event) {
+	for (GUI::button& btn : choise_btns) {
+		btn.update(event);
+		if (btn.isClicked())
+			
 	}
 }
 
@@ -129,13 +141,30 @@ void gameLogic::drawUI(GUI::window* window) {
 
 
 void gameLogic::createNewScene() {
-	bool flag;
-	speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
-	d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
 	if (d_system.getDialog().getReplica().getJumps()[0].first.size() == 0)
-		flag = d_system.next(d_system.getDialog().getJump());
-	else
-		d_system.getDialog().next(d_system.getDialog().getReplica().getJumps()[0].first);
+		endGame = d_system.next(d_system.getDialog().getJump());
+	else if (!endGame)
+		d_system.getDialog().next(d_system.getDialog().getReplica().getJumps()[chs_jump].first);
+	if (!endGame) {
+		choise_btns.clear();
+		if (d_system.getDialog().getReplica().getJumps().size() == 1)
+			chs_jump = 0;
+		else {
+
+			for (int i(0); i < d_system.getDialog().getReplica().getJumps().size(); ++i) {
+				choise_btns.push_back(GUI::button(
+					"assets/img/UI/choose_c.png",
+					"assets/img/UI/choose_t.png",
+					"assets/img/UI/choose_a.png",
+					0.5,
+					{ 100, 100 + i * 75 },
+					1
+				));
+			}
+		}
+		speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
+		d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
+	}
 	loadScene = false;
 }
 

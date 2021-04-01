@@ -122,5 +122,5 @@ dialog& dialogSystem::getDialog() {
 
 bool dialogSystem::next(const std::string& dialogId) {
 	cur_dialog = dialogId;
-	return true;
+	return dialogId == "";
 }
