@@ -4,10 +4,10 @@
     {
       "id": "dialog2.0",
       "background": "room",
-      "character": "player",
+      "character": "vlad",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -34,8 +34,8 @@
       "background": "room",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -70,8 +70,8 @@
       "background": "door",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -97,8 +97,8 @@
       "background": "dark_room",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -124,8 +124,8 @@
       "background": "dark_room",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -151,8 +151,8 @@
       "background": "dark_room",
       "character": "rudnik",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -176,10 +176,10 @@
     {
       "id": "dialog2.10",
       "background": "dark_room",
-      "character": "player",
+      "character": "vlad",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -205,8 +205,8 @@
       "background": "dark_room",
       "character": "rudnik",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -232,8 +232,8 @@
       "background": "door",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -267,8 +267,8 @@
         "emotion": "smiling"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "right2": {
         "character": "none",
@@ -298,8 +298,8 @@
         "emotion": "smiling"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "right2": {
         "character": "none",
@@ -315,18 +315,18 @@
     {
       "id": "dialog2.14",
       "background": "rita_room",
-      "character": "player",
+      "character": "vlad",
       "left1": {
-        "character": "pasha.r",
+        "character": "pasha.b",
         "emotion": "smiling"
       },
       "left2": {
-        "character": "misha.r",
+        "character": "misha.b",
         "emotion": "smiling"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "right2": {
         "character": "none",
@@ -344,8 +344,8 @@
       "background": "door",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
@@ -369,18 +369,18 @@
     {
       "id": "dialog2.16",
       "background": "rita_room",
-      "character": "player",
+      "character": "vlad",
       "left1": {
-        "character": "rita",
-        "emotion": "netural"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
         "emotion": "none"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "rita",
+        "emotion": "netural"
       },
       "right2": {
         "character": "none",
@@ -398,16 +398,16 @@
       "background": "rita_room",
       "character": "rita",
       "left1": {
-        "character": "rita",
-        "emotion": "netural"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
         "emotion": "none"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "rita",
+        "emotion": "netural"
       },
       "right2": {
         "character": "none",
@@ -429,16 +429,16 @@
       "background": "rita_room",
       "character": "rita",
       "left1": {
-        "character": "rita",
-        "emotion": "netural"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
         "emotion": "none"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "rita",
+        "emotion": "netural"
       },
       "right2": {
         "character": "none",
@@ -461,16 +461,16 @@
       "background": "rita_room",
       "character": "rita",
       "left1": {
-        "character": "rita",
-        "emotion": "netural"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
-        "character": "player",
+        "character": "none",
         "emotion": "none"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "rita",
+        "emotion": "netural"
       },
       "right2": {
         "character": "none",
@@ -493,16 +493,16 @@
       "background": "rita_room",
       "character": "rita",
       "left1": {
-        "character": "rita",
-        "emotion": "smiling"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
         "emotion": "none"
       },
       "right1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "rita",
+        "emotion": "smiling"
       },
       "right2": {
         "character": "none",
@@ -520,8 +520,8 @@
       "background": "rita_room",
       "character": "none",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "rita",
@@ -545,10 +545,10 @@
     {
       "id": "dialog2.25",
       "background": "rita_room",
-      "character": "player",
+      "character": "vlad",
       "left1": {
-        "character": "none",
-        "emotion": "none"
+        "character": "vlad",
+        "emotion": "calm"
       },
       "left2": {
         "character": "none",
