@@ -182,17 +182,17 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door1"
+      "id": "door"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door2"
+      "id": "door"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door3"
+      "id": "door"
       
     },
     
@@ -203,17 +203,22 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "street"
+      "id": "comrade"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "auditorium"
+      "id": "bedroom1"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "bedroom"
+      "id": "bedroom2"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "bedroom3"
       
     }
   ]

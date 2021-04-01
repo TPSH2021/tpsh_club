@@ -18,7 +18,31 @@ label::label(const sf::Font& font, const sf::Vector2f& pos, int size) {
 }
 
 void label::setText(const std::wstring& text) {
-	mText.setString(text);
+	std::vector<size_t> repl, tmp;
+	std::wstring res(text);
+	size_t d = 0;
+	size_t l = 0;
+	for (size_t i(0); i < text.size(); ++i)
+		if (res[i] == L' ')
+			tmp.push_back(i);
+	for (auto& k : tmp) {
+		if ((k - d >= 60 && k - d <= 65)) {
+			repl.push_back(k);
+			d = k;
+			l = k;
+		}
+		else if (k - d > 65) {
+			repl.push_back(l);
+			d = l;
+			l = k;
+		}
+		else {
+			l = k;
+		}
+	}
+	for (size_t i : repl)
+		res[i] = L'\n';
+	mText.setString(res);
 }
 
 void label::draw(window& window) {
@@ -148,6 +172,17 @@ void button::deactivate() {
 	isActive = false;
 	state = Type::Selected;
 }
+
+textButton::textButton(const std::string& common_tx,
+	const std::string& triggered_tx,
+	const std::string& clicked_tx,
+	float scale,
+	const sf::Vector2f& pos,
+	uint8_t id_u,
+	const sf::Font& font,
+	int size) : btn(common_tx, triggered_tx, clicked_tx, scale, pos, id_u),
+	lbl(font, { pos.x + 20, pos.y + 5 }, size)
+{}
 //---------------------------------------------------------------window
 window::window() {
 	setup("Window", sf::Vector2u(640, 480));
