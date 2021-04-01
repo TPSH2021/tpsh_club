@@ -494,5 +494,13 @@
   {
     "id": "maxim",
     "data": "Красников Максим"
+  },
+  {
+    "id": "player",
+    "data": "Влад"
+  },
+  {
+    "id": "none",
+    "data":  "NoName"
   }
 ]

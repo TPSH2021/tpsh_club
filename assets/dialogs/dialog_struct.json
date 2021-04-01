@@ -29,7 +29,7 @@
     {
       "id": "dialog6",
       "dirname": "assets/dialogs/dialog6.json",
-      "jump_to": "-1"
+      "jump_to": ""
     }
   ]
 }

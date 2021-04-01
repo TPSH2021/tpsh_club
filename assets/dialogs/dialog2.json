@@ -51,7 +51,7 @@
       },
       "jumps": [
         {
-          "nextPoint": "dialog2.5.",
+          "nextPoint": "dialog2.5",
           "description": "dialog2.2"
         },
         {
@@ -564,15 +564,15 @@
       },
       "jumps": [
       {
-        "nextPoint": "dialog3.0",
+        "nextPoint": "",
         "description": "dialog2.26"
       },
       {
-        "nextPoint": "dialog3.0",
+        "nextPoint": "",
         "description": "dialog2.27"
       },
       {
-        "nextPoint": "dialog3.0",
+        "nextPoint": "",
         "description": "dialog2.28"
       }
       ]
