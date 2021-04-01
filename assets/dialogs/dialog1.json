@@ -89,35 +89,16 @@
       },
       "jumps": [
         {
-          "nextPoint": "dialog1.7",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog1.7",
-      "background": "hotel_hall_background",
-      "character": "vlad",
-      "left1": {
-        "character": "vlad",
-        "emotion": "smiling"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right2": {
-        "character": "igor",
-        "emotion": "smiling"
-      },
-      "jumps": [
+          "nextPoint": "dialog1.8",
+          "description": "dialog1.7"
+        },
         {
           "nextPoint": "dialog1.8",
-          "description": ""
+          "description": "dialog1.7"
+        },
+        {
+          "nextPoint": "dialog1.8",
+          "description": "dialog1.7"
         }
       ]
     },

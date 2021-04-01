@@ -14,7 +14,7 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "rudnik",
+        "character": "maxim",
         "emotion": "neutral"
       },
       "right2": {
@@ -31,42 +31,7 @@
     {
       "id": "dialog3.1",
       "background": "comrade",
-      "character": "rudnik",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "lisa",
-        "emotion": "neutral"
-      },
-      "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "igor",
-        "emotion": "neutral"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.5",
-          "description": "dialog3.2"
-        },
-        {
-          "nextPoint": "dialog3.6",
-          "description": "dialog3.3"
-        },
-        {
-          "nextPoint": "dialog3.7",
-          "description": "dialog3.4"
-        }
-      ]
-    },
-    {
-      "id": "dialog3.5",
-      "background": "comrade",
-      "character": "rudnik",
+      "character": "maxim",
       "left1": {
         "character": "vlad",
         "emotion": "calm"
@@ -76,12 +41,47 @@
         "emotion": "smiling"
       },
       "right1": {
-        "character": "rudnik",
+        "character": "maxim",
         "emotion": "neutral"
       },
       "right2": {
         "character": "igor",
         "emotion": "calm"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog3.5",
+          "description": "dialog3.2"
+        },
+        {
+          "nextPoint": "dialog3.7",
+          "description": "dialog3.3"
+        },
+        {
+          "nextPoint": "dialog3.6",
+          "description": "dialog3.4"
+        }
+      ]
+    },
+    {
+      "id": "dialog3.5",
+      "background": "comrade",
+      "character": "maxim",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "maxim",
+        "emotion": "smiling"
+      },
+      "right2": {
+        "character": "igor",
+        "emotion": "smiling"
       },
       "jumps": [
         {
@@ -93,22 +93,22 @@
     {
       "id": "dialog3.6",
       "background": "comrade",
-      "character": "rudnik",
+      "character": "maxim",
       "left1": {
         "character": "vlad",
         "emotion": "calm"
       },
       "left2": {
-        "character": "lisa",
-        "emotion": "smiling"
+        "character": "none",
+        "emotion": "none"
       },
       "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
+        "character": "maxim",
+        "emotion": "sad"
       },
       "right2": {
         "character": "igor",
-        "emotion": "calm"
+        "emotion": "smiling"
       },
       "jumps": [
         {
@@ -120,22 +120,22 @@
     {
       "id": "dialog3.7",
       "background": "comrade",
-      "character": "rudnik",
+      "character": "maxim",
       "left1": {
         "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "lisa",
         "emotion": "smiling"
       },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
       "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
+        "character": "maxim",
+        "emotion": "smiling"
       },
       "right2": {
         "character": "igor",
-        "emotion": "calm"
+        "emotion": "neutral"
       },
       "jumps": [
         {
@@ -147,96 +147,69 @@
     {
       "id": "dialog3.8",
       "background": "comrade",
-      "character": "maxim",
+      "character": "igor",
       "left1": {
         "character": "vlad",
         "emotion": "calm"
       },
       "left2": {
-        "character": "lisa",
-        "emotion": "smiling"
+        "character": "none",
+        "emotion": "none"
       },
       "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
+        "character": "none",
+        "emotion": "none"
       },
       "right2": {
-        "character": "maxim",
-        "emotion": "calm"
+        "character": "igor",
+        "emotion": "smiling"
       },
       "jumps": [
         {
-          "nextPoint": "dialog3.12",
-          "description": "dialog3.9"
-        },
+          "nextPoint": "dialog3.9",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "id": "dialog3.9",
+      "background": "comrade",
+      "character": "igor",
+      "left1": {
+        "character": "vlad",
+        "emotion": "calm"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "igor",
+        "emotion": "smiling"
+      },
+      "jumps": [
         {
           "nextPoint": "dialog3.13",
           "description": "dialog3.10"
         },
         {
-          "nextPoint": "dialog3.12",
+          "nextPoint": "dialog3.13",
           "description": "dialog3.11"
-        }
-      ]
-    },
-    {
-      "id": "dialog3.12",
-      "background": "comrade",
-      "character": "maxim",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "lisa",
-        "emotion": "smiling"
-      },
-      "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "maxim",
-        "emotion": "calm"
-      },
-      "jumps": [
+        },
         {
-          "nextPoint": "dialog3.14",
-          "description": ""
+          "nextPoint": "dialog3.13",
+          "description": "dialog3.12"
         }
       ]
     },
     {
       "id": "dialog3.13",
       "background": "comrade",
-      "character": "maxim",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "lisa",
-        "emotion": "smiling"
-      },
-      "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "maxim",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.14",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog3.14",
-      "background": "comrade",
-      "character": "lisa",
+      "character": "igor",
       "left1": {
         "character": "vlad",
         "emotion": "calm"
@@ -246,32 +219,32 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
+        "character": "none",
+        "emotion": "none"
       },
       "right2": {
-        "character": "lisa",
-        "emotion": "calm"
+        "character": "igor",
+        "emotion": "smiling"
       },
       "jumps": [
         {
-          "nextPoint": "dialog3.18",
+          "nextPoint": "dialog3.17",
+          "description": "dialog3.14"
+        },
+        {
+          "nextPoint": "dialog3.17",
           "description": "dialog3.15"
         },
         {
-          "nextPoint": "dialog3.19",
+          "nextPoint": "dialog3.17",
           "description": "dialog3.16"
-        },
-        {
-          "nextPoint": "dialog3.20",
-          "description": "dialog3.17"
         }
       ]
     },
     {
-      "id": "dialog3.18",
+      "id": "dialog3.17",
       "background": "comrade",
-      "character": "lisa",
+      "character": "igor",
       "left1": {
         "character": "vlad",
         "emotion": "calm"
@@ -281,77 +254,31 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
+        "character": "none",
+        "emotion": "none"
       },
       "right2": {
-        "character": "lisa",
-        "emotion": "calm"
+        "character": "igor",
+        "emotion": "smiling"
       },
       "jumps": [
         {
-          "nextPoint": "dialog3.21",
-          "description": ""
+          "nextPoint": "dialog3.19",
+          "description": "dialog3.18"
+        },
+        {
+          "nextPoint": "dialog3.19",
+          "description": "dialog3.18"
+        },
+        {
+          "nextPoint": "dialog3.19",
+          "description": "dialog3.18"
         }
       ]
     },
     {
       "id": "dialog3.19",
       "background": "comrade",
-      "character": "lisa",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "lisa",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.21",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog3.20",
-      "background": "comrade",
-      "character": "lisa",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "rudnik",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "lisa",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.21",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog3.21",
-      "background": "comrade",
       "character": "igor",
       "left1": {
         "character": "vlad",
@@ -362,136 +289,12 @@
         "emotion": "none"
       },
       "right1": {
-        "character": "igor",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "lisa",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.22",
-          "description": ""
-        }
-      ]
-    },
-    {
-      "id": "dialog3.22",
-      "background": "comrade",
-      "character": "igor",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
         "character": "none",
         "emotion": "none"
       },
-      "right1": {
-        "character": "igor",
-        "emotion": "neutral"
-      },
       "right2": {
-        "character": "lisa",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.26",
-          "description": "dialog3.23"
-        },
-        {
-          "nextPoint": "dialog3.26",
-          "description": "dialog3.24"
-        },
-        {
-          "nextPoint": "dialog3.26",
-          "description": "dialog3.25"
-        }
-      ]
-    },
-    {
-      "id": "dialog3.26",
-      "background": "comrade",
-      "character": "igor",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
         "character": "igor",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "lisa",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.30",
-          "description": "dialog3.27"
-        },
-        {
-          "nextPoint": "dialog3.30",
-          "description": "dialog3.28"
-        },
-        {
-          "nextPoint": "dialog3.30",
-          "description": "dialog3.29"
-        }
-      ]
-    },
-    {
-      "id": "dialog3.30",
-      "background": "comrade",
-      "character": "igor",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "igor",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "lisa",
-        "emotion": "calm"
-      },
-      "jumps": [
-        {
-          "nextPoint": "dialog3.32",
-          "description": "dialog3.31"
-        }
-      ]
-    },
-    {
-      "id": "dialog3.32",
-      "background": "comrade",
-      "character": "igor",
-      "left1": {
-        "character": "vlad",
-        "emotion": "calm"
-      },
-      "left2": {
-        "character": "none",
-        "emotion": "none"
-      },
-      "right1": {
-        "character": "igor",
-        "emotion": "neutral"
-      },
-      "right2": {
-        "character": "lisa",
-        "emotion": "calm"
+        "emotion": "smiling"
       },
       "jumps": [
         {
