@@ -43,11 +43,11 @@ const std::pair<std::string, std::string>& replica::getLeft1Character() const {
 }
 
 void replica::setLeft2Character(const std::pair<std::string, std::string>& id) {
-	character_left1 = id;
+	character_left2 = id;
 }
 
 const std::pair<std::string, std::string>& replica::getLeft2Character() const {
-	return character_left1;
+	return character_left2;
 }
 
 void replica::setRight1Character(const std::pair<std::string, std::string>& id) {

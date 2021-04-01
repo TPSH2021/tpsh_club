@@ -4,21 +4,12 @@
 #include <iostream>
 #include "helper_func.hpp"
 using namespace game::gameModule;
-
+using namespace GUI;
 
 gameLogic::gameLogic(const sf::Font& font) :
-	red_button("assets/images/UI/redactor_c.png",
-		"assets/images/UI/redactor_t.png",
-		"assets/images/UI/redactor_a.png",
-		0.06, { 0, 0 }, 1),
-	menu_button("assets/images/UI/menu_c.png",
-		"assets/images/UI/menu_t.png",
-		"assets/images/UI/menu_a.png",
-		0.06, { 0, 35 }, 2),
-	exit("assets/images/UI/exit_c.png",
-		"assets/images/UI/exit_t.png",
-		"assets/images/UI/exit_a.png",
-		0.06, { 0, 70 }, 3),
+	red_button(createNewButton(buttonStyle::editor, 0.06, { 0, 0 })),
+	menu_button(createNewButton(buttonStyle::menu, 0.06, { 0, 35 })),
+	exit(createNewButton(buttonStyle::exit, 0.06, { 0, 70 })),
 	speaker(font, {30, winC::size.y - 232}, 32),
 	d_text(font, {70, winC::size.y - 180}, 30),
 	d_system("assets/dialogs/dialog_struct.json"),
@@ -68,7 +59,6 @@ game::states gameLogic::run(GUI::window* window) {
 void gameLogic::handleChsButtons(const sf::Event& event) {
 	for (int i(0); i < choice_btns.size(); ++i) {
 		choice_btns[i].btn.update(event);
-		//choice_btns[i].lbl.update(event);
 		if (choice_btns[i].btn.isClicked()) {
 			chs_jump = i;
 			loadScene = true;
@@ -107,8 +97,8 @@ void gameLogic::drawUI(GUI::window* window) {
 	}
 	if (char_l_1.first != "none") {
 		char_l_1_sprite.setTexture(a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second));
-		float k_x = char_size.x / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_2.second).getSize().x;
-		float k_y = char_size.y / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_2.second).getSize().y;
+		float k_x = char_size.x / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().x;
+		float k_y = char_size.y / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().y;
 		char_l_1_sprite.setScale({ k_x, k_y });
 		char_l_1_sprite.move({ 20 + k, 100 });
 	}
@@ -171,8 +161,7 @@ void gameLogic::createNewScene(bool need_next) {
 						"assets/images/UI/choose_t.png",
 						"assets/images/UI/choose_a.png",
 						0.15,
-						{ 200.0f, 100 + i * 70.0f },
-						1, ffont, 18));
+						{ 200.0f, 100 + i * 70.0f }, ffont, 18));
 					choice_btns[i].lbl.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getJumps()[i].second)));
 				}
 				chs_jump = -1;

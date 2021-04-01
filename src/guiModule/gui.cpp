@@ -57,19 +57,17 @@ button::button(const std::string & common_tx,
 	const std::string& triggered_tx,
 	const std::string& clicked_tx,
 	float scale_u,
-	const sf::Vector2f& pos_u,
-	uint8_t id_u) {
+	const sf::Vector2f& pos_u) {
 	g_scale = { 1, 1 };
 	scale = scale_u;
 	state = Type::Normal;
 	isActive = false;
 	isSelected = false;
 	pos = pos_u;
-	//common = sf::Texture();
 	common.loadFromFile(common_tx);
 	triggered.loadFromFile(triggered_tx);
 	clicked.loadFromFile(clicked_tx);
-	id = id_u;
+	flag = false;
 }
 
 bool GUI::button::isClicked()
@@ -178,9 +176,8 @@ textButton::textButton(const std::string& common_tx,
 	const std::string& clicked_tx,
 	float scale,
 	const sf::Vector2f& pos,
-	uint8_t id_u,
 	const sf::Font& font,
-	int size) : btn(common_tx, triggered_tx, clicked_tx, scale, pos, id_u),
+	int size) : btn(common_tx, triggered_tx, clicked_tx, scale, pos),
 	lbl(font, { pos.x + 20, pos.y + 5 }, size)
 {}
 //---------------------------------------------------------------window
@@ -291,4 +288,36 @@ void mBackground::draw(window* window) {
 	sprite.setScale(scale);
 	sprite.setTexture(texture);
 	window->getRenderWindow().draw(sprite);
+}
+
+button GUI::createNewButton(buttonStyle style, float scale, sf::Vector2f pos)
+{
+	switch (style)
+	{
+	case GUI::buttonStyle::editor:
+		return button("assets/images/UI/redactor_c.png",
+			"assets/images/UI/redactor_t.png",
+			"assets/images/UI/redactor_a.png",
+			scale, pos
+		);
+	case GUI::buttonStyle::menu:
+		return button("assets/images/UI/menu_c.png",
+			"assets/images/UI/menu_t.png",
+			"assets/images/UI/menu_a.png",
+			scale, pos
+		);
+	case GUI::buttonStyle::play:
+		return button("assets/images/UI/play_c.png",
+			"assets/images/UI/play_t.png",
+			"assets/images/UI/play_a.png",
+			scale, pos
+		);
+	case GUI::buttonStyle::exit:
+		return button("assets/images/UI/exit_c.png",
+			"assets/images/UI/exit_t.png",
+			"assets/images/UI/exit_a.png",
+			scale, pos
+		);
+	}
+	
 }

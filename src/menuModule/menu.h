@@ -10,7 +10,6 @@ namespace game {
 		private:
 			GUI::button play;
 			GUI::button exit;
-			GUI::label title;
 			GUI::mBackground bg;
 		};
 	}

@@ -14,8 +14,8 @@ namespace GUI {
 		window();
 		window(const std::string& l_title, const sf::Vector2u& l_size);
 		~window();
-		void beginDraw();  // Clear the window.
-		void endDraw();    // Display the changes.
+		void beginDraw();
+		void endDraw();
 
 		sf::Vector2u getWindowSize();
 		sf::RenderWindow& getRenderWindow();
@@ -60,8 +60,7 @@ namespace GUI {
 			const std::string&,
 			const std::string&,
 			float scale,
-			const sf::Vector2f& pos,
-			uint8_t id_u);
+			const sf::Vector2f& pos);
 
 		bool isClicked();
 		void update(const sf::Event& event);
@@ -73,7 +72,6 @@ namespace GUI {
 		void activate();
 		void deactivate();
 	private:
-		uint8_t id;
 
 		float scale;
 		sf::Vector2f g_scale;
@@ -95,7 +93,6 @@ namespace GUI {
 			const std::string&,
 			float scale,
 			const sf::Vector2f& pos,
-			uint8_t id_u,
 			const sf::Font& font,
 			int size
 		);
@@ -115,5 +112,12 @@ namespace GUI {
 		sf::Texture texture;
 		sf::Vector2f scale;
 	};
+	enum class buttonStyle {
+		editor,
+		menu,
+		play,
+		exit
+	};
 
+	button createNewButton(buttonStyle style, float scale, sf::Vector2f pos);
 }
