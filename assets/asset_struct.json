@@ -208,12 +208,17 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "auditorium"
+      "id": "bedroom1"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "bedroom"
+      "id": "bedroom2"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/none_bg.png",
+      "id": "bedroom3"
       
     }
   ]
