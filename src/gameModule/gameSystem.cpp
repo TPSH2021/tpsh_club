@@ -2,10 +2,8 @@
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
 #include <iostream>
+#include "helper_func.hpp"
 using namespace game::gameModule;
-
-
-
 
 
 gameLogic::gameLogic(const sf::Font& font) :
@@ -27,10 +25,13 @@ gameLogic::gameLogic(const sf::Font& font) :
 	a_system()
 {
 	speaker.setText(L"SomeName");
-	d_text.setText(L"qweRTYUIOPASDFGHJKLZXCVBnmfghjVBNhjkUIO");
+	d_text.setText(L"SomeText");
 	dialogUI.loadFromFile("assets/images/UI/dialog.png");
 	d_scale = winC::size.x / dialogUI.getSize().x;
-	d_pos = {0, winC::size.y - dialogUI.getSize().y * d_scale };
+	d_pos = { 0, winC::size.y - dialogUI.getSize().y * d_scale };
+
+	speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
+	d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
 
 }
 
@@ -46,8 +47,10 @@ game::states gameLogic::run(GUI::window* window) {
 			exit.update(event);
 			handleKeyboard(event);
 		}
-		if (loadScene)
+		if (loadScene) {
+			std::cout << "loaded" << std::endl;
 			createNewScene();
+		}
 
 		drawUI(window);
 		red_button.isClicked();
@@ -73,28 +76,37 @@ void gameLogic::drawUI(GUI::window* window) {
 	auto char_r_1 = d_system.getDialog().getReplica().getRight1Character();
 	auto char_r_2 = d_system.getDialog().getReplica().getRight2Character();
 
-	char_l_2_sprite.setTexture(a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second));
-	char_l_1_sprite.setTexture(a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second));
-	char_r_1_sprite.setTexture(a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second));
-	char_r_2_sprite.setTexture(a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second));
-	char_l_2_sprite.setScale(
-		{ char_size.x / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().x,
-		  char_size.y / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().y });
-	char_l_1_sprite.setScale(
-		{ char_size.x / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_2.second).getSize().x,
-		  char_size.y / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_2.second).getSize().y });
-	char_r_1_sprite.setScale(
-		{ char_size.x / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().x,
-		  char_size.y / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().y });
-	char_r_2_sprite.setScale(
-		{ char_size.x / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().x,
-		  char_size.y / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().y });
+
 	float k = winC::size.x / 4;
-	//std::cout << char_left_1.getSize().x << ' ' << char_left_1.getSize().y << std::endl;
-	//char_l_2_sprite.move({20, winC::size.y - char_left_2.getSize().y * sc});
-	//char_l_1_sprite.move({20 + k, winC::size.y - char_left_1.getSize().y * sc });
-	//char_r_1_sprite.move({ winC::size.x - 20 - k - char_right_2.getSize().x * sc, winC::size.y - char_right_1.getSize().y * sc});
-	//char_r_2_sprite.move({ winC::size.x - 20 - char_right_2.getSize().x * sc, winC::size.y - char_right_2.getSize().y * sc});
+
+	if (char_l_1.first != "none") {
+		char_l_2_sprite.setTexture(a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second));
+		float k_x = char_size.x / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().x;
+		float k_y = char_size.y / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().y;
+		char_l_2_sprite.setScale({ k_x, k_y});
+		char_l_2_sprite.move({ 20, 100});
+	}
+	if (char_l_1.first != "none") {
+		char_l_1_sprite.setTexture(a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second));
+		float k_x = char_size.x / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_2.second).getSize().x;
+		float k_y = char_size.y / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_2.second).getSize().y;
+		char_l_1_sprite.setScale({ k_x, k_y });
+		char_l_1_sprite.move({ 20 + k, 100 });
+	}
+	if (char_r_1.first != "none") {
+		char_r_1_sprite.setTexture(a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second));
+		float k_x = char_size.x / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().x;
+		float k_y = char_size.y / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().y;
+		char_r_1_sprite.setScale({ k_x, k_y });
+		char_r_1_sprite.move({ winC::size.x - 20 - k - char_size.x, 100 });
+	}
+	if (char_r_2.first != "none") {
+		char_r_2_sprite.setTexture(a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second));
+		float k_x = char_size.x / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().x;
+		float k_y = char_size.y / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().y;
+		char_r_2_sprite.setScale({ k_x, k_y });
+		char_r_2_sprite.move({ winC::size.x - 20 - char_size.x, 100 });
+	}
 	window->getRenderWindow().draw(char_l_2_sprite);
 	window->getRenderWindow().draw(char_l_1_sprite);
 	window->getRenderWindow().draw(char_r_1_sprite);
@@ -117,6 +129,13 @@ void gameLogic::drawUI(GUI::window* window) {
 
 
 void gameLogic::createNewScene() {
+	bool flag;
+	speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
+	d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
+	if (d_system.getDialog().getReplica().getJumps()[0].first.size() == 0)
+		flag = d_system.next(d_system.getDialog().getJump());
+	else
+		d_system.getDialog().next(d_system.getDialog().getReplica().getJumps()[0].first);
 	loadScene = false;
 }
 
