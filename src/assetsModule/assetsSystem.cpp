@@ -51,6 +51,17 @@ const std::vector<std::string>& character::getAllEmotions() {
 		res.push_back(c.first);
 	return res;
 }
+const std::map<std::string, character>& assetsSystem::getAllCharacters() {
+	return characters;
+}
+
+const std::map<std::string, background>& assetsSystem::getAllBackgrouds() {
+	return backgrounds;
+}
+
+const std::map<std::string, std::string>& assetsSystem::getAllTexts() {
+	return texts;
+}
 
 background& assetsSystem::getBackground(const std::string& id) {
 	return backgrounds.at(id);

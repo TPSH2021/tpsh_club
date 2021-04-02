@@ -1,7 +1,12 @@
 #include "gui.h"
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
+#include <imgui.h>
+#include <imgui-SFML.h>
 #include <iostream>
+#include <string>
+#include <vector>
+#include <assetsModule/assetsSystem.h>
 #include <SFML/System/String.hpp>
 #include <SFML/System/String.hpp>
 #include <SFML/Graphics/Font.hpp>
@@ -319,5 +324,55 @@ button GUI::createNewButton(buttonStyle style, float scale, sf::Vector2f pos)
 			scale, pos
 		);
 	}
-	
+}
+//-----------------------------------------Editor
+
+editor::editor()
+{
+	deltaClock;
+	Mass = 100;
+}
+
+editor::~editor()
+{}
+
+void editor::Init(sf::RenderWindow& win) {
+	ImGui::SFML::Init(win);
+}
+
+void editor::ProcessEvent(const sf::Event& event) {							
+	ImGui::SFML::ProcessEvent(event);
+}
+
+void editor::Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dialogSystem, game::assetsModule::assetsSystem& assetsSystem) {
+	ImGui::SFML::Update(win, deltaClock.restart());
+	ImGui::Begin("Editor");
+	ImGui::Text("Characters");
+	std::string characters;
+	std::vector<std::string> char_sel_to_id;
+	int num = 0;
+	for (auto& iter : assetsSystem.getAllCharacters()) {
+		characters += iter.first + '\0';
+		char_sel_to_id.push_back(iter.first);
+		if (dialogSystem.getDialog().getReplica().getLeft1Character().first == iter.first)
+			sel_left_1_char = num;
+		num++;
+	}
+
+	auto key = dialogSystem.getDialog().getReplica().getLeft1Character().second;
+	sel_left_1_emot = em_sel_to_id.at(key);
+	ImGui::Combo("Central Left Character", &sel_left_1_char, characters.c_str(), assetsSystem.getAllCharacters().size());
+	ImGui::Combo("Central Left Emotions", &sel_left_1_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0", 6);
+	if (char_sel_to_id[sel_left_1_char] != dialogSystem.getDialog().getReplica().getLeft1Character().first || em_id_to_sel[sel_left_1_emot] != dialogSystem.getDialog().getReplica().getLeft1Character().second)
+		dialogSystem.getDialog().getReplica().setLeft1Character({ char_sel_to_id[sel_left_1_char], em_id_to_sel[sel_left_1_emot] });
+
+	ImGui::End();
+}
+
+void editor::Render(sf::RenderWindow& win) {
+	ImGui::SFML::Render(win);
+}
+
+void editor::ShutDown() {
+	ImGui::SFML::Shutdown();
 }

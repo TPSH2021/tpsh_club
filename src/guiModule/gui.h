@@ -1,12 +1,15 @@
 #pragma once
 
 #include <string>
+#include <map>
+#include <dialogModule/dialogSystem.h>
 #include <functional>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Drawable.hpp>
+
 namespace GUI {
 
 	class window {
@@ -99,7 +102,7 @@ namespace GUI {
 		button btn;
 		label lbl;
 	};
-	 
+
 	class mBackground {
 	public:
 		mBackground(const std::string& path);
@@ -120,4 +123,23 @@ namespace GUI {
 	};
 
 	button createNewButton(buttonStyle style, float scale, sf::Vector2f pos);
+
+	class editor {
+	public:
+		editor();
+		~editor();
+		void Init(sf::RenderWindow& win);
+		void ProcessEvent(const sf::Event& event);
+		void Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dialogSystem, game::assetsModule::assetsSystem& assetsSystem);
+		void Render(sf::RenderWindow& win);
+		void ShutDown();
+	private:
+
+		int sel_left_1_char;
+		int sel_left_1_emot;
+		sf::Clock deltaClock;
+		const std::map<std::string, int> em_sel_to_id = { {"happy", 0 }, { "sad", 1 }, {"angry", 2}, {"calm", 3}, {"smiling", 4}, {"neutral", 5} };
+		std::vector<std::string> em_id_to_sel = { "happy","sad", "angry","calm","smiling","neutral" };
+		float Mass;
+	};
 }

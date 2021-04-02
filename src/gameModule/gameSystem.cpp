@@ -2,19 +2,25 @@
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
 #include <iostream>
+#include <imgui.h>
+#include <imgui-SFML.h>
 #include "helper_func.hpp"
 using namespace game::gameModule;
+
 using namespace GUI;
+
 
 gameLogic::gameLogic(const sf::Font& font) :
 	red_button(createNewButton(buttonStyle::editor, 0.06, { 0, 0 })),
 	menu_button(createNewButton(buttonStyle::menu, 0.06, { 0, 35 })),
 	exit(createNewButton(buttonStyle::exit, 0.06, { 0, 70 })),
-	speaker(font, {30, winC::size.y - 232}, 32),
-	d_text(font, {70, winC::size.y - 180}, 30),
+	speaker(font, { 30, winC::size.y - 232 }, 32),
+	d_text(font, { 70, winC::size.y - 180 }, 30),
 	d_system("assets/dialogs/dialog_struct.json"),
 	a_system()
 {
+	is_editor_active = false;
+	loadScene = false;
 	ffont = font;
 	speaker.setText(L"SomeName");
 	d_text.setText(L"SomeText");
@@ -31,6 +37,8 @@ game::states gameLogic::run(GUI::window* window) {
 
 		while (window->getRenderWindow().pollEvent(event)) {
 			window->update(event);
+			if(is_editor_active)
+				ImGui::SFML::ProcessEvent(event);
 			red_button.update(event);
 			menu_button.update(event);
 			exit.update(event);
@@ -41,8 +49,19 @@ game::states gameLogic::run(GUI::window* window) {
 			std::cout << "loaded" << std::endl;
 			createNewScene(true);
 		}
-
-		red_button.isClicked();
+		if (is_editor_active)
+			editor.Update(window->getRenderWindow(), d_system, a_system);
+		if (red_button.isClicked()) {
+			if (is_editor_active) {
+				is_editor_active = false;
+				editor.ShutDown();
+			}
+			else {
+				editor.Init(window->getRenderWindow());
+				is_editor_active = true;
+				editor.Update(window->getRenderWindow(), d_system, a_system);
+			}
+		}
 		if (menu_button.isClicked())
 			return states::menu;
 		else if (exit.isClicked() || window->isDone())
@@ -50,7 +69,7 @@ game::states gameLogic::run(GUI::window* window) {
 		else if (endGame)
 			return states::menu;
 
-		drawUI(window);
+		drawUI(window);	
 
 
 	}
@@ -138,7 +157,8 @@ void gameLogic::drawUI(GUI::window* window) {
 		b.btn.draw(window);
 		b.lbl.draw(window);
 	}
-
+	if (is_editor_active)
+		editor.Render(window->getRenderWindow());
 	window->endDraw();
 }
 

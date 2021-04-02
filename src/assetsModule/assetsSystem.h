@@ -36,6 +36,9 @@ namespace game {
 			assetsSystem();
 			background& getBackground(const std::string&);
 			const character& getCharacter(std::string&);
+			const std::map<std::string, character>& getAllCharacters();
+			const std::map<std::string, background>& getAllBackgrouds();
+			const std::map<std::string, std::string>& getAllTexts();
 			const std::string& getText(const std::string&);
 
 		private:

@@ -29,8 +29,8 @@
       ]
     },
     {
-      "id": "dialog6.1",
-      "background": "screenshot1",
+      "id": "dialog6.0",
+      "background": "kolya2",
       "character": "none",
       "left1": {
         "character": "none",
@@ -55,9 +55,36 @@
         }
       ]
     },
-
     {
       "id": "dialog6.2",
+      "background": "screenshot1",
+      "character": "none",
+      "left1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "left2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right1": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "right2": {
+        "character": "none",
+        "emotion": "none"
+      },
+      "jumps": [
+        {
+          "nextPoint": "dialog6.3",
+          "description": ""
+        }
+      ]
+    },
+
+    {
+      "id": "dialog6.3",
       "background": "screenshot2",
       "character": "none",
       "left1": {
