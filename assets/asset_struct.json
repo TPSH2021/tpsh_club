@@ -5,8 +5,8 @@
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
-      "smiling": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/vlad/calm.png",
+      "smiling": "assets/images/characters/vlad/smiling.png",
       "neutral": "assets/images/characters/none_char.png"
     },
     {
@@ -15,7 +15,7 @@
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
       "calm": "assets/images/characters/none_char.png",
-      "smiling": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/misha.b/smiling.png",
       "neutral": "assets/images/characters/none_char.png"
     },
     {
@@ -24,7 +24,7 @@
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
       "calm": "assets/images/characters/none_char.png",
-      "smiling": "assets/images/characters/none_char.png",
+      "smiling": "assets/images/characters/pasha.b/smiling.png",
       "neutral": "assets/images/characters/none_char.png"
     },
     {
@@ -41,9 +41,9 @@
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
-      "smiling": "assets/images/characters/none_char.png",
-      "neutral": "assets/images/characters/none_char.png"
+      "calm": "assets/images/characters/rudnik/calm.png",
+      "smiling": "assets/images/characters/rudnik/smiling.png",
+      "neutral": "assets/images/characters/rudnik/neutral.png"
     },
     {
       "id": "igor",
@@ -61,7 +61,7 @@
       "angry": "assets/images/characters/none_char.png",
       "calm": "assets/images/characters/none_char.png",
       "smiling": "assets/images/characters/none_char.png",
-      "neutral": "assets/images/characters/none_char.png"
+      "neutral": "assets/images/characters/milena/neutral.png"
     },
     {
       "id": "gelya",
@@ -77,7 +77,7 @@
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/ilya/calm.png",
       "smiling": "assets/images/characters/none_char.png",
       "neutral": "assets/images/characters/none_char.png"
     },
@@ -86,7 +86,7 @@
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/danil/calm.png",
       "smiling": "assets/images/characters/none_char.png",
       "neutral": "assets/images/characters/none_char.png"
     },
@@ -95,7 +95,7 @@
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/dasha/calm.png",
       "smiling": "assets/images/characters/none_char.png",
       "neutral": "assets/images/characters/none_char.png"
     },
@@ -109,20 +109,11 @@
       "neutral": "assets/images/characters/none_char.png"
     },
     {
-      "id": "lisa",
-      "happy": "assets/images/characters/none_char.png",
-      "sad": "assets/images/characters/none_char.png",
-      "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
-      "smiling": "assets/images/characters/none_char.png",
-      "neutral": "assets/images/characters/none_char.png"
-    },
-    {
       "id": "diana",
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/diana/calm.png",
       "smiling": "assets/images/characters/none_char.png",
       "neutral": "assets/images/characters/none_char.png"
     },
@@ -131,7 +122,7 @@
       "happy": "assets/images/characters/none_char.png",
       "sad": "assets/images/characters/none_char.png",
       "angry": "assets/images/characters/none_char.png",
-      "calm": "assets/images/characters/none_char.png",
+      "calm": "assets/images/characters/vova/calm.png",
       "smiling": "assets/images/characters/none_char.png",
       "neutral": "assets/images/characters/none_char.png"
     },
