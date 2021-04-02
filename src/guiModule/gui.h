@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <dialogModule/dialogSystem.h>
 #include <functional>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Image.hpp>
@@ -120,4 +121,19 @@ namespace GUI {
 	};
 
 	button createNewButton(buttonStyle style, float scale, sf::Vector2f pos);
+	class editor {
+	public:
+		editor();
+		~editor();
+		void Init(sf::RenderWindow& win);
+		void ProcessEvent(const sf::Event& event);
+		void Update(sf::RenderWindow& win, game::dialogModule::dialogSystem &dialogSystem, game::assetsModule::assetsSystem &assetsSystem);
+		void Render(sf::RenderWindow& win);
+	private:
+
+		int selection;
+		sf::Clock deltaClock;
+		float Mass;
+	};
+
 }

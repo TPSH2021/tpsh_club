@@ -2,9 +2,13 @@
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
 #include <iostream>
+#include <imgui.h>
+#include <imgui-SFML.h>
 #include "helper_func.hpp"
 using namespace game::gameModule;
+
 using namespace GUI;
+editor editor;
 
 gameLogic::gameLogic(const sf::Font& font) :
 	red_button(createNewButton(buttonStyle::editor, 0.06, { 0, 0 })),
@@ -25,12 +29,14 @@ gameLogic::gameLogic(const sf::Font& font) :
 }
 
 game::states gameLogic::run(GUI::window* window) {
+	editor.Init(window->getRenderWindow());
 	while (true) {
 
 		sf::Event event;
 
 		while (window->getRenderWindow().pollEvent(event)) {
 			window->update(event);
+			ImGui::SFML::ProcessEvent(event);
 			red_button.update(event);
 			menu_button.update(event);
 			exit.update(event);
@@ -41,7 +47,7 @@ game::states gameLogic::run(GUI::window* window) {
 			std::cout << "loaded" << std::endl;
 			createNewScene(true);
 		}
-
+		editor.Update(window->getRenderWindow(), d_system, a_system);
 		red_button.isClicked();
 		if (menu_button.isClicked())
 			return states::menu;
@@ -50,7 +56,7 @@ game::states gameLogic::run(GUI::window* window) {
 		else if (endGame)
 			return states::menu;
 
-		drawUI(window);
+		drawUI(window);	
 
 
 	}
@@ -138,7 +144,7 @@ void gameLogic::drawUI(GUI::window* window) {
 		b.btn.draw(window);
 		b.lbl.draw(window);
 	}
-
+	editor.Render(window->getRenderWindow());
 	window->endDraw();
 }
 
