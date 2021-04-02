@@ -19,7 +19,9 @@ namespace game {
 			gameLogic(const sf::Font& font);
 			states run(GUI::window* window);
 		private:
+			GUI::editor editor;
 			bool flag;
+			bool is_editor_active;
 			bool loadScene;
 			void handleKeyboard(const sf::Event& event);
 			void handleChsButtons(const sf::Event& event);

@@ -324,12 +324,12 @@ button GUI::createNewButton(buttonStyle style, float scale, sf::Vector2f pos)
 			scale, pos
 		);
 	}
-	
+}
 //-----------------------------------------Editor
 
-editor::editor() {
+editor::editor()
+{
 	deltaClock;
-	selection = 0;
 	Mass = 100;
 }
 
@@ -348,21 +348,31 @@ void editor::Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dia
 	ImGui::SFML::Update(win, deltaClock.restart());
 	ImGui::Begin("Editor");
 	ImGui::Text("Characters");
-	std::string data;
-	std::vector<std::string> selection_to_id;
+	std::string characters;
+	std::vector<std::string> char_sel_to_id;
 	int num = 0;
 	for (auto& iter : assetsSystem.getAllCharacters()) {
-		data += iter.first + '\0';
-		selection_to_id.push_back(iter.first);
+		characters += iter.first + '\0';
+		char_sel_to_id.push_back(iter.first);
 		if (dialogSystem.getDialog().getReplica().getLeft1Character().first == iter.first)
-			selection = num;
+			sel_left_1_char = num;
 		num++;
 	}
-	ImGui::Combo("Central Left Character", &selection, data.c_str(), assetsSystem.getAllCharacters().size());
-	dialogSystem.getDialog().getReplica().setLeft1Character({ selection_to_id[selection], dialogSystem.getDialog().getReplica().getLeft1Character().second });
+
+	auto key = dialogSystem.getDialog().getReplica().getLeft1Character().second;
+	sel_left_1_emot = em_sel_to_id.at(key);
+	ImGui::Combo("Central Left Character", &sel_left_1_char, characters.c_str(), assetsSystem.getAllCharacters().size());
+	ImGui::Combo("Central Left Emotions", &sel_left_1_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0", 6);
+	if (char_sel_to_id[sel_left_1_char] != dialogSystem.getDialog().getReplica().getLeft1Character().first || em_id_to_sel[sel_left_1_emot] != dialogSystem.getDialog().getReplica().getLeft1Character().second)
+		dialogSystem.getDialog().getReplica().setLeft1Character({ char_sel_to_id[sel_left_1_char], em_id_to_sel[sel_left_1_emot] });
+
 	ImGui::End();
 }
 
 void editor::Render(sf::RenderWindow& win) {
 	ImGui::SFML::Render(win);
+}
+
+void editor::ShutDown() {
+	ImGui::SFML::Shutdown();
 }
