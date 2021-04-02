@@ -171,8 +171,13 @@
       
     },
     {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "dark_room"
+      "file": "assets/images/backgrounds/dark_room1.png",
+      "id": "dark_room1"
+      
+    },
+    {
+      "file": "assets/images/backgrounds/dark_room2.png",
+      "id": "dark_room2"
       
     },
     {
@@ -182,17 +187,7 @@
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door1"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door2"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door3"
+      "id": "door"
       
     },
     
@@ -204,11 +199,6 @@
     {
       "file": "assets/images/backgrounds/none_bg.png",
       "id": "street"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "auditorium"
       
     },
     {
