@@ -142,21 +142,4 @@ namespace GUI {
 		std::vector<std::string> em_id_to_sel = { "happy","sad", "angry","calm","smiling","neutral" };
 		float Mass;
 	};
-
-	class editor {
-	public:
-		editor();
-		~editor();
-		void Init(sf::RenderWindow& win);
-		void ProcessEvent(const sf::Event& event);
-		void Update(sf::RenderWindow& win, game::dialogModule::dialogSystem &dialogSystem, game::assetsModule::assetsSystem &assetsSystem);
-		void Render(sf::RenderWindow& win);
-	private:
-
-		int selection;
-		sf::Clock deltaClock;
-		float Mass;
-	};
-
-}
 }
