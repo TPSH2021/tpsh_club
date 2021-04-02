@@ -94,7 +94,7 @@
     },
     {
       "id": "dialog2.7",
-      "background": "dark_room",
+      "background": "dark_room1",
       "character": "none",
       "left1": {
         "character": "vlad",
@@ -121,7 +121,7 @@
     },
     {
       "id": "dialog2.8",
-      "background": "dark_room",
+      "background": "dark_room2",
       "character": "none",
       "left1": {
         "character": "vlad",
@@ -148,7 +148,7 @@
     },
     {
       "id": "dialog2.9",
-      "background": "dark_room",
+      "background": "dark_room2",
       "character": "rudnik",
       "left1": {
         "character": "vlad",
@@ -175,7 +175,7 @@
     },
     {
       "id": "dialog2.10",
-      "background": "dark_room",
+      "background": "dark_room2",
       "character": "vlad",
       "left1": {
         "character": "vlad",
@@ -202,7 +202,7 @@
     },
     {
       "id": "dialog2.11",
-      "background": "dark_room",
+      "background": "dark_room2",
       "character": "rudnik",
       "left1": {
         "character": "vlad",
