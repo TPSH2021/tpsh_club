@@ -1,7 +1,12 @@
 #include "gui.h"
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Event.hpp>
+#include <imgui.h>
+#include <imgui-SFML.h>
 #include <iostream>
+#include <string>
+#include <vector>
+#include <assetsModule/assetsSystem.h>
 #include <SFML/System/String.hpp>
 #include <SFML/System/String.hpp>
 #include <SFML/Graphics/Font.hpp>
@@ -291,4 +296,46 @@ void mBackground::draw(window* window) {
 	sprite.setScale(scale);
 	sprite.setTexture(texture);
 	window->getRenderWindow().draw(sprite);
+}
+
+//-----------------------------------------Editor
+
+editor::editor() {
+	deltaClock;
+	selection = 0;
+	Mass = 100;
+}
+
+editor::~editor()
+{}
+
+void editor::Init(sf::RenderWindow& win) {
+	ImGui::SFML::Init(win);
+}
+
+void editor::ProcessEvent(const sf::Event& event) {							
+	ImGui::SFML::ProcessEvent(event);
+}
+
+void editor::Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dialogSystem, game::assetsModule::assetsSystem& assetsSystem) {
+	ImGui::SFML::Update(win, deltaClock.restart());
+	ImGui::Begin("Editor");
+	ImGui::Text("Characters");
+	std::string data;
+	std::vector<std::string> selection_to_id;
+	int num = 0;
+	for (auto& iter : assetsSystem.getAllCharacters()) {
+		data += iter.first + '\0';
+		selection_to_id.push_back(iter.first);
+		if (dialogSystem.getDialog().getReplica().getLeft1Character().first == iter.first)
+			selection = num;
+		num++;
+	}
+	ImGui::Combo("Central Left Character", &selection, data.c_str(), assetsSystem.getAllCharacters().size());
+	dialogSystem.getDialog().getReplica().setLeft1Character({ selection_to_id[selection], dialogSystem.getDialog().getReplica().getLeft1Character().second });
+	ImGui::End();
+}
+
+void editor::Render(sf::RenderWindow& win) {
+	ImGui::SFML::Render(win);
 }
