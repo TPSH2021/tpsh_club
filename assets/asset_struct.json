@@ -167,49 +167,34 @@
       
     },
     {
+      "file": "assets/images/backgrounds/dark_room2.png",
+      "id": "dark_room2"
+      
+    },
+    {
       "file": "assets/images/backgrounds/room.png",
       "id": "room"
       
     },
     {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "door"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
+      "file": "assets/images/backgrounds/door.png",
       "id": "door"
       
     },
     
     {
-      "file": "assets/images/backgrounds/none_bg.png",
+      "file": "assets/images/backgrounds/rita_room.png",
       "id": "rita_room"
       
     },
     {
-      "file": "assets/images/backgrounds/none_bg.png",
+      "file": "assets/images/backgrounds/comrade.png",
       "id": "comrade"
       
     },
     {
       "file": "assets/images/backgrounds/none_bg.png",
-      "id": "bedroom1"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "bedroom2"
-      
-    },
-    {
-      "file": "assets/images/backgrounds/none_bg.png",
-      "id": "bedroom3"
+      "id": "kolya"
       
     },
     {
