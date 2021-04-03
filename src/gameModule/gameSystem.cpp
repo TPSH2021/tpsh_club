@@ -11,9 +11,9 @@ using namespace GUI;
 
 
 gameLogic::gameLogic(const sf::Font& font, dialogSystem* d2_system, assetsSystem* a2_system) :
-	red_button(createNewButton(buttonStyle::editor, 0.06, { 0, 0 })),
-	menu_button(createNewButton(buttonStyle::menu, 0.06, { 0, 35 })),
-	exit(createNewButton(buttonStyle::exit, 0.06, { 0, 70 })),
+	red_button(createNewButton(buttonStyle::editor, 0.3, { 0, 0 })),
+	menu_button(createNewButton(buttonStyle::menu, 0.3, { 0, 35 })),
+	exit(createNewButton(buttonStyle::exit, 0.3, { 0, 70 })),
 	speaker(font, { 30, winC::size.y - 232 }, 32),
 	d_text(font, { 70, winC::size.y - 180 }, 30)
 {
@@ -175,14 +175,13 @@ void gameLogic::createNewScene(bool need_next) {
 			if (d_system->getDialog().getReplica().getJumps().size() == 1)
 				chs_jump = 0;
 			else {
-
 				for (int i(0); i < d_system->getDialog().getReplica().getJumps().size(); ++i) {
 					choice_btns.push_back(GUI::textButton(
 						"assets/images/UI/choose_c.png",
 						"assets/images/UI/choose_t.png",
 						"assets/images/UI/choose_a.png",
-						0.15,
-						{ 200.0f, 100 + i * 70.0f }, ffont, 18));
+						1,
+						{ (1920.0f - 873) / 2, 100 + i * 70.0f }, ffont, 30));
 					choice_btns[i].lbl.setText(utf8_to_utf16(a_system->getText(d_system->getDialog().getReplica().getJumps()[i].second)));
 				}
 				chs_jump = -1;

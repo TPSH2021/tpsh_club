@@ -7,8 +7,8 @@ using namespace game;
 using namespace menuModule;
 using namespace GUI;
 menu::menu(const sf::Font& font) :
-	play(createNewButton(buttonStyle::play, 0.2, { 100, 100 })),
-	exit(createNewButton(buttonStyle::exit, 0.2, { 100, 300 })),
+	play(createNewButton(buttonStyle::play, 1, { 200, 200 })),
+	exit(createNewButton(buttonStyle::exit, 1, { 200, 500 })),
 	bg("assets/images/UI/bg.png")
 {}
 

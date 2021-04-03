@@ -85,6 +85,7 @@ dialog::dialog(const std::string& id, const std::string& filepath, const std::st
 	nlohmann::json structfile;
 	jsonstream >> structfile;
 	cur_replica = structfile["startPoint"];
+	start_point = cur_replica;
 	jump_to = jump;
 	for (int i = 0; i < structfile["textPoints"].size(); i++)
 		replicas.insert(std::make_pair( structfile["textPoints"][i]["id"], replica(i, filepath)));
@@ -102,6 +103,10 @@ bool dialog::next(const std::string& replicaId) {
 const std::string& dialog::getJump() {
 	return jump_to;
 }
+
+void dialog::reset() {
+	cur_replica = start_point;
+}
 //-------------------------------------------------------------------dialogSystem
 dialogSystem::dialogSystem(const std::string& filepath) {
 	auto cwd = std::filesystem::current_path().string();
@@ -111,15 +116,19 @@ dialogSystem::dialogSystem(const std::string& filepath) {
 	nlohmann::json structfile;
 	jsonstream >> structfile;
 	cur_dialog = structfile["start_point"];
+	start_point = cur_dialog;
 	for (int i = 0; i < structfile["data"].size(); i++)
 		dialogs.insert(std::make_pair(structfile["data"][i]["id"], dialog(structfile["data"][i]["id"], structfile["data"][i]["dirname"], structfile["data"][i]["jump_to"])));
 }
 
 dialog& dialogSystem::getDialog() {
+	if (cur_dialog == "")
+		cur_dialog = start_point;
 	return dialogs.at(cur_dialog);
 }
 
 bool dialogSystem::next(const std::string& dialogId) {
+	dialogs.at(cur_dialog).reset();
 	cur_dialog = dialogId;
 	return dialogId == "";
 }
