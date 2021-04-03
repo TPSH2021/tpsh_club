@@ -16,7 +16,7 @@ namespace game {
 	namespace gameModule {
 		class gameLogic {
 		public:
-			gameLogic(const sf::Font& font);
+			gameLogic(const sf::Font& font, dialogSystem*, assetsSystem*);
 			states run(GUI::window* window);
 		private:
 			GUI::editor editor;
@@ -36,9 +36,9 @@ namespace game {
 			GUI::button exit;
 			GUI::label speaker;
 			GUI::label d_text;
-			dialogSystem d_system;
-			assetsSystem a_system;
 			sf::Font ffont;
+			dialogSystem* d_system;
+			assetsSystem* a_system;
 			std::vector<GUI::textButton> choice_btns;
 			int chs_jump;
 		};

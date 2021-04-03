@@ -12,8 +12,8 @@
 #include <SFML/Graphics/Font.hpp>
 #include "consts.h"
 using namespace GUI;
-
-
+using namespace game::dialogModule;
+using namespace game::assetsModule;
 //---------------------------------------------------------------label
 
 label::label(const sf::Font& font, const sf::Vector2f& pos, int size) {
@@ -343,40 +343,55 @@ void editor::ProcessEvent(const sf::Event& event) {
 	ImGui::SFML::ProcessEvent(event);
 }
 
-void editor::Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dialogSystem, game::assetsModule::assetsSystem& assetsSystem) {
+void editor::Update(sf::RenderWindow& win, dialogSystem* dialogSystem, assetsSystem* assetsSystem) {
 	ImGui::SFML::Update(win, deltaClock.restart());
 	ImGui::Begin("Editor");
 	ImGui::Text("Characters");
-	std::string characters;
-	std::vector<std::string> char_sel_to_id;
+	std::vector<std::string> char_to_id;
+	std::map<std::string, int> id_to_char{ {"none", 15} };
 	int num = 0;
-	for (auto& iter : assetsSystem.getAllCharacters()) {
-		characters += iter.first + '\0';
-		char_sel_to_id.push_back(iter.first);
-		if (dialogSystem.getDialog().getReplica().getLeft1Character().first == iter.first)
-			sel_left_1_char = num;
-		num++;
+	const char* characters[128];
+	for (auto& iter : assetsSystem->getAllCharacters()) {
+		characters[num] = iter.first.c_str();
+		char_to_id.push_back(iter.first);
+		id_to_char[iter.first] = num++;
 	}
+	characters[num] = "none";
+	char_to_id.push_back("none");
+	auto key = dialogSystem->getDialog().getReplica().getLeft1Character();
+	sel_left_1_char = id_to_char[key.first];
+	sel_left_1_emot = em_to_id.at(key.second);
+	ImGui::Combo("Central Left Character", &sel_left_1_char, characters, assetsSystem->getAllCharacters().size() + 1);
+	ImGui::Combo("Central Left Emotions", &sel_left_1_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0none\0", 7);
+	if (char_to_id[sel_left_1_char] != key.first || id_to_em[sel_left_1_emot] != key.second)
+		dialogSystem->getDialog().getReplica().setLeft1Character({ char_to_id[sel_left_1_char], id_to_em[sel_left_1_emot] });
 
-	auto key2 = dialogSystem.getDialog().getReplica().getLeft1Character();
-	sel_left_1_emot = em_sel_to_id.at(key2.second);
-	ImGui::Combo("Central Left Character", &sel_left_1_char, characters.c_str(), assetsSystem.getAllCharacters().size());
-	ImGui::Combo("Central Left Emotions", &sel_left_1_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0", 6);
-	if (char_sel_to_id[sel_left_1_char] != key2.first || em_id_to_sel[sel_left_1_emot] != dialogSystem.getDialog().getReplica().getLeft1Character().second)
-		dialogSystem.getDialog().getReplica().setLeft1Character({ char_sel_to_id[sel_left_1_char], em_id_to_sel[sel_left_1_emot] });
-	num = 0;
-	for (auto& iter : assetsSystem.getAllCharacters()) {
-		if (dialogSystem.getDialog().getReplica().getLeft2Character().first == iter.first)
-			sel_left_2_char = num;
-		num++;
-	}
-	if (char_sel_to_id[sel_left_2_char] != dialogSystem.getDialog().getReplica().getLeft2Character().first || em_id_to_sel[sel_left_2_emot] != dialogSystem.getDialog().getReplica().getLeft2Character().second)
-		dialogSystem.getDialog().getReplica().setLeft2Character({ char_sel_to_id[sel_left_2_char], em_id_to_sel[sel_left_2_emot] });
+	
+	key = dialogSystem->getDialog().getReplica().getLeft2Character();
+	sel_left_2_char = id_to_char[key.first];
+	sel_left_2_emot = em_to_id.at(key.second);
+	ImGui::Combo("Outside Left Character", &sel_left_2_char, characters, assetsSystem->getAllCharacters().size() + 1);
+	ImGui::Combo("Outside Left Emotions", &sel_left_2_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0none\0", 7);
+	if (char_to_id[sel_left_2_char] != key.first || id_to_em[sel_left_2_emot] != key.second)
+		dialogSystem->getDialog().getReplica().setLeft2Character({ char_to_id[sel_left_2_char], id_to_em[sel_left_2_emot] });
 
-	auto key2 = dialogSystem.getDialog().getReplica().getLeft2Character().second;
-	sel_left_2_emot = em_sel_to_id.at(key2);
-	ImGui::Combo("Outside Left Character", &sel_left_2_char, characters.c_str(), assetsSystem.getAllCharacters().size());
-	ImGui::Combo("Outside Left Emotions", &sel_left_2_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0", 6);
+	key = dialogSystem->getDialog().getReplica().getRight2Character();
+	sel_right_2_char = id_to_char[key.first];
+	sel_right_2_emot = em_to_id.at(key.second);
+	ImGui::Combo("Outside Right Character", &sel_right_2_char, characters, assetsSystem->getAllCharacters().size() + 1);
+	ImGui::Combo("Outside Right Emotions", &sel_right_2_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0none\0", 7);
+	if (char_to_id[sel_right_2_char] != key.first || id_to_em[sel_right_2_emot] != key.second)
+		dialogSystem->getDialog().getReplica().setLeft2Character({ char_to_id[sel_right_2_char], id_to_em[sel_right_2_emot] });
+
+	key = dialogSystem->getDialog().getReplica().getRight1Character();
+	sel_right_1_char = id_to_char[key.first];
+	sel_right_1_emot = em_to_id.at(key.second);
+	ImGui::Combo("Central Right Character", &sel_right_1_char, characters, assetsSystem->getAllCharacters().size() + 1);
+	ImGui::Combo("Central Right Emotions", &sel_right_1_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0none\0", 7);
+	if (char_to_id[sel_right_1_char] != key.first || id_to_em[sel_right_1_emot] != key.second)
+		dialogSystem->getDialog().getReplica().setRight1Character({ char_to_id[sel_right_1_char], id_to_em[sel_right_1_emot] });
+
+	
 	ImGui::End();
 }
 

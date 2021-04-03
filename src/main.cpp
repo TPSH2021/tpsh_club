@@ -18,6 +18,8 @@ int main() {
 	// Program entry point.   
 	window window("game", sf::Vector2u(1280, 720));
 	stdFont.loadFromFile("assets/ConsolasBold.ttf");
+	game::dialogSystem d_system("assets/dialogs/dialog_struct.json");
+	game::assetsSystem a_system;
 	states state = states::menu;
 	while (state != states::exit) {
 		switch (state)
@@ -30,11 +32,9 @@ int main() {
 			break;
 		case game::states::game:
 		{
-			gameLogic game_g(stdFont);
+			gameLogic game_g(stdFont, &d_system, &a_system);
 			state = game_g.run(&window);
 		}
-		case game::states::redactor:
-			break;
 		}
 	}
 	window.doDone(true);
