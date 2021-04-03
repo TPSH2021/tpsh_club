@@ -10,15 +10,15 @@ using namespace game::gameModule;
 using namespace GUI;
 
 
-gameLogic::gameLogic(const sf::Font& font) :
+gameLogic::gameLogic(const sf::Font& font, dialogSystem* d2_system, assetsSystem* a2_system) :
 	red_button(createNewButton(buttonStyle::editor, 0.06, { 0, 0 })),
 	menu_button(createNewButton(buttonStyle::menu, 0.06, { 0, 35 })),
 	exit(createNewButton(buttonStyle::exit, 0.06, { 0, 70 })),
 	speaker(font, { 30, winC::size.y - 232 }, 32),
-	d_text(font, { 70, winC::size.y - 180 }, 30),
-	d_system("assets/dialogs/dialog_struct.json"),
-	a_system()
+	d_text(font, { 70, winC::size.y - 180 }, 30)
 {
+	d_system = d2_system;
+	a_system = a2_system;
 	is_editor_active = false;
 	loadScene = false;
 	ffont = font;
@@ -31,6 +31,7 @@ gameLogic::gameLogic(const sf::Font& font) :
 }
 
 game::states gameLogic::run(GUI::window* window) {
+
 	while (true) {
 
 		sf::Event event;
@@ -50,7 +51,7 @@ game::states gameLogic::run(GUI::window* window) {
 			createNewScene(true);
 		}
 		if (is_editor_active)
-			editor.Update(window->getRenderWindow(), &d_system, &a_system);
+			editor.Update(window->getRenderWindow(), d_system, a_system);
 		if (red_button.isClicked()) {
 			if (is_editor_active) {
 				is_editor_active = false;
@@ -59,7 +60,7 @@ game::states gameLogic::run(GUI::window* window) {
 			else {
 				editor.Init(window->getRenderWindow());
 				is_editor_active = true;
-				editor.Update(window->getRenderWindow(), &d_system, &a_system);
+				editor.Update(window->getRenderWindow(), d_system, a_system);
 			}
 		}
 		if (menu_button.isClicked())
@@ -89,49 +90,49 @@ void gameLogic::handleChsButtons(const sf::Event& event) {
 void gameLogic::drawUI(GUI::window* window) {
 	window->beginDraw();
 	auto bg_sprite = sf::Sprite();
-	bg_sprite.setTexture(a_system.getBackground(d_system.getDialog().getReplica().getBackgroundId()).getTexture());
+	bg_sprite.setTexture(a_system->getBackground(d_system->getDialog().getReplica().getBackgroundId()).getTexture());
 
 	bg_sprite.setScale(
-		{ winC::size.x / a_system.getBackground(d_system.getDialog().getReplica().getBackgroundId()).getTexture().getSize().x,
-		 winC::size.y / a_system.getBackground(d_system.getDialog().getReplica().getBackgroundId()).getTexture().getSize().y });
+		{ winC::size.x / a_system->getBackground(d_system->getDialog().getReplica().getBackgroundId()).getTexture().getSize().x,
+		 winC::size.y / a_system->getBackground(d_system->getDialog().getReplica().getBackgroundId()).getTexture().getSize().y });
 	window->getRenderWindow().draw(bg_sprite);
 	auto char_l_2_sprite = sf::Sprite();
 	auto char_l_1_sprite = sf::Sprite();
 	auto char_r_1_sprite = sf::Sprite();
 	auto char_r_2_sprite = sf::Sprite();
 
-	auto char_l_2 = d_system.getDialog().getReplica().getLeft2Character();
-	auto char_l_1 = d_system.getDialog().getReplica().getLeft1Character();
-	auto char_r_1 = d_system.getDialog().getReplica().getRight1Character();
-	auto char_r_2 = d_system.getDialog().getReplica().getRight2Character();
+	auto char_l_2 = d_system->getDialog().getReplica().getLeft2Character();
+	auto char_l_1 = d_system->getDialog().getReplica().getLeft1Character();
+	auto char_r_1 = d_system->getDialog().getReplica().getRight1Character();
+	auto char_r_2 = d_system->getDialog().getReplica().getRight2Character();
 
 	float k = winC::size.x / 4;
 
 	if (char_l_2.first != "none" && char_l_2.second != "none") {
-		char_l_2_sprite.setTexture(a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second));
-		float k_x = char_size.x / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().x;
-		float k_y = char_size.y / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().y;
+		char_l_2_sprite.setTexture(a_system->getCharacter(char_l_2.first).getEmotionById(char_l_2.second));
+		float k_x = char_size.x / a_system->getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().x;
+		float k_y = char_size.y / a_system->getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().y;
 		char_l_2_sprite.setScale({ k_x, k_y});
 		char_l_2_sprite.move({ 20, 100});
 	}
 	if (char_l_1.first != "none" && char_l_1.second != "none") {
-		char_l_1_sprite.setTexture(a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second));
-		float k_x = char_size.x / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().x;
-		float k_y = char_size.y / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().y;
+		char_l_1_sprite.setTexture(a_system->getCharacter(char_l_1.first).getEmotionById(char_l_1.second));
+		float k_x = char_size.x / a_system->getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().x;
+		float k_y = char_size.y / a_system->getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().y;
 		char_l_1_sprite.setScale({ k_x, k_y });
 		char_l_1_sprite.move({ 20 + k, 100 });
 	}
 	if (char_r_1.first != "none" && char_r_1.second != "none") {
-		char_r_1_sprite.setTexture(a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second));
-		float k_x = char_size.x / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().x;
-		float k_y = char_size.y / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().y;
+		char_r_1_sprite.setTexture(a_system->getCharacter(char_r_1.first).getEmotionById(char_r_1.second));
+		float k_x = char_size.x / a_system->getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().x;
+		float k_y = char_size.y / a_system->getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().y;
 		char_r_1_sprite.setScale({ k_x, k_y });
 		char_r_1_sprite.move({ winC::size.x - 20 - k - char_size.x, 100 });
 	}
 	if (char_r_2.first != "none" && char_r_2.second != "none") {
-		char_r_2_sprite.setTexture(a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second));
-		float k_x = char_size.x / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().x;
-		float k_y = char_size.y / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().y;
+		char_r_2_sprite.setTexture(a_system->getCharacter(char_r_2.first).getEmotionById(char_r_2.second));
+		float k_x = char_size.x / a_system->getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().x;
+		float k_y = char_size.y / a_system->getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().y;
 		char_r_2_sprite.setScale({ k_x, k_y });
 		char_r_2_sprite.move({ winC::size.x - 20 - char_size.x, 100 });
 	}
@@ -165,30 +166,30 @@ void gameLogic::drawUI(GUI::window* window) {
 
 void gameLogic::createNewScene(bool need_next) {
 	if (chs_jump != -1) {
-		if (need_next && d_system.getDialog().getReplica().getJumps()[0].first.size() == 0)
-			endGame = d_system.next(d_system.getDialog().getJump());
+		if (need_next && d_system->getDialog().getReplica().getJumps()[0].first.size() == 0)
+			endGame = d_system->next(d_system->getDialog().getJump());
 		else if (need_next && !endGame)
-			d_system.getDialog().next(d_system.getDialog().getReplica().getJumps()[chs_jump].first);
+			d_system->getDialog().next(d_system->getDialog().getReplica().getJumps()[chs_jump].first);
 		if (!endGame) {
 			choice_btns.clear();
-			if (d_system.getDialog().getReplica().getJumps().size() == 1)
+			if (d_system->getDialog().getReplica().getJumps().size() == 1)
 				chs_jump = 0;
 			else {
 
-				for (int i(0); i < d_system.getDialog().getReplica().getJumps().size(); ++i) {
+				for (int i(0); i < d_system->getDialog().getReplica().getJumps().size(); ++i) {
 					choice_btns.push_back(GUI::textButton(
 						"assets/images/UI/choose_c.png",
 						"assets/images/UI/choose_t.png",
 						"assets/images/UI/choose_a.png",
 						0.15,
 						{ 200.0f, 100 + i * 70.0f }, ffont, 18));
-					choice_btns[i].lbl.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getJumps()[i].second)));
+					choice_btns[i].lbl.setText(utf8_to_utf16(a_system->getText(d_system->getDialog().getReplica().getJumps()[i].second)));
 				}
 				chs_jump = -1;
 				std::cout << choice_btns.size() << std::endl;
 			}
-			speaker.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getSpeaker())));
-			d_text.setText(utf8_to_utf16(a_system.getText(d_system.getDialog().getReplica().getId())));
+			speaker.setText(utf8_to_utf16(a_system->getText(d_system->getDialog().getReplica().getSpeaker())));
+			d_text.setText(utf8_to_utf16(a_system->getText(d_system->getDialog().getReplica().getId())));
 		}
 	}
 	loadScene = false;

@@ -95,7 +95,6 @@ replica& dialog::getReplica() {
 }
 
 bool dialog::next(const std::string& replicaId) {
-	//TODO: why this method return bool?!
 	cur_replica = replicaId;
 	return true;
 }

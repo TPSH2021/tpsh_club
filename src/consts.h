@@ -9,7 +9,6 @@ namespace game {
 		menu,
 		game,
 		exit,
-		redactor
 	};
 	const sf::Vector2f char_size = { 280, 500 };
 	
