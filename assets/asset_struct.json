@@ -144,7 +144,7 @@
     {
       "file": "assets/images/backgrounds/hotel_hall_background.png",
       "id": "hotel_hall_background"
-      
+
     },
     {
       "file": "assets/images/backgrounds/workspace.png",
@@ -154,53 +154,58 @@
     {
       "file": "assets/images/backgrounds/screenshot1.png",
       "id": "screenshot1"
-      
+
     },
     {
       "file": "assets/images/backgrounds/screenshot2.png",
       "id": "screenshot2"
-      
+
     },
     {
       "file": "assets/images/backgrounds/dark_room1.png",
       "id": "dark_room1"
-      
+
     },
     {
       "file": "assets/images/backgrounds/dark_room2.png",
       "id": "dark_room2"
-      
+
     },
     {
       "file": "assets/images/backgrounds/room.png",
       "id": "room"
-      
+
     },
     {
       "file": "assets/images/backgrounds/door.png",
       "id": "door"
-      
+
     },
-    
+
     {
       "file": "assets/images/backgrounds/rita_room.png",
       "id": "rita_room"
-      
+
     },
     {
       "file": "assets/images/backgrounds/comrade.png",
       "id": "comrade"
-      
+
     },
     {
-      "file": "assets/images/backgrounds/none_bg.png",
+      "file": "assets/images/backgrounds/kolya.png",
       "id": "kolya"
-      
+
     },
     {
       "file": "assets/images/backgrounds/die.png",
       "id": "die"
-      
+
+    },
+    {
+      "file": "assets/images/backgrounds/kolya2.png",
+      "id": "kolya2"
+
     }
   ]
 }
