@@ -50,7 +50,7 @@ game::states gameLogic::run(GUI::window* window) {
 			createNewScene(true);
 		}
 		if (is_editor_active)
-			editor.Update(window->getRenderWindow(), d_system, a_system);
+			editor.Update(window->getRenderWindow(), &d_system, &a_system);
 		if (red_button.isClicked()) {
 			if (is_editor_active) {
 				is_editor_active = false;
@@ -59,7 +59,7 @@ game::states gameLogic::run(GUI::window* window) {
 			else {
 				editor.Init(window->getRenderWindow());
 				is_editor_active = true;
-				editor.Update(window->getRenderWindow(), d_system, a_system);
+				editor.Update(window->getRenderWindow(), &d_system, &a_system);
 			}
 		}
 		if (menu_button.isClicked())
@@ -107,28 +107,28 @@ void gameLogic::drawUI(GUI::window* window) {
 
 	float k = winC::size.x / 4;
 
-	if (char_l_2.first != "none") {
+	if (char_l_2.first != "none" && char_l_2.second != "none") {
 		char_l_2_sprite.setTexture(a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second));
 		float k_x = char_size.x / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().x;
 		float k_y = char_size.y / a_system.getCharacter(char_l_2.first).getEmotionById(char_l_2.second).getSize().y;
 		char_l_2_sprite.setScale({ k_x, k_y});
 		char_l_2_sprite.move({ 20, 100});
 	}
-	if (char_l_1.first != "none") {
+	if (char_l_1.first != "none" && char_l_1.second != "none") {
 		char_l_1_sprite.setTexture(a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second));
 		float k_x = char_size.x / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().x;
 		float k_y = char_size.y / a_system.getCharacter(char_l_1.first).getEmotionById(char_l_1.second).getSize().y;
 		char_l_1_sprite.setScale({ k_x, k_y });
 		char_l_1_sprite.move({ 20 + k, 100 });
 	}
-	if (char_r_1.first != "none") {
+	if (char_r_1.first != "none" && char_r_1.second != "none") {
 		char_r_1_sprite.setTexture(a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second));
 		float k_x = char_size.x / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().x;
 		float k_y = char_size.y / a_system.getCharacter(char_r_1.first).getEmotionById(char_r_1.second).getSize().y;
 		char_r_1_sprite.setScale({ k_x, k_y });
 		char_r_1_sprite.move({ winC::size.x - 20 - k - char_size.x, 100 });
 	}
-	if (char_r_2.first != "none") {
+	if (char_r_2.first != "none" && char_r_2.second != "none") {
 		char_r_2_sprite.setTexture(a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second));
 		float k_x = char_size.x / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().x;
 		float k_y = char_size.y / a_system.getCharacter(char_r_2.first).getEmotionById(char_r_2.second).getSize().y;

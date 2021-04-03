@@ -130,18 +130,24 @@ namespace GUI {
 		~editor();
 		void Init(sf::RenderWindow& win);
 		void ProcessEvent(const sf::Event& event);
-		void Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dialogSystem, game::assetsModule::assetsSystem& assetsSystem);
+		void Update(sf::RenderWindow& win, game::dialogModule::dialogSystem* dialogSystem, game::assetsModule::assetsSystem* assetsSystem);
 		void Render(sf::RenderWindow& win);
 		void ShutDown();
 	private:
 
-		int sel_left_1_char;
-		int sel_left_1_emot;
 		int sel_left_2_char;
+		int sel_left_1_char;
+		int sel_right_1_char;
+		int sel_right_2_char;
+
 		int sel_left_2_emot;
+		int sel_left_1_emot;
+		int sel_right_1_emot;
+		int sel_right_2_emot;
+
 		sf::Clock deltaClock;
-		const std::map<std::string, int> em_sel_to_id = { {"happy", 0 }, { "sad", 1 }, {"angry", 2}, {"calm", 3}, {"smiling", 4}, {"neutral", 5} };
-		std::vector<std::string> em_id_to_sel = { "happy","sad", "angry","calm","smiling","neutral" };
+		const std::map<std::string, int> em_to_id = { {"happy", 0 }, { "sad", 1 }, {"angry", 2}, {"calm", 3}, {"smiling", 4}, {"neutral", 5}, {"none", 6 } };
+		std::vector<std::string> id_to_em = { "happy", "sad", "angry", "calm", "smiling", "neutral", "none" };
 		float Mass;
 	};
 }
