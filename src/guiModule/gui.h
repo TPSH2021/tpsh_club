@@ -137,6 +137,8 @@ namespace GUI {
 
 		int sel_left_1_char;
 		int sel_left_1_emot;
+		int sel_left_2_char;
+		int sel_left_2_emot;
 		sf::Clock deltaClock;
 		const std::map<std::string, int> em_sel_to_id = { {"happy", 0 }, { "sad", 1 }, {"angry", 2}, {"calm", 3}, {"smiling", 4}, {"neutral", 5} };
 		std::vector<std::string> em_id_to_sel = { "happy","sad", "angry","calm","smiling","neutral" };
