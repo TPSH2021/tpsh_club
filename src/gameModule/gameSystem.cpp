@@ -14,7 +14,7 @@ gameLogic::gameLogic(const sf::Font& font, dialogSystem* d2_system, assetsSystem
 	red_button(createNewButton(buttonStyle::editor, 0.3, { 0, 0 })),
 	menu_button(createNewButton(buttonStyle::menu, 0.3, { 0, 35 })),
 	exit(createNewButton(buttonStyle::exit, 0.3, { 0, 70 })),
-	speaker(font, { 30, winC::size.y - 338 }, 32),
+	speaker(font, { 10, winC::size.y - 338 }, 32),
 	d_text(font, { 120, winC::size.y - 270 }, 44)
 {
 	d_system = d2_system;

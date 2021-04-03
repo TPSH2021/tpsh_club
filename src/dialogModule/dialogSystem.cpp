@@ -79,6 +79,8 @@ const std::vector<std::pair<std::string, std::string>>& replica::getJumps() cons
 	return  jumps;
 }
 
+
+
 //-------------------------------------------------------------------dialog
 dialog::dialog(const std::string& id, const std::string& filepath, const std::string& jump) : id(id) {
 	std::ifstream jsonstream(filepath);
@@ -98,6 +100,10 @@ replica& dialog::getReplica() {
 bool dialog::next(const std::string& replicaId) {
 	cur_replica = replicaId;
 	return true;
+}
+
+std::string dialog::getCurReplica() {
+	return cur_replica;
 }
 
 const std::string& dialog::getJump() {
@@ -131,4 +137,8 @@ bool dialogSystem::next(const std::string& dialogId) {
 	dialogs.at(cur_dialog).reset();
 	cur_dialog = dialogId;
 	return dialogId == "";
+}
+
+std::string dialogSystem::getCurDialog() {
+	return cur_dialog;
 }

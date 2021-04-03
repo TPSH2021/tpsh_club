@@ -31,7 +31,6 @@ namespace game {
 			const std::string& getId() const;
 			const std::string& getSpeaker() const;
 			const std::vector<std::pair<std::string, std::string>>& getJumps() const;
-
 		private:
 			std::string id;
 			std::string background_id;
@@ -51,6 +50,7 @@ namespace game {
 			bool next(const std::string&);
 			const std::string& getJump();
 			void reset();
+			std::string getCurReplica();
 		private:
 			std::map<std::string, replica> replicas;
 			std::string cur_replica;
@@ -64,7 +64,7 @@ namespace game {
 			dialogSystem(const std::string& filepath);
 			dialog& getDialog();
 			bool next(const std::string&);
-
+			std::string getCurDialog();
 		private:
 			std::map<std::string, dialog> dialogs;
 			std::string cur_dialog;

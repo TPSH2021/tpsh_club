@@ -3,6 +3,8 @@
 #include <SFML/Window/Event.hpp>
 #include <imgui.h>
 #include <imgui-SFML.h>
+#include <json.hpp>
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -350,8 +352,11 @@ void editor::Update(sf::RenderWindow& win, dialogSystem* dialogSystem, assetsSys
 	ImGui::Text("Characters");
 	std::vector<std::string> char_to_id;
 	std::map<std::string, int> id_to_char{ {"none", 15} };
+	std::vector<std::string> bg_to_id;
+	std::map<std::string, int> id_to_bg;
 	int num = 0;
 	const char* characters[128];
+	const char* backgrounds[256];
 	for (auto& iter : assetsSystem->getAllCharacters()) {
 		characters[num] = iter.first.c_str();
 		char_to_id.push_back(iter.first);
@@ -359,6 +364,14 @@ void editor::Update(sf::RenderWindow& win, dialogSystem* dialogSystem, assetsSys
 	}
 	characters[num] = "none";
 	char_to_id.push_back("none");
+
+	num = 0;
+	for (auto& iter : assetsSystem->getAllBackgrouds()) {
+		backgrounds[num] = iter.first.c_str();
+		bg_to_id.push_back(iter.first);
+		id_to_bg[iter.first] = num++;
+	}
+
 	auto key = dialogSystem->getDialog().getReplica().getLeft1Character();
 	sel_left_1_char = id_to_char[key.first];
 	sel_left_1_emot = em_to_id.at(key.second);
@@ -392,6 +405,54 @@ void editor::Update(sf::RenderWindow& win, dialogSystem* dialogSystem, assetsSys
 	if (char_to_id[sel_right_1_char] != key.first || id_to_em[sel_right_1_emot] != key.second)
 		dialogSystem->getDialog().getReplica().setRight1Character({ char_to_id[sel_right_1_char], id_to_em[sel_right_1_emot] });
 
+	auto key2 = dialogSystem->getDialog().getReplica().getBackgroundId();
+	sel_bg = id_to_bg[key2];
+	ImGui::Combo("Background", &sel_bg, backgrounds, assetsSystem->getAllBackgrouds().size());
+	if (bg_to_id[sel_bg] != key2)
+		dialogSystem->getDialog().getReplica().setBackgroundId(bg_to_id[sel_bg]);
+
+	if (ImGui::Button("Save changes")) {
+		auto c_dialog = "assets/dialogs/" + dialogSystem->getCurDialog() + ".json";
+		auto c_repl = dialogSystem->getDialog().getCurReplica();
+		nlohmann::json _file;
+		std::cout << c_dialog << ' ';
+		std::ifstream fin(c_dialog);
+		fin >> _file;
+		fin.close();
+		int repl_i(0);
+		for (int i(0); i < _file["textPoints"]; ++i) {
+			if (_file["textPoints"][i]["id"] == c_repl) {
+				repl_i = i;
+				break;
+			}
+		}
+
+		if (dialogSystem->getDialog().getReplica().getLeft2Character().first != "none" &&
+			dialogSystem->getDialog().getReplica().getLeft2Character().second != "none") {
+			_file["textPoints"][repl_i]["left2"]["character"] = dialogSystem->getDialog().getReplica().getLeft2Character().first;
+			_file["textPoints"][repl_i]["left2"]["emotion"] = dialogSystem->getDialog().getReplica().getLeft2Character().second;
+		}
+		if (dialogSystem->getDialog().getReplica().getLeft1Character().first != "none" &&
+			dialogSystem->getDialog().getReplica().getLeft1Character().second != "none") {
+			_file["textPoints"][repl_i]["left1"]["character"] = dialogSystem->getDialog().getReplica().getLeft1Character().first;
+			_file["textPoints"][repl_i]["left1"]["emotion"] = dialogSystem->getDialog().getReplica().getLeft1Character().second;
+		}
+		if (dialogSystem->getDialog().getReplica().getRight1Character().first != "none" &&
+			dialogSystem->getDialog().getReplica().getRight1Character().second != "none") {
+			_file["textPoints"][repl_i]["right1"]["character"] = dialogSystem->getDialog().getReplica().getRight1Character().first;
+			_file["textPoints"][repl_i]["right1"]["emotion"] = dialogSystem->getDialog().getReplica().getRight1Character().second;
+		}
+		if (dialogSystem->getDialog().getReplica().getRight2Character().first != "none" &&
+			dialogSystem->getDialog().getReplica().getRight2Character().second != "none") {
+			_file["textPoints"][repl_i]["right2"]["character"] = dialogSystem->getDialog().getReplica().getRight2Character().first;
+			_file["textPoints"][repl_i]["right2"]["emotion"] = dialogSystem->getDialog().getReplica().getRight2Character().second;
+		}
+		_file["textPoints"][repl_i]["background"] = dialogSystem->getDialog().getReplica().getBackgroundId();
+	
+		std::ofstream fout(c_dialog);
+		fout << _file;
+		fout.close();
+	}
 	
 	ImGui::End();
 }
@@ -402,4 +463,8 @@ void editor::Render(sf::RenderWindow& win) {
 
 void editor::ShutDown() {
 	ImGui::SFML::Shutdown();
+}
+
+void editor::saveChanges(dialogSystem* dialogSystem, assetsSystem* assetsSystem) {
+	//std::ifstream fin();
 }
