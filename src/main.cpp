@@ -16,9 +16,9 @@ sf::Font stdFont;
 
 int main() {
 	// Program entry point.   
-	window window("game", sf::Vector2u(1280, 720));
 	stdFont.loadFromFile("assets/ConsolasBold.ttf");
 	game::dialogSystem d_system("assets/dialogs/dialog_struct.json");
+	window window("game", { 1920, 1080 });
 	game::assetsSystem a_system;
 	states state = states::menu;
 	while (state != states::exit) {

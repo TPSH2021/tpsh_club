@@ -50,10 +50,11 @@ namespace game {
 			replica& getReplica();
 			bool next(const std::string&);
 			const std::string& getJump();
-
+			void reset();
 		private:
 			std::map<std::string, replica> replicas;
 			std::string cur_replica;
+			std::string start_point;
 			std::string id;
 			std::string jump_to;
 		};
@@ -67,6 +68,7 @@ namespace game {
 		private:
 			std::map<std::string, dialog> dialogs;
 			std::string cur_dialog;
+			std::string start_point;
 		};
 	}  // namespace dialogModule
 }  // namespace game
