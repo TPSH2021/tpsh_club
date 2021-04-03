@@ -329,7 +329,6 @@ button GUI::createNewButton(buttonStyle style, float scale, sf::Vector2f pos)
 
 editor::editor()
 {
-	deltaClock;
 	Mass = 100;
 }
 
@@ -359,13 +358,25 @@ void editor::Update(sf::RenderWindow& win, game::dialogModule::dialogSystem& dia
 		num++;
 	}
 
-	auto key = dialogSystem.getDialog().getReplica().getLeft1Character().second;
-	sel_left_1_emot = em_sel_to_id.at(key);
+	auto key2 = dialogSystem.getDialog().getReplica().getLeft1Character();
+	sel_left_1_emot = em_sel_to_id.at(key2.second);
 	ImGui::Combo("Central Left Character", &sel_left_1_char, characters.c_str(), assetsSystem.getAllCharacters().size());
 	ImGui::Combo("Central Left Emotions", &sel_left_1_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0", 6);
-	if (char_sel_to_id[sel_left_1_char] != dialogSystem.getDialog().getReplica().getLeft1Character().first || em_id_to_sel[sel_left_1_emot] != dialogSystem.getDialog().getReplica().getLeft1Character().second)
+	if (char_sel_to_id[sel_left_1_char] != key2.first || em_id_to_sel[sel_left_1_emot] != dialogSystem.getDialog().getReplica().getLeft1Character().second)
 		dialogSystem.getDialog().getReplica().setLeft1Character({ char_sel_to_id[sel_left_1_char], em_id_to_sel[sel_left_1_emot] });
+	num = 0;
+	for (auto& iter : assetsSystem.getAllCharacters()) {
+		if (dialogSystem.getDialog().getReplica().getLeft2Character().first == iter.first)
+			sel_left_2_char = num;
+		num++;
+	}
+	if (char_sel_to_id[sel_left_2_char] != dialogSystem.getDialog().getReplica().getLeft2Character().first || em_id_to_sel[sel_left_2_emot] != dialogSystem.getDialog().getReplica().getLeft2Character().second)
+		dialogSystem.getDialog().getReplica().setLeft2Character({ char_sel_to_id[sel_left_2_char], em_id_to_sel[sel_left_2_emot] });
 
+	auto key2 = dialogSystem.getDialog().getReplica().getLeft2Character().second;
+	sel_left_2_emot = em_sel_to_id.at(key2);
+	ImGui::Combo("Outside Left Character", &sel_left_2_char, characters.c_str(), assetsSystem.getAllCharacters().size());
+	ImGui::Combo("Outside Left Emotions", &sel_left_2_emot, "happy\0sad\0angry\0calm\0smiling\0neutral\0", 6);
 	ImGui::End();
 }
 
