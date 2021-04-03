@@ -2,7 +2,7 @@
 #include <SFML/System/Vector2.hpp>
 
 namespace winC {
-	const sf::Vector2f size = { 1280, 720 };
+	const sf::Vector2f size = { 1920, 1080 };
 }
 namespace game {
 	const enum class states {
@@ -10,6 +10,6 @@ namespace game {
 		game,
 		exit,
 	};
-	const sf::Vector2f char_size = { 280, 500 };
+	const sf::Vector2f char_size = { 420, 746 };
 	
 }

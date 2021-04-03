@@ -187,11 +187,12 @@ textButton::textButton(const std::string& common_tx,
 {}
 //---------------------------------------------------------------window
 window::window() {
-	setup("Window", sf::Vector2u(640, 480));
+	setup("Window", sf::Vector2u(1920, 1080));
 }
 
 window::window(const std::string& l_title, const sf::Vector2u& l_size) {
 	setup(l_title, l_size);
+	//toggleFullscreen();
 }
 
 window::~window() {
@@ -201,7 +202,7 @@ window::~window() {
 void window::setup(const std::string& l_title, const sf::Vector2u& l_size) {
 	m_windowTitle = l_title;
 	m_windowSize = l_size;
-	m_isFullscreen = false;
+	m_isFullscreen = true;
 	m_isDone = false;
 	create();
 }
@@ -282,7 +283,7 @@ void mBackground::update(const sf::Event& event) {
 void mBackground::draw(window& window) {
 	auto sprite = sf::Sprite();
 	sprite.setPosition(pos);
-	sprite.setScale(scale);
+	//sprite.setScale(scale);
 	sprite.setTexture(texture);
 	window.getRenderWindow().draw(sprite);
 }
