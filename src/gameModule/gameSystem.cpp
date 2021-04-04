@@ -63,12 +63,22 @@ game::states gameLogic::run(GUI::window* window) {
 				editor.Update(window->getRenderWindow(), d_system, a_system);
 			}
 		}
-		if (menu_button.isClicked())
+		if (menu_button.isClicked()) {
+			if (is_editor_active)
+				editor.ShutDown();
 			return states::menu;
+		}
 		else if (exit.isClicked() || window->isDone())
+		{
+			if (is_editor_active)
+				editor.ShutDown();
 			return states::exit;
-		else if (endGame)
+		}
+		else if (endGame) {
+			if (is_editor_active)
+				editor.ShutDown();
 			return states::menu;
+		}
 
 		drawUI(window);	
 
