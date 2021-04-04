@@ -181,7 +181,7 @@ void gameLogic::createNewScene(bool need_next) {
 						"assets/images/UI/choose_t.png",
 						"assets/images/UI/choose_a.png",
 						1,
-						{ (1920.0f - 873) / 2, 100 + i * 70.0f }, ffont, 30));
+						{ (1920.0f - 873) / 2, 400 + i * 70.0f }, ffont, 30));
 					choice_btns[i].lbl.setText(utf8_to_utf16(a_system->getText(d_system->getDialog().getReplica().getJumps()[i].second)));
 				}
 				chs_jump = -1;
